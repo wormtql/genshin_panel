@@ -3,5 +3,28 @@ node_js:
   - stable
 install:
   - npm install
-script:
-  - npm test
+
+stages:
+  - build
+  - test
+  - name: deploy
+    if: branch = main
+
+jobs:
+  include:
+    - stage: build
+      script:
+        - npm run build
+    
+    - stage: test
+      script:
+        - npm run test
+    
+    - stage: deploy
+      deploy:
+        provider: npm
+        email: 584130248@qq.com
+        api_key: "$NPM_TOKEN"
+        skip_cleanup: true
+        on:
+          all_branches: true
