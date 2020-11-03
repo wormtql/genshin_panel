@@ -1,4 +1,5 @@
 # 《原神》面板计算器
+[![Build Status](https://travis-ci.org/wormtql/genshin_panel.svg?branch=main)](https://travis-ci.org/wormtql/genshin_panel)
 模拟角色、装备、圣遗物的搭配，得出最终面板。
 
 注：最终面板与实际面板有出入，这是因为游戏中的圣遗物只保留到小数点后一位，实际上这之后的小数位数并不是零。  
