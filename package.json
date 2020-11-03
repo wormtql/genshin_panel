@@ -1,8 +1,9 @@
 {
   "name": "genshin_panel",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "genshin panel calculator",
-  "main": "index.js",
+  "main": "dist/index.js",
+  "files": ["dist/"],
   "scripts": {
     "test": "mocha",
     "build": "tsc"
@@ -12,6 +13,7 @@
     "url": "https://github.com/wormtql/genshin_panel"
   },
   "keywords": [
+    "原神",
     "genshin",
     "typescript"
   ],
