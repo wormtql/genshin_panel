@@ -119,4 +119,18 @@ describe("#compose", () => {
         expect(attribute).property("thunderBonus", 0.498);
         expect(attribute).property("recharge", 1.197);
     })
+
+    it("custom base attribute", () => {
+        let base = Object.assign(app.newAttribute(), {
+            "attack1": 123
+        });
+        // let base = app.newAttribute();
+
+        let art = new app.Artifact("flower", "berserker");
+        art.setPrimaryTag("attack1", 123);
+        app.applyArtifacts(base, [art]);
+
+        expect(base).property("attack1", 123);
+        expect(base).property("attack2", 123);
+    })
 })

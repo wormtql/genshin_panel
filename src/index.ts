@@ -9,7 +9,7 @@ import { Weapon } from "./numeric/weapon/type";
 export { getCharacterAttribute, getWeaponAttribute, getAttribute } from "./numeric";
 
 // 圣遗物
-export * from "./artifact";
+export { Artifact, apply as applyArtifacts } from "./artifact";
 
 // 属性
 export { newAttribute } from "./attribute";
@@ -38,7 +38,7 @@ export function compose(character: string, weapon: string, artifacts: Artifact[]
 
     params = params || {};
 
-    applyArtifacts(base, params, artifacts);
+    applyArtifacts(base, artifacts, params);
 
     return base;
 }

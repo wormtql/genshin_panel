@@ -3,6 +3,8 @@
 注：最终面板与实际面板有出入，这是因为游戏中的圣遗物只保留到小数点后一位，实际上这之后的小数位数并不是零。  
 最终结果仅有非常小的差别，可以忽略不计
 
+目前支持的数据预设有限，但是可以根据自己的角色自己构造基本面板。
+
 ## 安装
 ```bash
 npm install genshin_panel
@@ -12,11 +14,15 @@ npm install genshin_panel
 ```js
 import { compose } from "genshin_panel";
 
-let attribute = compose("keqing-70-0", "heijian-70-0", []) // 刻晴70级未突破，黑剑70级未突破，无圣遗物
+// 刻晴70级未突破，黑剑70级未突破，无圣遗物
+let attribute = compose("keqing-70-0", "heijian-70-0", [])
 console.log(attribute.toString());
+
+// 刻晴70级未突破，黎明神剑70级突破，无圣遗物
+let attribute2 = compose("keqing-70-0", "limingshenjian-70-1". [])
 ```
 
-添加圣遗物：
+## 添加圣遗物：
 ```js
 import { compose, Artifact } from "genshin_panel";
 
@@ -63,3 +69,26 @@ art5.addSecondaryTag("life1", 215);
 // 包含如雷2件套、战狂2件套的加成效果
 let attribute = app.compose("keqing-70-0", "heijian-70-0", [art, art2, art3, art4, art5]);
 ```
+
+## 自定义基础面板
+```js
+import { newAttribute, applyArtifacts } from "genshin_panel";
+
+let attribute = Object.assign(newAttribute(), {
+    // 基础攻击力
+    "attack1": 123,
+    // 基础生命值
+    "life1": 1234
+});
+
+applyArtifacts(attribute, []);
+```
+
+## 支持的人物
+- keqing-70-0
+
+## 支持的武器
+- 黎明神剑20-80级
+- 黑剑20-80级
+
+## 

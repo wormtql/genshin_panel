@@ -10,7 +10,7 @@ export { TagType } from "./tag_type";
 
 
 // 计算圣遗物（包括套装）加成后的面板
-export function apply(attribute: Attribute, param: Param, artifacts: Artifact[]) {
+export function apply(attribute: Attribute, artifacts: Artifact[], param: Param) {
     for (let i = 0; i < artifacts.length; i++) {
         artifacts[i].apply(attribute);
     }
