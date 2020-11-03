@@ -1,0 +1,48 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.newAttribute = void 0;
+function newAttribute() {
+    return {
+        cureEffect: 0,
+        curedEffect: 0,
+        life: 0,
+        life1: 0,
+        life2: 0,
+        attack1: 0,
+        attack2: 0,
+        defend1: 0,
+        defend2: 0,
+        critical: 0,
+        bCritical: 0,
+        criticalDamage: 0,
+        thunderRes: 0,
+        fireRes: 0,
+        waterRes: 0,
+        iceRes: 0,
+        windRes: 0,
+        rockRes: 0,
+        elementalMastery: 0,
+        recharge: 1,
+        thunderBonus: 0,
+        fireBonus: 0,
+        waterBonus: 0,
+        iceBonus: 0,
+        windBonus: 0,
+        rockBonus: 0,
+        thunderTime: 0,
+        fireTime: 0,
+        waterTime: 0,
+        iceTime: 0,
+        windTime: 0,
+        rockTime: 0,
+        physicalBonus: 0,
+        aBonus: 0,
+        bBonus: 0,
+        bonus: 0,
+        eBonus: 0,
+        qBonus: 0,
+        shield: 0,
+        tag: [],
+    };
+}
+exports.newAttribute = newAttribute;
