@@ -1,9 +1,12 @@
 # 《原神》面板计算器
-模拟角色、装备、圣遗物的搭配，得出最终面板。  
+模拟角色、装备、圣遗物的搭配，得出最终面板。
+
 注：最终面板与实际面板有出入，这是因为游戏中的圣遗物只保留到小数点后一位，实际上这之后的小数位数并不是零。  
 最终结果仅有非常小的差别，可以忽略不计
 
 目前支持的数据预设有限，但是可以根据自己的角色自己构造基本面板。
+
+更多角色与武器正在更新中
 
 ## 安装
 ```bash
@@ -15,11 +18,10 @@ npm install genshin_panel
 import { compose } from "genshin_panel";
 
 // 刻晴70级未突破，黑剑70级未突破，无圣遗物
-let attribute = compose("keqing-70-0", "heijian-70-0", [])
-console.log(attribute.toString());
+let attribute = compose("keqing-70-0", "heijian-70-0", []);
 
 // 刻晴70级未突破，黎明神剑70级突破，无圣遗物
-let attribute2 = compose("keqing-70-0", "limingshenjian-70-1". [])
+let attribute2 = compose("keqing-70-0", "limingshenjian-70-1". []);
 ```
 
 ## 添加圣遗物：
