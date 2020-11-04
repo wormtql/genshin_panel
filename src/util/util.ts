@@ -1,15 +1,15 @@
 import { Attribute } from "../attribute";
 
 export function mixAttribute(base: Attribute, mix: any): Attribute {
-    let temp = Object.assign({}, base);
+    // let temp = Object.assign({}, base);
 
     for (let key in mix) {
         if (typeof base[key] === "number") {
-            temp[key] += mix[key];
+            base[key] += mix[key];
         }
     }
 
-    return temp;
+    return base;
 }
 
 export function capitalize(s: string) {

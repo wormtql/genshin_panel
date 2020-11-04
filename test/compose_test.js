@@ -3,7 +3,7 @@ const app = require("../dist");
 
 describe("#composeBasic", () => {
     it("compose keqing heijian", () => {
-        let attribute = app.composeBasic("keqing-70-0", "heijian-70-0");
+        let attribute = app.compose("keqing-70-0", "heijian-70-0");
         expect(attribute).property("life1", 10025);
         expect(attribute).property("attack1", 635);
         expect(attribute).property("defend1", 612);
@@ -18,7 +18,7 @@ describe("#composeBasic", () => {
     })
 
     it("compose keqing limingshenjian", () => {
-        let attribute = app.composeBasic("keqing-70-0", "limingshenjian-60-0");
+        let attribute = app.compose("keqing-70-0", "limingshenjian-60-0");
         expect(attribute).property("life1", 10025);
         expect(attribute).property("attack1", 510);
         expect(attribute).property("defend1", 612);
@@ -132,5 +132,38 @@ describe("#compose", () => {
 
         expect(base).property("attack1", 123);
         expect(base).property("attack2", 123);
+    })
+
+    it ("compose interface test 1", () => {
+        let art = {
+            position: "flower",
+            setName: "berserker",
+            primary: {
+                tag: "life1",
+                value: 645,
+            },
+            secondary: [
+                {
+                    tag: "criticalDamage",
+                    value: 0.044,
+                },
+                {
+                    tag: "elementalMastery",
+                    value: 15,
+                },
+                {
+                    tag: "defend2",
+                    value: 0.053
+                }
+            ],
+        };
+
+        let attribute = app.compose("keqing-70-0", "heijian-70-0", [art]);
+        expect(attribute).property("life2", 645);
+        expect(attribute).property("defend2", 32.436);
+        expect(attribute).property("elementalMastery", 15);
+        expect(attribute).property("criticalDamage", 0.736);
+        expect(attribute).property("attack1", 635);
+        expect(attribute).property("critical", 0.277);
     })
 })

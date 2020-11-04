@@ -2,13 +2,13 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.capitalize = exports.mixAttribute = void 0;
 function mixAttribute(base, mix) {
-    let temp = Object.assign({}, base);
+    // let temp = Object.assign({}, base);
     for (let key in mix) {
         if (typeof base[key] === "number") {
-            temp[key] += mix[key];
+            base[key] += mix[key];
         }
     }
-    return temp;
+    return base;
 }
 exports.mixAttribute = mixAttribute;
 function capitalize(s) {

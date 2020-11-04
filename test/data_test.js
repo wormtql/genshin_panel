@@ -6,12 +6,14 @@ describe("#character-data-test", () => {
     it("getCharacterAttribute keqing-70-0", () => {
         let value = app.getCharacterAttribute("keqing-70-0");
         expect(value).to.eql({
-            "attack1": 247,
-            "life1": 10025,
-            "defend1": 612,
-            "criticalDamage": 0.692,
-            "critical": 0.05,
-            "bCritical": 0.05,
+            primary: {
+                "attack": 247,
+                "life": 10025,
+                "defend": 612,
+            },
+            secondary: {
+                "criticalDamage": 0.192,
+            }
         })
     });
 
@@ -25,9 +27,12 @@ describe("#weapon-data-test", () => {
     it("getWeaponAttribute heijian-70-0", () => {
         let value = app.getWeaponAttribute("heijian-70-0");
         expect(value).to.eql({
-            "primary": 388,
-            "secondary": {
+            primary: {
+                "attack": 388,
+            },
+            secondary: {
                 "critical": 0.227,
+                "bCritical": 0.227,
             }
         })
     });

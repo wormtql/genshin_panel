@@ -1,15 +1,14 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.compose = exports.composeBasic = exports.newAttribute = exports.applyArtifacts = exports.Artifact = exports.getAttribute = exports.getWeaponAttribute = exports.getCharacterAttribute = void 0;
+exports.compose = exports.newAttribute = exports.applyArtifacts = exports.Artifact = exports.getWeaponAttribute = exports.getCharacterAttribute = void 0;
 const numeric_1 = require("./numeric");
 const attribute_1 = require("./attribute");
-const util_1 = require("./util/util");
+// import { mixAttribute, capitalize } from "./util/util";
 const artifact_1 = require("./artifact");
 // 角色与武器数据
 var numeric_2 = require("./numeric");
 Object.defineProperty(exports, "getCharacterAttribute", { enumerable: true, get: function () { return numeric_2.getCharacterAttribute; } });
 Object.defineProperty(exports, "getWeaponAttribute", { enumerable: true, get: function () { return numeric_2.getWeaponAttribute; } });
-Object.defineProperty(exports, "getAttribute", { enumerable: true, get: function () { return numeric_2.getAttribute; } });
 // 圣遗物
 var artifact_2 = require("./artifact");
 Object.defineProperty(exports, "Artifact", { enumerable: true, get: function () { return artifact_2.Artifact; } });
@@ -17,25 +16,60 @@ Object.defineProperty(exports, "applyArtifacts", { enumerable: true, get: functi
 // 属性
 var attribute_2 = require("./attribute");
 Object.defineProperty(exports, "newAttribute", { enumerable: true, get: function () { return attribute_2.newAttribute; } });
-function composeBasic(character, weapon) {
-    let a1 = numeric_1.getCharacterAttribute(character);
-    let a2 = numeric_1.getWeaponAttribute(weapon);
-    if (a1 === null || a2 === null) {
+function createArtifact(obj) {
+    try {
+        let art = new artifact_1.Artifact(obj.position, obj.setName);
+        art.setPrimaryTag(obj.primary.tag, obj.primary.value);
+        for (let i = 0; i < obj.secondary.length; i++) {
+            let temp = obj.secondary[i];
+            art.addSecondaryTag(temp.tag, temp.value);
+        }
+        return art;
+    }
+    catch (err) {
         return null;
     }
-    let base = attribute_1.newAttribute();
-    let temp = util_1.mixAttribute(base, a1);
-    numeric_1.addWeaponAttribute(temp, a2);
-    return temp;
 }
-exports.composeBasic = composeBasic;
 function compose(character, weapon, artifacts, params) {
-    let base = composeBasic(character, weapon);
-    if (base === null) {
+    let base = attribute_1.newAttribute();
+    let a1 = numeric_1.getCharacterAttribute(character);
+    if (a1 === null) {
         return null;
+    }
+    let a2 = numeric_1.getWeaponAttribute(weapon);
+    if (a2 === null) {
+        return null;
+    }
+    numeric_1.applyCharacterBase(base, a1);
+    numeric_1.applyWeaponBase(base, a2);
+    numeric_1.applyCharacterSecondary(base, a1);
+    numeric_1.applyWeaponSecondary(base, a2);
+    if (!artifacts || artifacts.length === 0) {
+        return base;
     }
     params = params || {};
-    artifact_1.apply(base, artifacts, params);
+    if (artifacts[0] instanceof artifact_1.Artifact) {
+        artifact_1.apply(base, artifacts, params);
+    }
+    else {
+        let arts = [];
+        for (let i = 0; i < artifacts.length; i++) {
+            let art = createArtifact(artifacts[i]);
+            if (art !== null) {
+                arts.push(art);
+            }
+        }
+        artifact_1.apply(base, arts, params);
+    }
     return base;
 }
 exports.compose = compose;
+// export function compose(character: string, weapon: string, artifacts: Artifact[], params?: Param): Attribute | null {
+//     let base: Attribute | null = composeBasic(character, weapon);
+//     if (base === null) {
+//         return null;
+//     }
+//     params = params || {};
+//     applyArtifacts(base, artifacts, params);
+//     return base;
+// }

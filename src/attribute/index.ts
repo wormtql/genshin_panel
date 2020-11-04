@@ -15,9 +15,9 @@ export function newAttribute(): Attribute {
         defend2: 0,            // 增加防御力
 
 
-        critical: 0,           // 暴击率
-        bCritical: 0,          // 重击暴击率
-        criticalDamage: 0,     // 暴击伤害
+        critical: 0.05,        // 暴击率
+        bCritical: 0.05,       // 重击暴击率
+        criticalDamage: 0.5,   // 暴击伤害
 
         thunderRes: 0,         // 雷元素抗性
         fireRes: 0,            //

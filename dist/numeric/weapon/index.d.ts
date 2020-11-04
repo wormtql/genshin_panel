@@ -1,4 +1,4 @@
-import { Weapon } from "./type";
 import { Attribute } from "../../attribute";
-export declare function getAttribute(what: string): Weapon | null;
-export declare function addWeaponAttribute(attribute: Attribute, weaponAttribute: Weapon): void;
+export declare function applyBase(attribute: Attribute, w: any): void;
+export declare function applySecondary(attribute: Attribute, w: any): void;
+export declare function getAttribute(what: string): any;

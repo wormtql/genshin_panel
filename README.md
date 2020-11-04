@@ -1,5 +1,6 @@
 # 《原神》面板计算器
-[![Build Status](https://travis-ci.org/wormtql/genshin_panel.svg?branch=main)](https://travis-ci.org/wormtql/genshin_panel)
+[![Build Status](https://travis-ci.org/wormtql/genshin_panel.svg?branch=main)](https://travis-ci.org/wormtql/genshin_panel)  
+
 模拟角色、装备、圣遗物的搭配，得出最终面板。
 
 注：最终面板与实际面板有出入，这是因为游戏中的圣遗物只保留到小数点后一位，实际上这之后的小数位数并不是零。  
@@ -19,60 +20,44 @@ npm install genshin_panel
 const genshin = require("genshin_panel");
 
 // 刻晴70级未突破，黑剑70级未突破，无圣遗物
-let attribute = genshin.compose("keqing-70-0", "heijian-70-0", []);
+let attribute = genshin.compose("keqing-70-0", "heijian-70-0");
 
 // 刻晴70级未突破，黎明神剑70级突破，无圣遗物
-let attribute2 = genshin.compose("keqing-70-0", "limingshenjian-70-1". []);
+let attribute2 = genshin.compose("keqing-70-0", "limingshenjian-70-1");
 ```
 
 ## 添加圣遗物：
 ```js
 const genshin = require("genshin_panel");
 
-// 如雷的盛怒
-let art = new genshin.Artifact("flower", "thunderingFury");
-art.setPrimaryTag("life1", 2291);
-art.addSecondaryTag("critical", 0.031);
-art.addSecondaryTag("defend2", 0.047);
-art.addSecondaryTag("life2", 0.037);
-art.addSecondaryTag("elementalMastery", 19);
+let art = {
+    position: "flower",
+    setName: "berserker", // 战狂
+    primary: {
+        tag: "life1",
+        value: 645,
+    },
+    secondary: [
+        {
+            tag: "criticalDamage",
+            value: 0.044,
+        },
+        {
+            tag: "elementalMastery",
+            value: 15,
+        },
+        {
+            tag: "defend2",
+            value: 0.053
+        }
+    ],
+};
 
-// 战狂
-let art2 = new genshin.Artifact("feather", "berserker");
-art2.setPrimaryTag("attack1", 232);
-art2.addSecondaryTag("defend1", 13);
-art2.addSecondaryTag("attack2", 0.042);
-art2.addSecondaryTag("criticalDamage", 0.099);
-art2.addSecondaryTag("life1", 406);
-
-// 如雷的盛怒
-let art3 = new genshin.Artifact("sand", "thunderingFury");
-art3.setPrimaryTag("attack2", 0.348);
-art3.addSecondaryTag("defend1", 15);
-art3.addSecondaryTag("recharge", 0.145);
-art3.addSecondaryTag("life2", 0.042);
-art3.addSecondaryTag("critical", 0.025);
-
-// 行者之心
-let art4 = new genshin.Artifact("cup", "resolutionOfSojourner");
-art4.setPrimaryTag("thunderBonus", 0.348);
-art4.addSecondaryTag("defend1", 46);
-art4.addSecondaryTag("attack1", 11);
-art4.addSecondaryTag("recharge", 0.052);
-art4.addSecondaryTag("elementalMastery", 32);
-
-// 战狂
-let art5 = new genshin.Artifact("head", "berserker");
-art5.setPrimaryTag("critical", 0.232);
-art5.addSecondaryTag("attack1", 30);
-art5.addSecondaryTag("defend1", 31);
-art5.addSecondaryTag("criticalDamage", 0.056);
-art5.addSecondaryTag("life1", 215);
-
-// 包含如雷2件套、战狂2件套的加成效果
-let attribute = genshin.compose("keqing-70-0", "heijian-70-0", [art, art2, art3, art4, art5]);
-console.log(attribute);
+let attribute = app.compose("keqing-70-0", "heijian-70-0", [art]);
 ```
+
+[所有套装名称](src/artifact/artifact_type.ts)  
+
 
 ## 自定义基础面板
 ```js
@@ -88,11 +73,6 @@ let attribute = Object.assign(genshin.newAttribute(), {
 genshin.applyArtifacts(attribute, []);
 ```
 
-## 支持的人物
-- keqing-70-0
-
-## 支持的武器
-- 黎明神剑20-80级
-- 黑剑20-80级
-
-## 
+## 其他
+[支持的角色](src/numeric/character)
+[支持的武器](src/numeric/weapon)

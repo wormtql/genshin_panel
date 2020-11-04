@@ -1,12 +1,20 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.addWeaponAttribute = exports.getAttribute = void 0;
-const heijian_1 = require("./sword/heijian");
-const limingshenjian_1 = require("./sword/limingshenjian");
-const data = {
-    "heijian": heijian_1.heijianData,
-    "limingshenjian": limingshenjian_1.limingshenjianData,
-};
+exports.getAttribute = exports.applySecondary = exports.applyBase = void 0;
+// import { mixAttribute } from "../../util/util";
+const common_1 = require("../../common/common");
+const sword_1 = require("./sword");
+const data = Object.assign({}, sword_1.swordData);
+function applyBase(attribute, w) {
+    attribute.attack1 += w.primary.attack;
+}
+exports.applyBase = applyBase;
+function applySecondary(attribute, w) {
+    for (let key in w.secondary) {
+        common_1.applySingle(attribute, key, w.secondary[key]);
+    }
+}
+exports.applySecondary = applySecondary;
 function getAttribute(what) {
     for (let key in data) {
         if (what.indexOf(key) !== -1) {
@@ -15,40 +23,8 @@ function getAttribute(what) {
                 return null;
             }
             return temp;
-            // let base = newAttribute();
-            // return mixAttribute(base, temp);
         }
     }
     return null;
 }
 exports.getAttribute = getAttribute;
-function applySingle(attribute, tag, value) {
-    switch (tag) {
-        case "attack2":
-            attribute.attack2 += attribute.attack1 * value;
-            break;
-        case "critical":
-            attribute.critical += value;
-            attribute.bCritical += value;
-            break;
-        case "criticalDamage":
-            attribute.criticalDamage += value;
-            break;
-        case "elementalMastery":
-            attribute.elementalMastery += value;
-            break;
-        case "life2":
-            attribute.life2 += attribute.life1 * value;
-            break;
-        case "recharge":
-            attribute.recharge += value;
-            break;
-    }
-}
-function addWeaponAttribute(attribute, weaponAttribute) {
-    attribute.attack1 += weaponAttribute.primary;
-    for (let key in weaponAttribute.secondary) {
-        applySingle(attribute, key, weaponAttribute.secondary[key]);
-    }
-}
-exports.addWeaponAttribute = addWeaponAttribute;

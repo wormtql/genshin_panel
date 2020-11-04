@@ -1,16 +1,14 @@
-import { Attribute } from "../attribute";
-import { getAttribute as getCharacterAttribute } from "./character";
-import { getAttribute as getWeaponAttribute } from "./weapon";
+// import { Attribute } from "../attribute";
+export {
+    getAttribute as getCharacterAttribute,
+    applyBase as applyCharacterBase,
+    applySecondary as applyCharacterSecondary
+} from "./character";
 
-export { getAttribute as getCharacterAttribute } from "./character";
-export { getAttribute as getWeaponAttribute, addWeaponAttribute } from "./weapon";
+export {
+    getAttribute as getWeaponAttribute,
+    applyBase as applyWeaponBase,
+    applySecondary as applyWeaponSecondary
+} from "./weapon";
 
-export function getAttribute(what: string): any {
-    let temp = getCharacterAttribute(what);
-
-    if (temp === null) {
-        temp = getWeaponAttribute(what);
-    }
-
-    return temp;
-}
+export { supportedCharacters } from "./character";
