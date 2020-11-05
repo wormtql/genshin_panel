@@ -222,3 +222,9 @@ describe("#compose", () => {
         expect(attribute).property("critical", 0.277);
     })
 })
+
+// describe("#adverturer test", () => {
+//     it("set2 test", () => {
+
+//     })
+// })

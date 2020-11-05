@@ -10,12 +10,12 @@
 
 更多角色与武器正在更新中
 
-## 安装
+## 安装，install
 ```bash
 npm install genshin_panel
 ```
 
-## 基本使用
+## 基本使用，basic usage
 ```js
 const genshin = require("genshin_panel");
 
@@ -26,40 +26,28 @@ let attribute = genshin.compose("keqing-70-0", "heijian-70-0");
 let attribute2 = genshin.compose("keqing-70-0", "limingshenjian-70-1");
 ```
 
-## 添加圣遗物：
+## 添加圣遗物，add artifacts
 ```js
 const genshin = require("genshin_panel");
 
 let art = {
     position: "flower",
-    setName: "berserker", // 战狂
+    setName: "berserker",
     primary: {
-        tag: "life1",
-        value: 645,
+        "life1": 645
     },
-    secondary: [
-        {
-            tag: "criticalDamage",
-            value: 0.044,
-        },
-        {
-            tag: "elementalMastery",
-            value: 15,
-        },
-        {
-            tag: "defend2",
-            value: 0.053
-        }
-    ],
+    secondary: {
+        "criticalDamage": 0.044,
+        "elementalMastery": 15,
+        "defend2": 0.053,
+    }
 };
 
 let attribute = app.compose("keqing-70-0", "heijian-70-0", [art]);
 ```
 
-[所有套装名称](src/artifact/artifact_type.ts)  
 
-
-## 自定义基础面板
+## 自定义基础面板，custom
 ```js
 const genshin = require("genshin_panel");
 
@@ -74,5 +62,7 @@ genshin.applyArtifacts(attribute, []);
 ```
 
 ## 其他
-[支持的角色](src/numeric/character)
-[支持的武器](src/numeric/weapon)
+[支持的角色，supported character](src/numeric/character)  
+[支持的武器, supported weapon](src/numeric/weapon)  
+[所有套装名称, all set name](src/artifact/artifact_type.ts)  
+[面板属性列表, panel properties](src/attribute/attribute.ts)
