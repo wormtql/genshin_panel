@@ -1,5 +1,5 @@
 import { Attribute } from "../../attribute/attribute";
-import { Artifact } from "../artifact";
+import { IArtifact } from "../artifact";
 import { ArtifactSet, SET_COUNT } from "../artifact_type";
 import { Param } from "../param";
 
@@ -68,7 +68,7 @@ applyFunctions["viridescentVenerer"] = viridescentVenererApply;
 applyFunctions["wandererTroupe"] = wandererTroupeApply;
 
 
-export function apply(attribute: Attribute, params: Param, artifacts: Artifact[]) {
+export function apply(attribute: Attribute, params: Param, artifacts: IArtifact[]) {
     let temp: any = {};
 
     for (let i = 0; i < artifacts.length; i++) {

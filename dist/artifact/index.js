@@ -1,13 +1,22 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.apply = exports.Artifact = void 0;
+exports.apply = void 0;
 const index_1 = require("./effects/index");
-var artifact_1 = require("./artifact");
-Object.defineProperty(exports, "Artifact", { enumerable: true, get: function () { return artifact_1.Artifact; } });
+const common_1 = require("../common/common");
+// export { TagType } from "./tag_type";
+function applySingleArt(attribute, art) {
+    for (let key in art.primary) {
+        common_1.applySingle(attribute, key, art.primary[key]);
+    }
+    for (let key in art.secondary) {
+        common_1.applySingle(attribute, key, art.secondary[key]);
+    }
+}
 // 计算圣遗物（包括套装）加成后的面板
 function apply(attribute, artifacts, param) {
     for (let i = 0; i < artifacts.length; i++) {
-        artifacts[i].apply(attribute);
+        const art = artifacts[i];
+        applySingleArt(attribute, art);
     }
     index_1.apply(attribute, param, artifacts);
 }

@@ -20,8 +20,9 @@ export function applySecondary(attribute: Attribute, w: any) {
 }
 
 export function getAttribute(what: string): any {
+    // console.log("666" + what);
     for (let key in data) {
-        if (what.indexOf(key) === 1) {
+        if (what.indexOf(key) === 0) {
             let temp = data[key][what];
             if (typeof temp === "undefined") {
                 return null;

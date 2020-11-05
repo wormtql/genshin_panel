@@ -1,8 +1,7 @@
 import { Attribute } from "../attribute/attribute";
 import { Param } from "./param";
-import { Artifact } from "./artifact";
+import { IArtifact } from "./artifact";
 export { ArtifactSet, ArtifactType } from "./artifact_type";
-export { Artifact } from "./artifact";
+export { IArtifact } from "./artifact";
 export { Param } from "./param";
-export { TagType } from "./tag_type";
-export declare function apply(attribute: Attribute, artifacts: Artifact[], param: Param): void;
+export declare function apply(attribute: Attribute, artifacts: IArtifact[], param: Param): void;

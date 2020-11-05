@@ -1,14 +1,12 @@
-import { Attribute } from "../attribute/attribute";
 import { ArtifactSet, ArtifactType } from "./artifact_type";
-import { TagType, TagName } from "./tag_type";
-export declare class Artifact {
+import { TagName } from "./tag_type";
+export interface IArtifact {
     position: ArtifactType;
     setName: ArtifactSet;
-    mainTag: TagType;
-    secondaryTags: TagType[];
-    constructor(position: ArtifactType, setName: ArtifactSet);
-    setPrimaryTag(tag: TagName, value: number): void;
-    addSecondaryTag(tag: TagName, value: number): void;
-    private applySingle;
-    apply(attribute: Attribute): void;
+    primary: {
+        [key in TagName]: number;
+    };
+    secondary: {
+        [key in TagName]: number;
+    };
 }

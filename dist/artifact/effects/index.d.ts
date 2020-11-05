@@ -1,4 +1,4 @@
 import { Attribute } from "../../attribute/attribute";
-import { Artifact } from "../artifact";
+import { IArtifact } from "../artifact";
 import { Param } from "../param";
-export declare function apply(attribute: Attribute, params: Param, artifacts: Artifact[]): void;
+export declare function apply(attribute: Attribute, params: Param, artifacts: IArtifact[]): void;

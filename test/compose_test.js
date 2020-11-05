@@ -28,11 +28,18 @@ describe("#composeBasic", () => {
 
 describe("#compose", () => {
     it("artifacts test 1", () => {
-        let art = new app.Artifact("flower", "berserker");
-        art.setPrimaryTag("life1", 645);
-        art.addSecondaryTag("criticalDamage", 0.044);
-        art.addSecondaryTag("elementalMastery", 15);
-        art.addSecondaryTag("defend2", 0.053);
+        let art = {
+            position: "flower",
+            setName: "berserker",
+            primary: {
+                "life1": 645
+            },
+            secondary: {
+                "criticalDamage": 0.044,
+                "elementalMastery": 15,
+                "defend2": 0.053,
+            }
+        };
 
         let attribute = app.compose("keqing-70-0", "heijian-70-0", [art]);
         expect(attribute).property("life2", 645);
@@ -52,18 +59,32 @@ describe("#compose", () => {
     });
 
     it ("artifacts berserker set test", () => {
-        let art = new app.Artifact("flower", "berserker");
-        art.setPrimaryTag("life1", 645);
-        art.addSecondaryTag("criticalDamage", 0.044);
-        art.addSecondaryTag("elementalMastery", 15);
-        art.addSecondaryTag("defend2", 0.053);
+        let art = {
+            position: "flower",
+            setName: "berserker",
+            primary: {
+                "life1": 645
+            },
+            secondary: {
+                "criticalDamage": 0.044,
+                "elementalMastery": 15,
+                "defend2": 0.053,
+            }
+        };
 
-        let art2 = new app.Artifact("feather", "berserker");
-        art2.setPrimaryTag("attack1", 232);
-        art2.addSecondaryTag("defend1", 13);
-        art2.addSecondaryTag("attack2", 0.042);
-        art2.addSecondaryTag("criticalDamage", 0.099);
-        art2.addSecondaryTag("life1", 406);
+        let art2 = {
+            position: "feather",
+            setName: "berserker",
+            primary: {
+                "attack1": 232,
+            },
+            secondary: {
+                "defend1": 13,
+                "attack2": 0.042,
+                "criticalDamage": 0.099,
+                "life1": 406,
+            }
+        }
 
         let attribute = app.compose("keqing-70-0", "heijian-70-0", [art, art2]);
         expect(attribute).property("life2", 1051);
@@ -72,40 +93,75 @@ describe("#compose", () => {
     });
 
     it("artifacts test 2", () => {
-        let art = new app.Artifact("flower", "thunderingFury");
-        art.setPrimaryTag("life1", 2291);
-        art.addSecondaryTag("critical", 0.031);
-        art.addSecondaryTag("defend2", 0.047);
-        art.addSecondaryTag("life2", 0.037);
-        art.addSecondaryTag("elementalMastery", 19);
+        let art = {
+            position: "flower",
+            setName: "thunderingFury",
+            primary: {
+                "life1": 2291
+            },
+            secondary: {
+                "critical": 0.031,
+                "life2": 0.037,
+                "defend2": 0.047,
+                "elementalMastery": 19
+            }
+        };
 
-        let art2 = new app.Artifact("feather", "berserker");
-        art2.setPrimaryTag("attack1", 232);
-        art2.addSecondaryTag("defend1", 13);
-        art2.addSecondaryTag("attack2", 0.042);
-        art2.addSecondaryTag("criticalDamage", 0.099);
-        art2.addSecondaryTag("life1", 406);
+        let art2 = {
+            position: "feather",
+            setName: "berserker",
+            primary: {
+                "attack1": 232,
+            },
+            secondary: {
+                "defend1": 13,
+                "attack2": 0.042,
+                "criticalDamage": 0.099,
+                "life1": 406,
+            }
+        };
 
-        let art3 = new app.Artifact("sand", "thunderingFury");
-        art3.setPrimaryTag("attack2", 0.348);
-        art3.addSecondaryTag("defend1", 15);
-        art3.addSecondaryTag("recharge", 0.145);
-        art3.addSecondaryTag("life2", 0.042);
-        art3.addSecondaryTag("critical", 0.025);
+        let art3 = {
+            position: "sand",
+            setName: "thunderingFury",
+            primary: {
+                "attack2": 0.348,
+            },
+            secondary: {
+                "defend1": 15,
+                "recharge": 0.145,
+                "life2": 0.042,
+                "critical": 0.025
+            }
+        }
 
-        let art4 = new app.Artifact("cup", "resolutionOfSojourner");
-        art4.setPrimaryTag("thunderBonus", 0.348);
-        art4.addSecondaryTag("defend1", 46);
-        art4.addSecondaryTag("attack1", 11);
-        art4.addSecondaryTag("recharge", 0.052);
-        art4.addSecondaryTag("elementalMastery", 32);
+        let art4 = {
+            position: "cup",
+            setName: "resolutionOfSojourner",
+            primary: {
+                "thunderBonus": 0.348,
+            },
+            secondary: {
+                "defend1": 46,
+                "attack1": 11,
+                "recharge": 0.052,
+                "elementalMastery": 32,
+            }
+        }
 
-        let art5 = new app.Artifact("head", "berserker");
-        art5.setPrimaryTag("critical", 0.232);
-        art5.addSecondaryTag("attack1", 30);
-        art5.addSecondaryTag("defend1", 31);
-        art5.addSecondaryTag("criticalDamage", 0.056);
-        art5.addSecondaryTag("life1", 215);
+        let art5 = {
+            position: "head",
+            setName: "berserker",
+            primary: {
+                "critical": 0.232,
+            },
+            secondary: {
+                "attack1": 30,
+                "defend1": 31,
+                "criticalDamage": 0.056,
+                "life1": 215
+            }
+        };
 
         let attribute = app.compose("keqing-70-0", "heijian-70-0", [art, art2, art3, art4, art5]);
         // expect(attribute).eql({});
@@ -126,8 +182,17 @@ describe("#compose", () => {
         });
         // let base = app.newAttribute();
 
-        let art = new app.Artifact("flower", "berserker");
-        art.setPrimaryTag("attack1", 123);
+        let art = {
+            position: "flower",
+            setName: "berserker",
+            primary: {
+                "attack1": 123,
+            },
+            secondary: {
+
+            }
+        };
+
         app.applyArtifacts(base, [art]);
 
         expect(base).property("attack1", 123);
@@ -139,23 +204,13 @@ describe("#compose", () => {
             position: "flower",
             setName: "berserker",
             primary: {
-                tag: "life1",
-                value: 645,
+                "life1": 645,
             },
-            secondary: [
-                {
-                    tag: "criticalDamage",
-                    value: 0.044,
-                },
-                {
-                    tag: "elementalMastery",
-                    value: 15,
-                },
-                {
-                    tag: "defend2",
-                    value: 0.053
-                }
-            ],
+            secondary: {
+                "criticalDamage": 0.044,
+                "elementalMastery": 15,
+                "defend2": 0.053
+            }
         };
 
         let attribute = app.compose("keqing-70-0", "heijian-70-0", [art]);
