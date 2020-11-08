@@ -1,6 +1,7 @@
 import { Attribute } from "./attribute";
 import { Param, IArtifact } from "./artifact";
-export { getCharacterAttribute, getWeaponAttribute } from "./numeric";
+import { CharacterInterface, WeaponInterface } from "./common/type";
+export { getCharacterAttribute, getWeaponAttribute, supportedCharacters, supportedWeapons } from "./numeric";
 export { apply as applyArtifacts } from "./artifact";
 export { newAttribute } from "./attribute";
-export declare function compose(character: string, weapon: string, artifacts?: IArtifact[], params?: Param): Attribute | null;
+export declare function compose(character: string | CharacterInterface, weapon: string | WeaponInterface, artifacts?: IArtifact[], params?: Param): Attribute | null;

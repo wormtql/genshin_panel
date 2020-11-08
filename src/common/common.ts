@@ -1,7 +1,7 @@
-import { TagName } from "../artifact/tag_type";
+import { PrimaryTagName, SecondaryTagName } from "./type";
 import { Attribute } from "../attribute";
 
-export function applySingle(attribute: Attribute, name: TagName, value: number) {
+export function applySecondaryTag(attribute: Attribute, name: SecondaryTagName, value: number) {
     switch(name) {
         case "attack1":
             attribute.attack2 += value;
@@ -57,6 +57,20 @@ export function applySingle(attribute: Attribute, name: TagName, value: number) 
             break;
         case "physicalBonus":
             attribute.physicalBonus += value;
+            break;
+    }
+}
+
+export function applyPrimaryTag(attribute: Attribute, name: PrimaryTagName, value: number) {
+    switch(name) {
+        case "attack":
+            attribute.attack1 += value;
+            break;
+        case "defend":
+            attribute.defend1 += value;
+            break;
+        case "life":
+            attribute.life1 += value;
             break;
     }
 }

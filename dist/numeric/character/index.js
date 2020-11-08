@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.getAttribute = exports.applySecondary = exports.applyBase = exports.supportedCharacters = void 0;
+exports.getAttribute = exports.applySecondary = exports.applyPrimary = exports.supportedCharacters = void 0;
+// import { mixAttribute } from "../../util/util";
 const common_1 = require("../../common/common");
 const diluke_1 = require("./fire/diluke");
 const keli_1 = require("./fire/keli");
@@ -53,15 +54,15 @@ for (let key in data) {
 exports.supportedCharacters = function () {
     return _supportedCharacters;
 };
-function applyBase(attribute, c) {
-    attribute.life1 += c.primary.life;
-    attribute.attack1 += c.primary.attack;
-    attribute.defend1 += c.primary.defend;
+function applyPrimary(attribute, c) {
+    for (let key in c.primary) {
+        common_1.applyPrimaryTag(attribute, key, c.primary[key]);
+    }
 }
-exports.applyBase = applyBase;
+exports.applyPrimary = applyPrimary;
 function applySecondary(attribute, c) {
     for (let key in c.secondary) {
-        common_1.applySingle(attribute, key, c.secondary[key]);
+        common_1.applySecondaryTag(attribute, key, c.secondary[key]);
     }
 }
 exports.applySecondary = applySecondary;

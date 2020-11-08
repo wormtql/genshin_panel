@@ -199,7 +199,7 @@ describe("#compose", () => {
         expect(base).property("attack2", 123);
     })
 
-    it ("compose interface test 1", () => {
+    it("compose interface test 1", () => {
         let art = {
             position: "flower",
             setName: "berserker",
@@ -220,6 +220,21 @@ describe("#compose", () => {
         expect(attribute).property("criticalDamage", 0.736);
         expect(attribute).property("attack1", 635);
         expect(attribute).property("critical", 0.277);
+    })
+
+    it("compose custom weapon", () => {
+        let weapon = {
+            primary: {
+                "attack": 100,
+            },
+            secondary: {
+                "elementalMastery": 100,
+            }
+        };
+
+        let attribute = app.compose("keqing-70-0", weapon);
+        expect(attribute).property("attack2", 0);
+        expect(attribute).property("attack1", 347);
     })
 })
 

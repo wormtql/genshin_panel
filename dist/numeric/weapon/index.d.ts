@@ -1,4 +1,6 @@
 import { Attribute } from "../../attribute";
-export declare function applyBase(attribute: Attribute, w: any): void;
-export declare function applySecondary(attribute: Attribute, w: any): void;
-export declare function getAttribute(what: string): any;
+import { WeaponInterface } from "../../common/type";
+export declare const supportedWeapons: () => string[];
+export declare function applyPrimary(attribute: Attribute, w: WeaponInterface): void;
+export declare function applySecondary(attribute: Attribute, w: WeaponInterface): void;
+export declare function getAttribute(what: string): WeaponInterface | null;

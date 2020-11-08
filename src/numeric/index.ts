@@ -1,14 +1,15 @@
 // import { Attribute } from "../attribute";
 export {
     getAttribute as getCharacterAttribute,
-    applyBase as applyCharacterBase,
+    applyPrimary as applyCharacterPrimary,
     applySecondary as applyCharacterSecondary
 } from "./character";
 
 export {
     getAttribute as getWeaponAttribute,
-    applyBase as applyWeaponBase,
+    applyPrimary as applyWeaponPrimary,
     applySecondary as applyWeaponSecondary
 } from "./weapon";
 
 export { supportedCharacters } from "./character";
+export { supportedWeapons } from "./weapon";

@@ -1,3 +1,4 @@
-import { TagName } from "../artifact/tag_type";
+import { PrimaryTagName, SecondaryTagName } from "./type";
 import { Attribute } from "../attribute";
-export declare function applySingle(attribute: Attribute, name: TagName, value: number): void;
+export declare function applySecondaryTag(attribute: Attribute, name: SecondaryTagName, value: number): void;
+export declare function applyPrimaryTag(attribute: Attribute, name: PrimaryTagName, value: number): void;

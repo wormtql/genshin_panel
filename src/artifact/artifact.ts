@@ -1,15 +1,15 @@
 import { Attribute } from "../attribute/attribute";
-import { ArtifactSet, ArtifactType, SET_COUNT } from "./artifact_type"
-import { TagType, TagName } from "./tag_type"
+import { ArtifactSet, ArtifactType, SET_COUNT } from "./artifact_type";
+import { SecondaryTagName } from "../common/type";
 
 export interface IArtifact {
     position: ArtifactType,
     setName: ArtifactSet,
     primary: {
-        [key in TagName]: number
+        [key in SecondaryTagName]: number
     },
     secondary: {
-        [key in TagName]: number
+        [key in SecondaryTagName]: number
     },
 }
 

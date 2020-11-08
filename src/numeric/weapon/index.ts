@@ -1,25 +1,40 @@
 import { Attribute, newAttribute } from "../../attribute";
-// import { mixAttribute } from "../../util/util";
-import { applySingle } from "../../common/common";
-import { TagName } from "../../artifact/tag_type";
+import { applyPrimaryTag, applySecondaryTag } from "../../common/common";
+import { PrimaryTagName, SecondaryTagName, WeaponInterface } from "../../common/type";
 
 import { swordData } from "./sword";
+import { sword2Data } from "./sword2";
+import { stickData } from "./stick";
 
 const data = {
     ...swordData,
+    ...sword2Data,
+    ...stickData,
 }
 
-export function applyBase(attribute: Attribute, w: any) {
-    attribute.attack1 += w.primary.attack;
+const _supportedWeapons: string[] = [];
+for (let key in data) {
+    for (let key2 in data[key]) {
+        _supportedWeapons.push(key2);
+    }
 }
+export const supportedWeapons = function(): string[] {
+    return _supportedWeapons;
+};
 
-export function applySecondary(attribute: Attribute, w: any) {
-    for (let key in w.secondary) {
-        applySingle(attribute, key as TagName, w.secondary[key]);
+export function applyPrimary(attribute: Attribute, w: WeaponInterface) {
+    for (let key in w.primary) {
+        applyPrimaryTag(attribute, key as PrimaryTagName, w.primary[key]);
     }
 }
 
-export function getAttribute(what: string): any {
+export function applySecondary(attribute: Attribute, w: WeaponInterface) {
+    for (let key in w.secondary) {
+        applySecondaryTag(attribute, key as SecondaryTagName, w.secondary[key]);
+    }
+}
+
+export function getAttribute(what: string): WeaponInterface | null {
     // console.log("666" + what);
     for (let key in data) {
         if (what.indexOf(key) === 0) {

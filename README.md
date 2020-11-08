@@ -62,6 +62,7 @@ genshin.applyArtifacts(attribute, []);
 ```
 
 ## 其他
+[副词条列表](src/artifact/tag_type.ts)
 [支持的角色，supported character](src/numeric/character)  
 [支持的武器, supported weapon](src/numeric/weapon)  
 [所有套装名称, all set name](src/artifact/artifact_type.ts)  

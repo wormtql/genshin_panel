@@ -77,4 +77,107 @@ export declare const swordData: {
             secondary: {};
         };
     };
+    xialilongyin: {
+        "xialilongyin-70-0": {
+            primary: {
+                attack: number;
+            };
+            secondary: {
+                attack2: number;
+            };
+        };
+    };
+    xifengjian: {
+        "xifengjian-70-0": {
+            primary: {
+                attack: number;
+            };
+            secondary: {
+                recharge: number;
+            };
+        };
+    };
+    tiefengci: {
+        "tiefengci-70-0": {
+            primary: {
+                attack: number;
+            };
+            secondary: {
+                elementalMastery: number;
+            };
+        };
+    };
+    jilijian: {
+        "jilijian-70-0": {
+            primary: {
+                attack: number;
+            };
+            secondary: {
+                recharge: number;
+            };
+        };
+    };
+    zongshichangjian: {
+        "zongshichangjian-70-0": {
+            primary: {
+                attack: number;
+            };
+            secondary: {
+                attack2: number;
+            };
+        };
+    };
+    dijian: {
+        "dijian-70-0": {
+            primary: {
+                attack: number;
+            };
+            secondary: {
+                attack2: number;
+            };
+        };
+    };
+    shizuozhanyan: {
+        "shizuozhanyan-70-0": {
+            primary: {
+                attack: number;
+            };
+            secondary: {
+                physicalBonus: number;
+            };
+        };
+    };
+    heiyanchangjian: {
+        "heiyanchangjian-70-0": {
+            primary: {
+                attack: number;
+            };
+            secondary: {
+                criticalDamage: number;
+            };
+        };
+    };
+    tiankongzhiren: {
+        "tiankongzhiren-70-0": {
+            primary: {
+                attack: number;
+            };
+            secondary: {
+                recharge: number;
+                critical: number;
+                bCritical: number;
+            };
+        };
+    };
+    fengyingjian: {
+        "fengyingjian-70-0": {
+            primary: {
+                attack: number;
+            };
+            secondary: {
+                physicalBonus: number;
+                attack2: number;
+            };
+        };
+    };
 };

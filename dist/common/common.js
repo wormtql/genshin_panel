@@ -1,7 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.applySingle = void 0;
-function applySingle(attribute, name, value) {
+exports.applyPrimaryTag = exports.applySecondaryTag = void 0;
+function applySecondaryTag(attribute, name, value) {
     switch (name) {
         case "attack1":
             attribute.attack2 += value;
@@ -60,4 +60,18 @@ function applySingle(attribute, name, value) {
             break;
     }
 }
-exports.applySingle = applySingle;
+exports.applySecondaryTag = applySecondaryTag;
+function applyPrimaryTag(attribute, name, value) {
+    switch (name) {
+        case "attack":
+            attribute.attack1 += value;
+            break;
+        case "defend":
+            attribute.defend1 += value;
+            break;
+        case "life":
+            attribute.life1 += value;
+            break;
+    }
+}
+exports.applyPrimaryTag = applyPrimaryTag;

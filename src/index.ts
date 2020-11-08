@@ -1,19 +1,19 @@
 import { Attribute } from "./attribute";
 import {
     getCharacterAttribute, getWeaponAttribute,
-    applyCharacterBase, applyWeaponBase,
+    applyCharacterPrimary, applyWeaponPrimary,
     applyCharacterSecondary, applyWeaponSecondary
 } from "./numeric";
 import { newAttribute } from "./attribute";
-// import { mixAttribute, capitalize } from "./util/util";
 import { apply as applyArtifacts, Param, IArtifact, ArtifactType, ArtifactSet } from "./artifact";
-import { TagName } from "./artifact/tag_type";
+import { CharacterInterface, WeaponInterface } from "./common/type";
 
 // 角色与武器数据
 export {
-    getCharacterAttribute, getWeaponAttribute
+    getCharacterAttribute, getWeaponAttribute,
     // applyCharacterBase, applyWeaponBase,
     // applyCharacterSecondary, applyWeaponSecondary
+    supportedCharacters, supportedWeapons
 } from "./numeric";
 
 // 圣遗物
@@ -38,21 +38,38 @@ export { newAttribute } from "./attribute";
 //     }
 // }
 
-export function compose(character: string, weapon: string, artifacts?: IArtifact[], params?: Param): Attribute | null {
+export function compose(
+    character: string | CharacterInterface,
+    weapon: string | WeaponInterface,
+    artifacts?: IArtifact[],
+    params?: Param
+): Attribute | null {
     let base = newAttribute();
 
-    let a1 = getCharacterAttribute(character);
-    if (a1 === null) {
-        return null;
+    let a1: CharacterInterface;
+    if (typeof character === "object") {
+        a1 = character;
+    } else {
+        let temp = getCharacterAttribute(character);
+        if (temp === null) {
+            return null;
+        }
+        a1 = temp;
     }
 
-    let a2 = getWeaponAttribute(weapon);
-    if (a2 === null) {
-        return null;
+    let a2: WeaponInterface;
+    if (typeof weapon === "object") {
+        a2 = weapon;
+    } else {
+        let temp = getWeaponAttribute(weapon);
+        if (temp === null) {
+            return null;
+        }
+        a2 = temp;
     }
     
-    applyCharacterBase(base, a1);
-    applyWeaponBase(base, a2);
+    applyCharacterPrimary(base, a1);
+    applyWeaponPrimary(base, a2);
     applyCharacterSecondary(base, a1);
     applyWeaponSecondary(base, a2);
 

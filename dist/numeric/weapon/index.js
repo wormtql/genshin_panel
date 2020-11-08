@@ -1,17 +1,29 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.getAttribute = exports.applySecondary = exports.applyBase = void 0;
-// import { mixAttribute } from "../../util/util";
+exports.getAttribute = exports.applySecondary = exports.applyPrimary = exports.supportedWeapons = void 0;
 const common_1 = require("../../common/common");
 const sword_1 = require("./sword");
-const data = Object.assign({}, sword_1.swordData);
-function applyBase(attribute, w) {
-    attribute.attack1 += w.primary.attack;
+const sword2_1 = require("./sword2");
+const stick_1 = require("./stick");
+const data = Object.assign(Object.assign(Object.assign({}, sword_1.swordData), sword2_1.sword2Data), stick_1.stickData);
+const _supportedWeapons = [];
+for (let key in data) {
+    for (let key2 in data[key]) {
+        _supportedWeapons.push(key2);
+    }
 }
-exports.applyBase = applyBase;
+exports.supportedWeapons = function () {
+    return _supportedWeapons;
+};
+function applyPrimary(attribute, w) {
+    for (let key in w.primary) {
+        common_1.applyPrimaryTag(attribute, key, w.primary[key]);
+    }
+}
+exports.applyPrimary = applyPrimary;
 function applySecondary(attribute, w) {
     for (let key in w.secondary) {
-        common_1.applySingle(attribute, key, w.secondary[key]);
+        common_1.applySecondaryTag(attribute, key, w.secondary[key]);
     }
 }
 exports.applySecondary = applySecondary;

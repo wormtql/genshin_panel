@@ -1,6 +1,6 @@
 import { Attribute, newAttribute } from "../../attribute/index";
-import { mixAttribute } from "../../util/util";
-import { applySingle } from "../../common/common";
+// import { mixAttribute } from "../../util/util";
+import { applyPrimaryTag, applySecondaryTag } from "../../common/common";
 
 import { dilukeData } from "./fire/diluke";
 import { keliData } from "./fire/keli";
@@ -27,8 +27,7 @@ import { chongyunData } from "./ice/chongyun";
 
 import { nuoaierData } from "./rock/nuoaier";
 import { ningguangData } from "./rock/ningguang";
-
-import { TagName } from "../../artifact/tag_type";
+import { CharacterInterface, PrimaryTagName, SecondaryTagName } from "../../common/type";
 
 
 const data = {
@@ -69,19 +68,19 @@ export const supportedCharacters = function(): string[] {
     return _supportedCharacters;
 };
 
-export function applyBase(attribute: Attribute, c: any) {
-    attribute.life1 += c.primary.life;
-    attribute.attack1 += c.primary.attack;
-    attribute.defend1 += c.primary.defend;
-}
-
-export function applySecondary(attribute: Attribute, c: any) {
-    for (let key in c.secondary) {
-        applySingle(attribute, key as TagName, c.secondary[key]);
+export function applyPrimary(attribute: Attribute, c: CharacterInterface) {
+    for (let key in c.primary) {
+        applyPrimaryTag(attribute, key as PrimaryTagName, c.primary[key]);
     }
 }
 
-export function getAttribute(what: string): any {
+export function applySecondary(attribute: Attribute, c: CharacterInterface) {
+    for (let key in c.secondary) {
+        applySecondaryTag(attribute, key as SecondaryTagName, c.secondary[key]);
+    }
+}
+
+export function getAttribute(what: string): CharacterInterface | null {
     // let base: Attribute = newAttribute();
 
     for (let key in data) {

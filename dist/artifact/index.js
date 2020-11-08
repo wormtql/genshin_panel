@@ -6,10 +6,10 @@ const common_1 = require("../common/common");
 // export { TagType } from "./tag_type";
 function applySingleArt(attribute, art) {
     for (let key in art.primary) {
-        common_1.applySingle(attribute, key, art.primary[key]);
+        common_1.applySecondaryTag(attribute, key, art.primary[key]);
     }
     for (let key in art.secondary) {
-        common_1.applySingle(attribute, key, art.secondary[key]);
+        common_1.applySecondaryTag(attribute, key, art.secondary[key]);
     }
 }
 // 计算圣遗物（包括套装）加成后的面板

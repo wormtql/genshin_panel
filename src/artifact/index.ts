@@ -2,8 +2,8 @@ import { Attribute } from "../attribute/attribute";
 import { apply as applyEffect } from "./effects/index";
 import { Param } from "./param";
 import { IArtifact } from "./artifact";
-import { applySingle } from "../common/common";
-import { TagName } from "./tag_type";
+import { applySecondaryTag } from "../common/common";
+import { SecondaryTagName } from "../common/type";
 
 export { ArtifactSet, ArtifactType } from "./artifact_type";
 export { IArtifact } from "./artifact";
@@ -13,10 +13,10 @@ export { Param } from "./param";
 
 function applySingleArt(attribute: Attribute, art: IArtifact) {
     for (let key in art.primary) {
-        applySingle(attribute, key as TagName, art.primary[key]);
+        applySecondaryTag(attribute, key as SecondaryTagName, art.primary[key]);
     }
     for (let key in art.secondary) {
-        applySingle(attribute, key as TagName, art.secondary[key]);
+        applySecondaryTag(attribute, key as SecondaryTagName, art.secondary[key]);
     }
 }
 
