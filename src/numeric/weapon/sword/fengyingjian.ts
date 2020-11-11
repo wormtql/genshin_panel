@@ -5,7 +5,7 @@ export const fengyingjianData = {
         },
         secondary: {
             "physicalBonus": 0.341,
-            "attack2": 0.2,
+            // "attack2": 0.2,
         }
     },
 }

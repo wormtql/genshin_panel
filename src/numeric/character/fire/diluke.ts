@@ -7,7 +7,6 @@ export const dilukeData = {
         },
         secondary: {
             "critical": 0.144,
-            "bCritiacl": 0.144,
         }
     },
 }

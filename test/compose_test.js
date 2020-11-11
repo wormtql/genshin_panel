@@ -236,6 +236,12 @@ describe("#compose", () => {
         expect(attribute).property("attack2", 0);
         expect(attribute).property("attack1", 347);
     })
+
+    it("critical test", () => {
+        let attribute = app.compose("diluke-70-0", "jilidajian-70-0");
+
+        expect(attribute).property("bCritical", 0.194);
+    })
 })
 
 // describe("#adverturer test", () => {

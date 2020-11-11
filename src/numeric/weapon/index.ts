@@ -5,11 +5,15 @@ import { PrimaryTagName, SecondaryTagName, WeaponInterface } from "../../common/
 import { swordData } from "./sword";
 import { sword2Data } from "./sword2";
 import { stickData } from "./stick";
+import { bookData } from "./book";
+import { bowData } from "./bow";
 
 const data = {
     ...swordData,
     ...sword2Data,
     ...stickData,
+    ...bookData,
+    ...bowData,
 }
 
 const _supportedWeapons: string[] = [];

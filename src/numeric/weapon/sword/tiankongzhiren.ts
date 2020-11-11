@@ -5,8 +5,8 @@ export const tiankongzhirenData = {
         },
         secondary: {
             "recharge": 0.454,
-            "critical": 0.04,
-            "bCritical": 0.04,
+            // "critical": 0.04,
+            // "bCritical": 0.04,
         }
     },
 }

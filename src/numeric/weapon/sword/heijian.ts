@@ -53,7 +53,6 @@ export const heijianData = {
         },
         secondary: {
             "critical": 0.227,
-            "bCritical": 0.227,
         }
     },
     // "heijian-70-1": {
