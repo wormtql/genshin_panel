@@ -6,7 +6,6 @@ export declare const swordData: {
             };
             secondary: {
                 critical: number;
-                bCritical: number;
             };
         };
     };
@@ -164,8 +163,6 @@ export declare const swordData: {
             };
             secondary: {
                 recharge: number;
-                critical: number;
-                bCritical: number;
             };
         };
     };
@@ -176,7 +173,6 @@ export declare const swordData: {
             };
             secondary: {
                 physicalBonus: number;
-                attack2: number;
             };
         };
     };

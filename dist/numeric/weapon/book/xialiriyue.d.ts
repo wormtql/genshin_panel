@@ -1,5 +1,5 @@
-export declare const baiyingqiangData: {
-    "baiyingqiang-70-0": {
+export declare const xialiriyueData: {
+    "xialiriyue-70-0": {
         primary: {
             attack: number;
         };

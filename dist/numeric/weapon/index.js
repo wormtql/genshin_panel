@@ -5,7 +5,9 @@ const common_1 = require("../../common/common");
 const sword_1 = require("./sword");
 const sword2_1 = require("./sword2");
 const stick_1 = require("./stick");
-const data = Object.assign(Object.assign(Object.assign({}, sword_1.swordData), sword2_1.sword2Data), stick_1.stickData);
+const book_1 = require("./book");
+const bow_1 = require("./bow");
+const data = Object.assign(Object.assign(Object.assign(Object.assign(Object.assign({}, sword_1.swordData), sword2_1.sword2Data), stick_1.stickData), book_1.bookData), bow_1.bowData);
 const _supportedWeapons = [];
 for (let key in data) {
     for (let key2 in data[key]) {

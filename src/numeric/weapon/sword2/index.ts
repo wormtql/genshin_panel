@@ -12,7 +12,7 @@ import { tiankongzhiaoData } from "./tiankongzhiao";
 import { yucaiData } from "./yucai";
 
 export const sword2Data = {
-    "fetiandayujian": feitiandayujianData,
+    "feitiandayujian": feitiandayujianData,
     "yilifuren": yilifurenData,
     "tieyingkuojian": tieyingkuojianData,
     "xifengdajian": xifengdajianData,

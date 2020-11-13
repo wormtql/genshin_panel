@@ -7,7 +7,6 @@ export declare const dilukeData: {
         };
         secondary: {
             critical: number;
-            bCritiacl: number;
         };
     };
 };

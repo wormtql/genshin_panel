@@ -5,7 +5,6 @@ export declare const heijianData: {
         };
         secondary: {
             critical: number;
-            bCritical: number;
         };
     };
 };

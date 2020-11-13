@@ -1,16 +1,6 @@
-export declare const stickData: {
-    baiyingqiang: {
-        "baiyingqiang-70-0": {
-            primary: {
-                attack: number;
-            };
-            secondary: {
-                critical: number;
-            };
-        };
-    };
-    yuemao: {
-        "yuemao-50-0": {
+export declare const bowData: {
+    zongshichanggong: {
+        "zongshichanggong-70-0": {
             primary: {
                 attack: number;
             };
@@ -19,8 +9,18 @@ export declare const stickData: {
             };
         };
     };
-    heiyanciqiang: {
-        "heiyanciqiang-70-0": {
+    shizuodanyue: {
+        "shizuodanyue-70-0": {
+            primary: {
+                attack: number;
+            };
+            secondary: {
+                attack2: number;
+            };
+        };
+    };
+    heiyanzhangong: {
+        "heiyanzhangong-70-0": {
             primary: {
                 attack: number;
             };
@@ -29,8 +29,8 @@ export declare const stickData: {
             };
         };
     };
-    shizuoxinglian: {
-        "shizuoxinglian-70-0": {
+    xifengliegong: {
+        "xifengliegong-70-0": {
             primary: {
                 attack: number;
             };
@@ -39,18 +39,8 @@ export declare const stickData: {
             };
         };
     };
-    xifengchangqiang: {
-        "xifengchangqiang-70-0": {
-            primary: {
-                attack: number;
-            };
-            secondary: {
-                recharge: number;
-            };
-        };
-    };
-    liuyuezhen: {
-        "liuyuezhen-70-0": {
+    ganglungong: {
+        "ganglungong-70-0": {
             primary: {
                 attack: number;
             };
@@ -59,8 +49,18 @@ export declare const stickData: {
             };
         };
     };
-    xialimiechen: {
-        "xialimiechen-70-0": {
+    cangcuiliegong: {
+        "cangcuiliegong-70-0": {
+            primary: {
+                attack: number;
+            };
+            secondary: {
+                critical: number;
+            };
+        };
+    };
+    juexian: {
+        "juexian-70-0": {
             primary: {
                 attack: number;
             };
@@ -69,13 +69,33 @@ export declare const stickData: {
             };
         };
     };
-    juedouzhiqiang: {
-        "juedouzhiqiang-70-0": {
+    gongcang: {
+        "gongcang-70-0": {
             primary: {
                 attack: number;
             };
             secondary: {
-                critical: number;
+                attack2: number;
+            };
+        };
+    };
+    jiligong: {
+        "jiligong-70-0": {
+            primary: {
+                attack: number;
+            };
+            secondary: {
+                recharge: number;
+            };
+        };
+    };
+    amosizhigong: {
+        "amosizhigong-70-0": {
+            primary: {
+                attack: number;
+            };
+            secondary: {
+                attack2: number;
             };
         };
     };

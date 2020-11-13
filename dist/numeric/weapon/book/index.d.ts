@@ -1,26 +1,16 @@
-export declare const stickData: {
-    baiyingqiang: {
-        "baiyingqiang-70-0": {
+export declare const bookData: {
+    taolongyingjietan: {
+        "taolongyingjietan-70-0": {
             primary: {
                 attack: number;
             };
             secondary: {
-                critical: number;
+                life2: number;
             };
         };
     };
-    yuemao: {
-        "yuemao-50-0": {
-            primary: {
-                attack: number;
-            };
-            secondary: {
-                attack2: number;
-            };
-        };
-    };
-    heiyanciqiang: {
-        "heiyanciqiang-70-0": {
+    liulangyuezhang: {
+        "liulangyuezhang-70-0": {
             primary: {
                 attack: number;
             };
@@ -29,38 +19,28 @@ export declare const stickData: {
             };
         };
     };
-    shizuoxinglian: {
-        "shizuoxinglian-70-0": {
+    shizuojinpo: {
+        "shizuojinpo-70-0": {
             primary: {
                 attack: number;
             };
             secondary: {
-                recharge: number;
+                life2: number;
             };
         };
     };
-    xifengchangqiang: {
-        "xifengchangqiang-70-0": {
+    zhaoxin: {
+        "zhaoxin-70-0": {
             primary: {
                 attack: number;
             };
             secondary: {
-                recharge: number;
+                attack2: number;
             };
         };
     };
-    liuyuezhen: {
-        "liuyuezhen-70-0": {
-            primary: {
-                attack: number;
-            };
-            secondary: {
-                physicalBonus: number;
-            };
-        };
-    };
-    xialimiechen: {
-        "xialimiechen-70-0": {
+    wanguozhuhaitupu: {
+        "wanguozhuhaitupu-70-0": {
             primary: {
                 attack: number;
             };
@@ -69,8 +49,48 @@ export declare const stickData: {
             };
         };
     };
-    juedouzhiqiang: {
-        "juedouzhiqiang-70-0": {
+    xialiriyue: {
+        "xialiriyue-70-0": {
+            primary: {
+                attack: number;
+            };
+            secondary: {
+                critical: number;
+            };
+        };
+    };
+    heiyanfeiyu: {
+        "heiyanfeiyu-70-0": {
+            primary: {
+                attack: number;
+            };
+            secondary: {
+                criticalDamage: number;
+            };
+        };
+    };
+    jilicanzhang: {
+        "jilicanzhang-70-0": {
+            primary: {
+                attack: number;
+            };
+            secondary: {
+                elementalMastery: number;
+            };
+        };
+    };
+    tiankongzhijuan: {
+        "tiankongzhijuan-70-0": {
+            primary: {
+                attack: number;
+            };
+            secondary: {
+                attack2: number;
+            };
+        };
+    };
+    sifengyuandian: {
+        "sifengyuandian-70-0": {
             primary: {
                 attack: number;
             };

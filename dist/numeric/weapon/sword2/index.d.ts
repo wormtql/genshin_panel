@@ -1,5 +1,5 @@
 export declare const sword2Data: {
-    fetiandayujian: {
+    feitiandayujian: {
         "feitiandayujian-70-0": {
             primary: {
                 attack: number;

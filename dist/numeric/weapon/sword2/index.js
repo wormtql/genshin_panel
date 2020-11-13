@@ -14,7 +14,7 @@ const langdemolu_1 = require("./langdemolu");
 const tiankongzhiao_1 = require("./tiankongzhiao");
 const yucai_1 = require("./yucai");
 exports.sword2Data = {
-    "fetiandayujian": feitiandayujian_1.feitiandayujianData,
+    "feitiandayujian": feitiandayujian_1.feitiandayujianData,
     "yilifuren": yilifuren_1.yilifurenData,
     "tieyingkuojian": tieyingkuojian_1.tieyingkuojianData,
     "xifengdajian": xifengdajian_1.xifengdajianData,

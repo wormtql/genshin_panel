@@ -32,7 +32,6 @@ describe("#weapon-data-test", () => {
             },
             secondary: {
                 "critical": 0.227,
-                "bCritical": 0.227,
             }
         })
     });

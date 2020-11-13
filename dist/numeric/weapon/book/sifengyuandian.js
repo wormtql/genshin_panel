@@ -1,13 +1,13 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.tiankongzhirenData = void 0;
-exports.tiankongzhirenData = {
-    "tiankongzhiren-70-0": {
+exports.sifengyuandianData = void 0;
+exports.sifengyuandianData = {
+    "sifengyuandian-70-0": {
         primary: {
             "attack": 457,
         },
         secondary: {
-            "recharge": 0.454,
+            "critical": 0.273,
         }
     },
 };
