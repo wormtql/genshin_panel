@@ -99,4 +99,14 @@ export declare const bookData: {
             };
         };
     };
+    chenshizhisuo: {
+        "chenshizhisuo-60-0": {
+            primary: {
+                attack: number;
+            };
+            secondary: {
+                attack2: number;
+            };
+        };
+    };
 };

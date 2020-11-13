@@ -8,6 +8,7 @@ import { heiyanfeiyuData } from "./heiyanfeiyu";
 import { jilicanzhangData } from "./jilicanzhang";
 import { tiankongzhijuanData } from "./tiankongzhijuan";
 import { sifengyuandianData } from "./sifengyuandian";
+import { chenshizhisuoData } from "./chenshizhisuo";
 
 export const bookData = {
     "taolongyingjietan": taolongyingjietanData,
@@ -20,4 +21,5 @@ export const bookData = {
     "jilicanzhang": jilicanzhangData,
     "tiankongzhijuan": tiankongzhijuanData,
     "sifengyuandian": sifengyuandianData,
+    "chenshizhisuo": chenshizhisuoData,
 }

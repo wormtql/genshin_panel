@@ -11,6 +11,7 @@ const heiyanfeiyu_1 = require("./heiyanfeiyu");
 const jilicanzhang_1 = require("./jilicanzhang");
 const tiankongzhijuan_1 = require("./tiankongzhijuan");
 const sifengyuandian_1 = require("./sifengyuandian");
+const chenshizhisuo_1 = require("./chenshizhisuo");
 exports.bookData = {
     "taolongyingjietan": taolongyingjietan_1.taolongyingjietanData,
     "liulangyuezhang": liulangyuezhang_1.liulangyuezhangData,
@@ -22,4 +23,5 @@ exports.bookData = {
     "jilicanzhang": jilicanzhang_1.jilicanzhangData,
     "tiankongzhijuan": tiankongzhijuan_1.tiankongzhijuanData,
     "sifengyuandian": sifengyuandian_1.sifengyuandianData,
+    "chenshizhisuo": chenshizhisuo_1.chenshizhisuoData,
 };

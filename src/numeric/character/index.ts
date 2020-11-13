@@ -10,6 +10,7 @@ import { xianglingData } from "./fire/xiangling";
 import { monaData } from "./water/mona";
 import { babalaData } from "./water/babala";
 import { xingqiuData } from "./water/xingqiu";
+import { dadaliyaData } from "./water/dadaliya";
 
 import { qinData } from "./wind/qin";
 import { wendiData } from "./wind/wendi";
@@ -24,6 +25,7 @@ import { feixieerData } from "./thunder/feixieer";
 import { qiqiData } from "./ice/qiqi";
 import { kaiyaData } from "./ice/kaiya";
 import { chongyunData } from "./ice/chongyun";
+import { diaonaData } from "./ice/diaona";
 
 import { nuoaierData } from "./rock/nuoaier";
 import { ningguangData } from "./rock/ningguang";
@@ -39,6 +41,7 @@ const data = {
     "mona": monaData,
     "babala": babalaData,
     "xingqiu": xingqiuData,
+    "dadaliya": dadaliyaData,
 
     "qin": qinData,
     "wendi": wendiData,
@@ -53,6 +56,7 @@ const data = {
     "qiqi": qiqiData,
     "kaiya": kaiyaData,
     "chongyun": chongyunData,
+    "diaona": diaonaData,
 
     "nuoaier": nuoaierData,
     "ningguang": ningguangData,

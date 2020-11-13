@@ -10,6 +10,7 @@ const xiangling_1 = require("./fire/xiangling");
 const mona_1 = require("./water/mona");
 const babala_1 = require("./water/babala");
 const xingqiu_1 = require("./water/xingqiu");
+const dadaliya_1 = require("./water/dadaliya");
 const qin_1 = require("./wind/qin");
 const wendi_1 = require("./wind/wendi");
 const shatang_1 = require("./wind/shatang");
@@ -21,6 +22,7 @@ const feixieer_1 = require("./thunder/feixieer");
 const qiqi_1 = require("./ice/qiqi");
 const kaiya_1 = require("./ice/kaiya");
 const chongyun_1 = require("./ice/chongyun");
+const diaona_1 = require("./ice/diaona");
 const nuoaier_1 = require("./rock/nuoaier");
 const ningguang_1 = require("./rock/ningguang");
 const data = {
@@ -31,6 +33,7 @@ const data = {
     "mona": mona_1.monaData,
     "babala": babala_1.babalaData,
     "xingqiu": xingqiu_1.xingqiuData,
+    "dadaliya": dadaliya_1.dadaliyaData,
     "qin": qin_1.qinData,
     "wendi": wendi_1.wendiData,
     "shatang": shatang_1.shatangData,
@@ -42,6 +45,7 @@ const data = {
     "qiqi": qiqi_1.qiqiData,
     "kaiya": kaiya_1.kaiyaData,
     "chongyun": chongyun_1.chongyunData,
+    "diaona": diaona_1.diaonaData,
     "nuoaier": nuoaier_1.nuoaierData,
     "ningguang": ningguang_1.ningguangData,
 };
