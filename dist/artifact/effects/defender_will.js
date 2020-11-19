@@ -1,7 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 function apply2(attribute, params) {
-    attribute.defend2 += attribute.defend1 * 0.3;
+    attribute.defend3 += attribute.defend1 * 0.3;
 }
 function apply4(attribute, params) {
     if (typeof attribute.tag !== "undefined") {

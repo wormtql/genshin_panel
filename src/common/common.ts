@@ -27,6 +27,8 @@ export function applySecondaryTag(attribute: Attribute, name: SecondaryTagName, 
         case "critical":
             attribute.critical += value;
             attribute.bCritical += value;
+            attribute.eCritical += value;
+            attribute.qCritical += value;
             break;
         case "criticalDamage":
             attribute.criticalDamage += value;

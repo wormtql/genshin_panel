@@ -41,3 +41,29 @@ describe("#weapon-data-test", () => {
         expect(value).null;
     });
 })
+
+describe("#artifact-info-test", () => {
+    it("test1", () => {
+        let value = app.getArtifactInfo("战狂");
+
+        expect(value).eql({
+            chs: "战狂",
+            min: 2,
+            max: 4,
+            set2: "暴击率提高12%",
+            set4: "生命值低于70%时，暴击率额外提高24%",
+        });
+    })
+
+    it("test2", () => {
+        let value = app.getArtifactInfo("berserker");
+
+        expect(value).eql({
+            chs: "战狂",
+            min: 2,
+            max: 4,
+            set2: "暴击率提高12%",
+            set4: "生命值低于70%时，暴击率额外提高24%",
+        });
+    })
+})

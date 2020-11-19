@@ -7,7 +7,7 @@ function apply2(attribute: Attribute, params: Param) {
 
 function apply4(attribute: Attribute, params: Param) {
     if (params.countCrimsonWitch1) {
-        attribute.bonus += 0.4;
+        // attribute.bonus += 0.4;
         attribute.fireBonus += 1;
         if (typeof attribute.tag !== "undefined") {
             attribute.tag.push("炽烈的炎之魔女4件套叠加效果记为叠加2次，即100%");

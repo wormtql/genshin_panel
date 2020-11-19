@@ -16,3 +16,11 @@ export interface CharacterInterface {
         [key in SecondaryTagName]: number;
     };
 }
+export interface BonusItemInterface {
+    primary: {
+        [key in PrimaryTagName]: number;
+    };
+    secondary: {
+        [key in SecondaryTagName]: number;
+    };
+}

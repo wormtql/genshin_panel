@@ -2,7 +2,7 @@ import { Attribute } from "../../attribute/attribute"
 import { Param } from "../param";
 
 function apply2(attribute: Attribute, params: Param) {
-    attribute.attack2 += attribute.attack1 * 0.18;
+    attribute.attack3 += attribute.attack1 * 0.18;
 }
 
 function apply4(attribute: Attribute, params: Param) {

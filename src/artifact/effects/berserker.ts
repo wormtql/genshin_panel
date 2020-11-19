@@ -4,12 +4,16 @@ import { Param } from "../param";
 function apply2(attribute: Attribute, params: Param) {
     attribute.critical += 0.12;
     attribute.bCritical += 0.12;
+    attribute.qCritical += 0.12;
+    attribute.eCritical += 0.12;
 }
 
 function apply4(attribute: Attribute, paarms: Param) {
     if (paarms.countBerserker) {
         attribute.critical += 0.24;
         attribute.bCritical += 0.24;
+        attribute.eCritical += 0.24;
+        attribute.qCritical += 0.24;
         if (typeof attribute.tag !== "undefined") {
             attribute.tag.push("计入战狂4件套效果");
         }

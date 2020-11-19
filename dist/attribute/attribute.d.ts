@@ -1,15 +1,19 @@
 export interface Attribute {
     cureEffect: number;
     curedEffect: number;
-    life: number;
     life1: number;
     life2: number;
+    life3: number;
     attack1: number;
     attack2: number;
+    attack3: number;
     defend1: number;
     defend2: number;
+    defend3: number;
     critical: number;
     bCritical: number;
+    eCritical: number;
+    qCritical: number;
     criticalDamage: number;
     thunderRes: number;
     fireRes: number;

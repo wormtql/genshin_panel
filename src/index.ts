@@ -6,7 +6,16 @@ import {
 } from "./numeric";
 import { newAttribute } from "./attribute";
 import { apply as applyArtifacts, Param, IArtifact, ArtifactType, ArtifactSet } from "./artifact";
-import { CharacterInterface, WeaponInterface } from "./common/type";
+// import { CharacterInterface, WeaponInterface, BonusItemInterface } from "./common/type";
+import {
+    CharacterInterface,
+    WeaponInterface,
+    BonusItemInterface,
+    applyPrimaryTag,
+    applySecondaryTag,
+    PrimaryTagName,
+    SecondaryTagName,
+} from "./common";
 
 // 角色与武器数据
 export {
@@ -22,21 +31,9 @@ export { apply as applyArtifacts } from "./artifact";
 // 属性
 export { newAttribute } from "./attribute";
 
+// 信息
+export * from "./info";
 
-// function createArtifact(obj: IArtifact): Artifact | null {
-//     try {
-//         let art = new Artifact(obj.position, obj.setName);
-//         art.setPrimaryTag(obj.primary.tag, obj.primary.value);
-//         for (let i = 0; i < obj.secondary.length; i++) {
-//             let temp = obj.secondary[i];
-//             art.addSecondaryTag(temp.tag, temp.value);
-//         }
-    
-//         return art;
-//     } catch (err) {
-//         return null;
-//     }
-// }
 
 export function compose(
     character: string | CharacterInterface,
@@ -81,6 +78,33 @@ export function compose(
     applyArtifacts(base, artifacts, params);
     
     return base;
+}
+
+export function compose2(bonus: BonusItemInterface[], arts?: IArtifact[], params?: Param): Attribute {
+    let ret = newAttribute();
+
+    for (let i = 0; i < bonus.length; i++) {
+        let item: BonusItemInterface = bonus[i];
+        for (let key in item.primary) {
+            applyPrimaryTag(ret, key as PrimaryTagName, item.primary[key]);
+        }
+    }
+
+    for (let i = 0; i < bonus.length; i++) {
+        let item: BonusItemInterface = bonus[i];
+        for (let key in item.secondary) {
+            applySecondaryTag(ret, key as SecondaryTagName, item.secondary[key]);
+        }
+    }
+
+    if (!arts || arts.length === 0) {
+        return ret;
+    }
+
+    params = params || {};
+    applyArtifacts(ret, arts, params);
+
+    return ret;
 }
 
 // export function compose(character: string, weapon: string, artifacts: Artifact[], params?: Param): Attribute | null {

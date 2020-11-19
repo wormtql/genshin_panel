@@ -6,17 +6,24 @@ export function newAttribute(): Attribute {
     return {
         cureEffect: 0,         // 治疗效果 
         curedEffect: 0,        // 被治疗效果
-        life: 0,               // 当前生命值
+
         life1: 0,              // 基础生命值
         life2: 0,              // 增加生命值
+        life3: 0,
+
         attack1: 0,            // 基础攻击力
         attack2: 0,            // 增加攻击力
+        attack3: 0,
+
         defend1: 0,            // 基础防御力
         defend2: 0,            // 增加防御力
+        defend3: 0,
 
 
         critical: 0.05,        // 暴击率
         bCritical: 0.05,       // 重击暴击率
+        eCritical: 0.05,
+        qCritical: 0.05,
         criticalDamage: 0.5,   // 暴击伤害
 
         thunderRes: 0,         // 雷元素抗性

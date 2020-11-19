@@ -31,8 +31,8 @@ let attribute2 = genshin.compose("keqing-70-0", "limingshenjian-70-1");
 const genshin = require("genshin_panel");
 
 let art = {
-    position: "flower",
-    setName: "berserker",
+    position: "flower",             // 生之花
+    setName: "berserker",           // 战狂
     primary: {
         "life1": 645
     },
@@ -43,7 +43,7 @@ let art = {
     }
 };
 
-let attribute = app.compose("keqing-70-0", "heijian-70-0", [art]);
+let attribute = genshin.compose("keqing-70-0", "heijian-70-0", [art]);
 ```
 
 
@@ -51,14 +51,16 @@ let attribute = app.compose("keqing-70-0", "heijian-70-0", [art]);
 ```js
 const genshin = require("genshin_panel");
 
-let attribute = Object.assign(genshin.newAttribute(), {
-    // 基础攻击力
-    "attack1": 123,
-    // 基础生命值
-    "life1": 1234
-});
+let weapon = {
+    primary: {
+        attack: 100,
+    },
+    secondary: {
+        critical: 0.2,
+    }
+};
 
-genshin.applyArtifacts(attribute, []);
+let attribute = genshin.compose("keqing-70-0", weapon);
 ```
 
 ## 其他

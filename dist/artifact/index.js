@@ -1,9 +1,12 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.apply = void 0;
+exports.apply = exports.getParamList = void 0;
 const index_1 = require("./effects/index");
 const common_1 = require("../common/common");
+var param_1 = require("./param");
+Object.defineProperty(exports, "getParamList", { enumerable: true, get: function () { return param_1.getParamList; } });
 // export { TagType } from "./tag_type";
+// 计算单个圣遗物加成后的面板
 function applySingleArt(attribute, art) {
     for (let key in art.primary) {
         common_1.applySecondaryTag(attribute, key, art.primary[key]);

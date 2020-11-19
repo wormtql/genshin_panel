@@ -8,9 +8,11 @@ import { SecondaryTagName } from "../common/type";
 export { ArtifactSet, ArtifactType } from "./artifact_type";
 export { IArtifact } from "./artifact";
 export { Param } from "./param";
+export { getParamList } from "./param";
 // export { TagType } from "./tag_type";
 
 
+// 计算单个圣遗物加成后的面板
 function applySingleArt(attribute: Attribute, art: IArtifact) {
     for (let key in art.primary) {
         applySecondaryTag(attribute, key as SecondaryTagName, art.primary[key]);

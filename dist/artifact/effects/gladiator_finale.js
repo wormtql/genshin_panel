@@ -1,7 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 function apply2(attribute, params) {
-    attribute.attack2 += attribute.attack1 * 0.18;
+    attribute.attack3 += attribute.attack1 * 0.18;
 }
 function apply4(attribute, params) {
     if (params.countGladiatorFinale) {

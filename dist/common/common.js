@@ -27,6 +27,8 @@ function applySecondaryTag(attribute, name, value) {
         case "critical":
             attribute.critical += value;
             attribute.bCritical += value;
+            attribute.eCritical += value;
+            attribute.qCritical += value;
             break;
         case "criticalDamage":
             attribute.criticalDamage += value;
