@@ -7,7 +7,7 @@ function applySecondaryTag(attribute, name, value) {
             attribute.attack2 += value;
             break;
         case "attack2":
-            attribute.attack2 += value * attribute.attack1;
+            attribute.attack3 += value * attribute.attack1;
             break;
         case "cureEffect":
             attribute.cureEffect += value;
@@ -16,13 +16,13 @@ function applySecondaryTag(attribute, name, value) {
             attribute.life2 += value;
             break;
         case "life2":
-            attribute.life2 += value * attribute.life1;
+            attribute.life3 += value * attribute.life1;
             break;
         case "defend1":
             attribute.defend2 += value;
             break;
         case "defend2":
-            attribute.defend2 += value * attribute.defend1;
+            attribute.defend3 += value * attribute.defend1;
             break;
         case "critical":
             attribute.critical += value;

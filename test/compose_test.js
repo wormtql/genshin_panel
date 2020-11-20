@@ -43,7 +43,7 @@ describe("#compose", () => {
 
         let attribute = app.compose("keqing-70-0", "heijian-70-0", [art]);
         expect(attribute).property("life2", 645);
-        expect(attribute).property("defend2", 32.436);
+        expect(attribute).property("defend3", 32.436);
         expect(attribute).property("elementalMastery", 15);
         expect(attribute).property("criticalDamage", 0.736);
         expect(attribute).property("attack1", 635);
@@ -166,11 +166,12 @@ describe("#compose", () => {
         let attribute = app.compose("keqing-70-0", "heijian-70-0", [art, art2, art3, art4, art5]);
         // expect(attribute).eql({});
         expect(attribute).property("attack1", 635);
-        expect(attribute).property("attack2", 520.65);
+        expect(attribute).property("attack2", 273);
+        // expect(attribute).property("attack3", 247.65)
         expect(attribute).property("critical", 0.685);
         expect(attribute).property("criticalDamage", 0.847);
         expect(attribute).property("defend1", 612);
-        expect(attribute).property("defend2", 133.764);
+        expect(attribute).property("defend2", 105);
         expect(attribute).property("elementalMastery", 51);
         expect(attribute).property("thunderBonus", 0.498);
         expect(attribute).property("recharge", 1.197);
@@ -215,7 +216,7 @@ describe("#compose", () => {
 
         let attribute = app.compose("keqing-70-0", "heijian-70-0", [art]);
         expect(attribute).property("life2", 645);
-        expect(attribute).property("defend2", 32.436);
+        expect(attribute).property("defend3", 32.436);
         expect(attribute).property("elementalMastery", 15);
         expect(attribute).property("criticalDamage", 0.736);
         expect(attribute).property("attack1", 635);
