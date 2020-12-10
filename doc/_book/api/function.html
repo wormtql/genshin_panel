@@ -1,0 +1,605 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>函数 · 原神面板计算器</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="wormtql">
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="function.html" />
+    
+    
+    <link rel="prev" href="./" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../install.html">
+            
+                <a href="../install.html">
+            
+                    
+                    安装
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../basic_concept/">
+            
+                <a href="../basic_concept/">
+            
+                    
+                    基本概念
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../basic_concept/primary_tag.html">
+            
+                <a href="../basic_concept/primary_tag.html">
+            
+                    
+                    主属性
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../basic_concept/secondary_tag.html">
+            
+                <a href="../basic_concept/secondary_tag.html">
+            
+                    
+                    副属性
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../basic_concept/calculate.html">
+            
+                <a href="../basic_concept/calculate.html">
+            
+                    
+                    计算方法
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    API参考
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter active" data-level="1.4.1" data-path="function.html">
+            
+                <a href="function.html">
+            
+                    
+                    函数
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1.1" data-path="function.html">
+            
+                <a href="function.html#compose">
+            
+                    
+                    compose
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.2" data-path="function.html">
+            
+                <a href="function.html#getcharacterattribute">
+            
+                    
+                    getCharacterAttribute
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.3" data-path="function.html">
+            
+                <a href="function.html#getweaponattribute">
+            
+                    
+                    getWeaponAttribute
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.4" data-path="function.html">
+            
+                <a href="function.html#supportedcharacters">
+            
+                    
+                    supportedCharacters
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.5" data-path="function.html">
+            
+                <a href="function.html#supportedweapons">
+            
+                    
+                    supportedWeapons
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.6" data-path="function.html">
+            
+                <a href="function.html#applyartifacts">
+            
+                    
+                    applyArtifacts
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.7" data-path="function.html">
+            
+                <a href="function.html#newattribute">
+            
+                    
+                    newAttribute
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="struct.html">
+            
+                <a href="struct.html">
+            
+                    
+                    接口与类型
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.2.1" data-path="struct.html">
+            
+                <a href="struct.html#attribute">
+            
+                    
+                    Attribute
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.2" data-path="struct.html">
+            
+                <a href="struct.html#primarytagname">
+            
+                    
+                    PrimaryTagName
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.3" data-path="struct.html">
+            
+                <a href="struct.html#secondarytagname">
+            
+                    
+                    SecondaryTagName
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.4" data-path="struct.html">
+            
+                <a href="struct.html#characterinterface">
+            
+                    
+                    CharacterInterface
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.5" data-path="struct.html">
+            
+                <a href="struct.html#weaponinterface">
+            
+                    
+                    WeaponInterface
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.6" data-path="struct.html">
+            
+                <a href="struct.html#iartifact">
+            
+                    
+                    IArtifact
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.7" data-path="struct.html">
+            
+                <a href="struct.html#artifacttype">
+            
+                    
+                    ArtifactType
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.8" data-path="struct.html">
+            
+                <a href="struct.html#artifactset">
+            
+                    
+                    ArtifactSet
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.9" data-path="struct.html">
+            
+                <a href="struct.html#param">
+            
+                    
+                    Param
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >函数</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="&#x51FD;&#x6570;">&#x51FD;&#x6570;</h1>
+<h2 id="compose">compose</h2>
+<pre><code class="lang-typescript"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">compose</span>(<span class="hljs-params">
+    character: <span class="hljs-built_in">string</span> | CharacterInterface,
+    weapon: <span class="hljs-built_in">string</span> | WeaponInterface,
+    artifacts?: IArtifact[],
+    params?: Param
+</span>): <span class="hljs-title">Attribute</span> | <span class="hljs-title">null</span>
+</span></code></pre>
+<p>&#x8FD4;&#x56DE;&#x6700;&#x7EC8;&#x8BA1;&#x7B97;&#x5F97;&#x5230;&#x7684;&#x9762;&#x677F;&#xFF0C;&#x5982;&#x679C;&#x9884;&#x8BBE;&#x4E0D;&#x5B58;&#x5728;&#xFF0C;&#x5219;&#x8FD4;&#x56DE;null<br>character: &#x4EE3;&#x8868;&#x89D2;&#x8272;&#x7684;&#x9884;&#x8BBE;&#x5B57;&#x7B26;&#x4E32;&#x6216;&#x8005;&#x89D2;&#x8272;&#x7ED3;&#x6784;<br>weapon: &#x4EE3;&#x8868;&#x6B66;&#x5668;&#x9884;&#x8BBE;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#x6216;&#x8005;&#x6B66;&#x5668;&#x7ED3;&#x6784;<br>artifacts: &#x5723;&#x9057;&#x7269;&#x5217;&#x8868;&#xFF0C;&#x53EF;&#x4EE5;&#x4E3A;&#x7A7A;&#x5217;&#x8868;&#x6216;&#x8005;&#x4E3A;undefined<br>params: &#x8BA1;&#x7B97;&#x5723;&#x9057;&#x7269;&#x7684;&#x53C2;&#x6570;</p>
+<h2 id="getcharacterattribute">getCharacterAttribute</h2>
+<pre><code class="lang-typescript"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">getCharacterAttribute</span>(<span class="hljs-params">what: <span class="hljs-built_in">string</span></span>): <span class="hljs-title">CharacterInterface</span> | <span class="hljs-title">null</span>
+</span></code></pre>
+<p>what: &#x4EE3;&#x8868;&#x89D2;&#x8272;&#x9884;&#x8BBE;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#xFF0C;&#x8BE5;&#x5B57;&#x7B26;&#x4E32;&#x7531;&#x4E09;&#x90E8;&#x5206;&#x7EC4;&#x6210;&#xFF0C;&lt;&#x89D2;&#x8272;&#x5168;&#x62FC;&gt;-&lt;&#x7B49;&#x7EA7;&gt;-&lt;&#x662F;&#x5426;&#x7A81;&#x7834;&gt;<br>&#x4F8B;&#x5982;</p>
+<pre><code class="lang-typescript">getCharacterAttribute(<span class="hljs-string">&quot;keqing-70-0&quot;</span>) <span class="hljs-comment">// &#x523B;&#x6674;70&#x7EA7;&#x672A;&#x7A81;&#x7834;</span>
+getCharacterAttribute(<span class="hljs-string">&quot;keqing-70-1&quot;</span>) <span class="hljs-comment">// &#x523B;&#x6674;70&#x7EA7;&#x7A81;&#x7834;</span>
+</code></pre>
+<h2 id="getweaponattribute">getWeaponAttribute</h2>
+<pre><code class="lang-typescript"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">getAttribute</span>(<span class="hljs-params">what: <span class="hljs-built_in">string</span></span>): <span class="hljs-title">WeaponInterface</span> | <span class="hljs-title">null</span>
+</span></code></pre>
+<p>&#x540C;<a href="#getcharacterattribute">getCharacterAttribute</a></p>
+<h2 id="supportedcharacters">supportedCharacters</h2>
+<pre><code class="lang-typescript">supportedCharacters() <span class="hljs-comment">// &#x8FD4;&#x56DE;&#x652F;&#x6301;&#x7684;&#x6240;&#x6709;&#x89D2;&#x8272;&#x9884;&#x8BBE;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#x5217;&#x8868;</span>
+</code></pre>
+<h2 id="supportedweapons">supportedWeapons</h2>
+<p>&#x540C;<a href="#supportedcharacters">supportedCharacters</a></p>
+<h2 id="applyartifacts">applyArtifacts</h2>
+<pre><code class="lang-typescript"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">applyArtifacts</span>(<span class="hljs-params">attribute: Attribute, artifacts: IArtifact[], param: Param</span>)
+</span></code></pre>
+<p>attribute: &#x8981;&#x5E94;&#x7528;&#x5723;&#x9057;&#x7269;&#x7684;&#x5F53;&#x524D;&#x9762;&#x677F;
+artifacts: &#x5723;&#x9057;&#x7269;&#x5217;&#x8868;
+param: &#x5723;&#x9057;&#x7269;&#x53C2;&#x6570;</p>
+<h2 id="newattribute">newAttribute</h2>
+<pre><code class="lang-typescript"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">newAttribute</span>(<span class="hljs-params"></span>): <span class="hljs-title">Attribute</span>
+</span></code></pre>
+<p>&#x8FD4;&#x56DE;&#x7A7A;&#x7684;&#x5C5E;&#x6027;&#x7ED3;&#x6784;<br>&#x5176;&#x4E2D;&#xFF0C;&#x5305;&#x62EC;&#x521D;&#x59CB;&#x66B4;&#x51FB;&#x7387;<em>5%</em>&#x3001;&#x521D;&#x59CB;&#x5145;&#x80FD;&#x6548;&#x7387;<em>1</em>&#x3002;&#x5176;&#x4F59;&#x90FD;&#x662F;0</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="./" class="navigation navigation-prev " aria-label="Previous page: API参考">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="function.html#compose" class="navigation navigation-next " aria-label="Next page: compose">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"函数","level":"1.4.1","depth":2,"next":{"title":"compose","level":"1.4.1.1","depth":3,"anchor":"#compose","path":"api/function.md","ref":"api/function.md#compose","articles":[]},"previous":{"title":"API参考","level":"1.4","depth":1,"path":"api/index.md","ref":"api/index.md","articles":[{"title":"函数","level":"1.4.1","depth":2,"path":"api/function.md","ref":"api/function.md","articles":[{"title":"compose","level":"1.4.1.1","depth":3,"anchor":"#compose","path":"api/function.md","ref":"api/function.md#compose","articles":[]},{"title":"getCharacterAttribute","level":"1.4.1.2","depth":3,"anchor":"#getcharacterattribute","path":"api/function.md","ref":"api/function.md#getcharacterattribute","articles":[]},{"title":"getWeaponAttribute","level":"1.4.1.3","depth":3,"anchor":"#getweaponattribute","path":"api/function.md","ref":"api/function.md#getweaponattribute","articles":[]},{"title":"supportedCharacters","level":"1.4.1.4","depth":3,"anchor":"#supportedcharacters","path":"api/function.md","ref":"api/function.md#supportedcharacters","articles":[]},{"title":"supportedWeapons","level":"1.4.1.5","depth":3,"anchor":"#supportedweapons","path":"api/function.md","ref":"api/function.md#supportedweapons","articles":[]},{"title":"applyArtifacts","level":"1.4.1.6","depth":3,"anchor":"#applyartifacts","path":"api/function.md","ref":"api/function.md#applyartifacts","articles":[]},{"title":"newAttribute","level":"1.4.1.7","depth":3,"anchor":"#newattribute","path":"api/function.md","ref":"api/function.md#newattribute","articles":[]}]},{"title":"接口与类型","level":"1.4.2","depth":2,"path":"api/struct.md","ref":"api/struct.md","articles":[{"title":"Attribute","level":"1.4.2.1","depth":3,"anchor":"#attribute","path":"api/struct.md","ref":"api/struct.md#attribute","articles":[]},{"title":"PrimaryTagName","level":"1.4.2.2","depth":3,"anchor":"#primarytagname","path":"api/struct.md","ref":"api/struct.md#primarytagname","articles":[]},{"title":"SecondaryTagName","level":"1.4.2.3","depth":3,"anchor":"#secondarytagname","path":"api/struct.md","ref":"api/struct.md#secondarytagname","articles":[]},{"title":"CharacterInterface","level":"1.4.2.4","depth":3,"anchor":"#characterinterface","path":"api/struct.md","ref":"api/struct.md#characterinterface","articles":[]},{"title":"WeaponInterface","level":"1.4.2.5","depth":3,"anchor":"#weaponinterface","path":"api/struct.md","ref":"api/struct.md#weaponinterface","articles":[]},{"title":"IArtifact","level":"1.4.2.6","depth":3,"anchor":"#iartifact","path":"api/struct.md","ref":"api/struct.md#iartifact","articles":[]},{"title":"ArtifactType","level":"1.4.2.7","depth":3,"anchor":"#artifacttype","path":"api/struct.md","ref":"api/struct.md#artifacttype","articles":[]},{"title":"ArtifactSet","level":"1.4.2.8","depth":3,"anchor":"#artifactset","path":"api/struct.md","ref":"api/struct.md#artifactset","articles":[]},{"title":"Param","level":"1.4.2.9","depth":3,"anchor":"#param","path":"api/struct.md","ref":"api/struct.md#param","articles":[]}]}]},"dir":"ltr"},"config":{"plugins":["livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"wormtql","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"原神面板计算器","language":"zh-hans","gitbook":"3.2.3","description":"genshin panel calculator"},"file":{"path":"api/function.md","mtime":"2020-12-10T10:23:41.497Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-12-10T10:38:41.201Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

@@ -4,9 +4,15 @@ node_js:
 install:
   - npm install
 
+branches:
+  only:
+    - main
+
 stages:
-  - build
-  - test
+  - name: build
+    if: branch = main
+  - name: test
+    if: branch = main
   - name: deploy
     if: branch = main
 
