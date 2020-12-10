@@ -10,10 +10,16 @@
 
 更多角色与武器正在更新中
 
+
 ## 安装，install
 ```bash
 npm install genshin_panel
 ```
+
+
+## 文档，documentation
+[https://wormtql.gitbook.io/genshin-panel-doc/](https://wormtql.gitbook.io/genshin-panel-doc/)
+
 
 ## 基本使用，basic usage
 ```js
@@ -25,6 +31,7 @@ let attribute = genshin.compose("keqing-70-0", "heijian-70-0");
 // 刻晴70级未突破，黎明神剑70级突破，无圣遗物
 let attribute2 = genshin.compose("keqing-70-0", "limingshenjian-70-1");
 ```
+
 
 ## 添加圣遗物，add artifacts
 ```js
@@ -62,10 +69,3 @@ let weapon = {
 
 let attribute = genshin.compose("keqing-70-0", weapon);
 ```
-
-## 其他
-[副词条列表](src/artifact/tag_type.ts)
-[支持的角色，supported character](src/numeric/character)  
-[支持的武器, supported weapon](src/numeric/weapon)  
-[所有套装名称, all set name](src/artifact/artifact_type.ts)  
-[面板属性列表, panel properties](src/attribute/attribute.ts)
