@@ -1,18 +1,18 @@
-const expect = require("chai").expect;
+// const expect = require("chai").expect;
 
-const app = require("../dist");
+// const app = require("../dist");
 
-describe("#character-data-test", () => {
-    it("test1", () => {
-        let value = app("keqing");
-        console.log(value);
-    });
+// describe("#character-data-test", () => {
+//     it("test1", () => {
+//         let value = app("keqing");
+//         console.log(value);
+//     });
 
-    it("getCharacterAttribute null", () => {
-        let value = app.getCharacterAttribute("asd");
-        expect(value).null;
-    });
-})
+//     it("getCharacterAttribute null", () => {
+//         let value = app.getCharacterAttribute("asd");
+//         expect(value).null;
+//     });
+// })
 
 // describe("#weapon-data-test", () => {
 //     it("getWeaponAttribute heijian-70-0", () => {

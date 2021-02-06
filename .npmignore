@@ -1,4 +1,7 @@
+.cache/
 src/
 test/
 tsconfig.json
 scripts/
+.travis.yml
+webpack.config.json

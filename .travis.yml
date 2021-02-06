@@ -32,5 +32,5 @@ jobs:
         email: 584130248@qq.com
         api_key: "$NPM_TOKEN"
         skip_cleanup: true
-        on:
-          all_branches: true
+        # on:
+        #   all_branches: true

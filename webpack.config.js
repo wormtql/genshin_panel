@@ -1,28 +1,22 @@
 const path = require("path");
+const fs = require("fs");
 
-// module.exports = [
-//     "source-map"
-// ].map(devtool => ({
-//     mode: "development",
-//     entry: "./src/numerics/character/index.ts",
-//     output: {
-//         path: path.resolve(__dirname, "dist"),
-//         filename: "genshin-panel.js",
-//         library: "genshinPanel",
-//         libraryTarget: "umd",
-//     },
-//     devtool,
-//     optimization: {
-//         runtimeChunk: true,
-//     }
-// }))
+class DeleteTsPlugin {
+    apply(compiler) {
+        compiler.hooks.done.tap("Delete Typescript Result Plugin", (stats) => {
+            fs.rmdirSync(path.resolve(__dirname, "dist", "ts_dist"), {recursive: true})
+        })
+    }
+}
+
+let mode = "production";
 
 module.exports = {
-    mode: "development",
+    mode,
     entry: "./src/index.ts",
     output: {
         path: path.resolve(__dirname, "dist"),
-        filename: "[name].js",
+        filename: "genshin_panel.js",
         library: "genshinPanel",
         libraryTarget: "umd",
         globalObject: "this",
@@ -44,6 +38,7 @@ module.exports = {
     resolve: {
         extensions: ['.js', '.jsx', '.ts', '.tsx'],
     },
+    plugins: [new DeleteTsPlugin()]
     // optimization: {
     //     runtimeChunk: true,
     // }

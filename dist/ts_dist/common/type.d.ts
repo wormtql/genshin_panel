@@ -1,2 +1,0 @@
-export declare type PrimaryTagName = "attack" | "defend" | "life";
-export declare type SecondaryTagName = "cureEffect" | "lifeStatic" | "lifePercentage" | "attackStatic" | "attackPercentage" | "defendStatic" | "defendPercentage" | "critical" | "eCritical" | "criticalDamage" | "elementalMastery" | "recharge" | "thunderBonus" | "fireBonus" | "waterBonus" | "iceBonus" | "windBonus" | "rockBonus" | "physicalBonus" | "bonus" | "aBonus" | "bBonus" | "eBonus" | "qBonus";
