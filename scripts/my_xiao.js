@@ -1,4 +1,4 @@
-const app = require("../dist/main.js");
+const app = require("../dist");
 
 let xiao = new app.Character("xiao", 77, false, 0);
 let weapon = new app.Weapon("tiankongzhiji", 90, false, 2);
