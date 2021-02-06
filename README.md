@@ -1,5 +1,5 @@
 # 《原神》面板计算器
-[![Build Status](https://travis-ci.org/wormtql/genshin_panel.svg?branch=main)](https://travis-ci.org/wormtql/genshin_panel)
+<!-- [![Build Status](https://travis-ci.org/wormtql/genshin_panel.svg?branch=main)](https://travis-ci.org/wormtql/genshin_panel) -->
 ![npm](https://img.shields.io/npm/v/genshin_panel)  
 
 模拟角色、装备、圣遗物的搭配，得出最终面板。
@@ -12,10 +12,10 @@
 ```bash
 npm install genshin_panel
 ```
-
+<!-- 
 
 ## 文档
-[https://wormtql.gitbook.io/genshin-panel-doc/](https://wormtql.gitbook.io/genshin-panel-doc/)
+[https://wormtql.gitbook.io/genshin-panel-doc/](https://wormtql.gitbook.io/genshin-panel-doc/) -->
 
 
 ## 构建角色与武器

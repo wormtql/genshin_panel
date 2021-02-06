@@ -3,7 +3,7 @@
         "target": "es6",
         "module": "commonjs",
         "declaration": true,
-        "outDir": "./dist/ts_dist",
+        "outDir": "./dist",
         "strict": true,
         "suppressImplicitAnyIndexErrors": true,
         "moduleResolution": "node",
