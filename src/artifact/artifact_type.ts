@@ -6,11 +6,13 @@
 //     Head,
 // }
 
-export type ArtifactType =
+export type ArtifactTypeName =
     "flower" | "feather" | "sand" | "cup" | "head";
 
-export type ArtifactSet
+export type ArtifactSetName
     = "archaicPetra"               // 悠古的磐岩
+    | "heartOfDepth"               // 沉沦之心
+    | "blizzardStrayer"            // 冰风迷途的勇士
     | "retracingBolide"            // 逆飞的流星
     | "noblesseOblige"             // 昔日宗室之仪
     | "gladiatorFinale"            // 角斗士的终幕礼

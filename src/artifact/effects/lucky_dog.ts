@@ -1,8 +1,8 @@
-import { Attribute } from "../../attribute/attribute"
-import { Param } from "../param";
+import Attribute from "../../attribute/attribute"
+import Param from "../param";
 
 function apply2(attribute: Attribute, params: Param) {
-    attribute.defend2 += 100;
+    attribute.defendStatic += 100;
 }
 
 function apply4(attribute: Attribute, params: Param) {

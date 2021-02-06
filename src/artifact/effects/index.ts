@@ -1,7 +1,8 @@
-import { Attribute } from "../../attribute/attribute";
-import { IArtifact } from "../artifact";
-import { ArtifactSet, SET_COUNT } from "../artifact_type";
-import { Param } from "../param";
+import Attribute from "../../attribute/attribute";
+import Artifact from "../artifact";
+import ArtifactSet from "../artifact_set";
+import { ArtifactSetName, SET_COUNT } from "../artifact_type";
+import Param from "../param";
 
 import {default as adventurerApply} from "./adventurer";
 import {default as archaicPetraApply} from "./archaic_petra";
@@ -32,10 +33,12 @@ import {default as tinyMiracleApply} from "./tiny_miracle";
 import {default as travelingDoctorApply} from "./traveling_doctor";
 import {default as viridescentVenererApply} from "./viridescent_venerer";
 import {default as wandererTroupeApply} from "./wanderer_troupe";
+import {default as heartOfDepthApply} from "./heart_of_depth";
+import {default as blizzardStrayerApply} from "./blizzard_strayer";
 
 
 type ApplyFunctionType = ((attribute: Attribute, params: Param) => void) | null;
-let applyFunctions: ApplyFunctionType[][] = (Array(SET_COUNT)).fill(null);
+let applyFunctions: any = {};
 
 applyFunctions["adventurer"] = adventurerApply;
 applyFunctions["archaicPetra"] = archaicPetraApply;
@@ -66,13 +69,18 @@ applyFunctions["tinyMiracle"] = tinyMiracleApply;
 applyFunctions["travelingDoctor"] = travelingDoctorApply;
 applyFunctions["viridescentVenerer"] = viridescentVenererApply;
 applyFunctions["wandererTroupe"] = wandererTroupeApply;
+applyFunctions["heartOfDepth"] = heartOfDepthApply;
+applyFunctions["blizzardStrayer"] = blizzardStrayerApply;
 
 
-export function apply(attribute: Attribute, params: Param, artifacts: IArtifact[]) {
+export default function apply(attribute: Attribute, params: Param | undefined | null, artifacts: ArtifactSet) {
     let temp: any = {};
+    let len = artifacts.length();
 
-    for (let i = 0; i < artifacts.length; i++) {
-        let art = artifacts[i];
+    params = params || {};
+
+    for (let i = 0; i < len; i++) {
+        let art = artifacts.get(i);
 
         let setName = art.setName;
         if (temp[setName]) {
@@ -84,15 +92,11 @@ export function apply(attribute: Attribute, params: Param, artifacts: IArtifact[
 
     for (let key in temp) {
         let count = temp[key];
-        // console.log(count);
         while (count > 0) {
             if (applyFunctions[key][count - 1] !== null) {
                 applyFunctions[key][count - 1](attribute, params);
             }
             count--;
         }
-        // if (count > 0 && count <= 5 && applyFunctions[key][count - 1] !== null) {
-        //     applyFunctions[key][count - 1](attribute, params);
-        // }
     }
 }

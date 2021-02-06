@@ -1,12 +1,14 @@
 {
     "compilerOptions": {
-        "target": "ES6",
+        "target": "es6",
         "module": "commonjs",
         "declaration": true,
-        "outDir": "./dist",
+        "outDir": "./dist/ts_dist",
         "strict": true,
         "suppressImplicitAnyIndexErrors": true,
+        "moduleResolution": "node",
+        // "noEmit": true,
         // "esModuleInterop": true
-    },
-    "include": ["src/**/*"],
+    }
+    // "include": ["src/**/*", "scripts/weapon", "scripts/character"],
 }

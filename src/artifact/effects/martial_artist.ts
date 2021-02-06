@@ -1,5 +1,5 @@
-import { Attribute } from "../../attribute/attribute"
-import { Param } from "../param";
+import Attribute from "../../attribute/attribute"
+import Param from "../param";
 
 function apply2(attribute: Attribute, params: Param) {
     attribute.aBonus += 0.15;
@@ -10,9 +10,6 @@ function apply4(attribute: Attribute, params: Param) {
     if (params.countMartialArtist) {
         attribute.aBonus += 0.25;
         attribute.bBonus += 0.25;
-        if (typeof attribute.tag !== "undefined") {
-            attribute.tag.push("计入武人4件套");
-        }
     }
 }
 

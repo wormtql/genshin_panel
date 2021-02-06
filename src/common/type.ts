@@ -1,3 +1,5 @@
+import Attribute from "../attribute/attribute"
+
 export type PrimaryTagName
     = "attack"
     | "defend"
@@ -5,14 +7,15 @@ export type PrimaryTagName
 ;
 
 export type SecondaryTagName
-    = "cureEffect"         // 治疗效果 
-    | "life1"              // 固定生命值
-    | "life2"              // %生命值
-    | "attack1"            // 固定攻击力
-    | "attack2"            // %攻击力
-    | "defend1"            // 固定防御力
-    | "defend2"            // %防御力
-    | "critical"           // 暴击率
+    = "cureEffect"         // 治疗效果
+    | "lifeStatic"         // 固定生命值
+    | "lifePercentage"     // %生命值
+    | "attackStatic"       // 固定攻击力
+    | "attackPercentage"   // %攻击力
+    | "defendStatic"       // 固定防御力
+    | "defendPercentage"   // %防御力
+    | "critical"           // 全暴击率
+    | "eCritical"          // E暴击率
     | "criticalDamage"     // 暴击伤害
     | "elementalMastery"   // 元素精通
     | "recharge"           // 元素充能效率
@@ -23,31 +26,9 @@ export type SecondaryTagName
     | "windBonus"          //
     | "rockBonus"          //
     | "physicalBonus"      // 物理伤害加成
+    | "bonus"              // 伤害加成
+    | "aBonus"             // 平A伤害加成
+    | "bBonus"             // 重击伤害加成
+    | "eBonus"             // E伤害加成
+    | "qBonus"             // Q伤害加成
 ;
-
-export interface WeaponInterface {
-    primary: {
-        [key in PrimaryTagName]: number
-    },
-    secondary: {
-        [key in SecondaryTagName]: number
-    }
-}
-
-export interface CharacterInterface {
-    primary: {
-        [key in PrimaryTagName]: number
-    },
-    secondary: {
-        [key in SecondaryTagName]: number
-    }
-}
-
-export interface BonusItemInterface {
-    primary: {
-        [key in PrimaryTagName]: number
-    },
-    secondary: {
-        [key in SecondaryTagName]: number
-    }
-}

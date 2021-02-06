@@ -8,7 +8,8 @@
   ],
   "scripts": {
     "test": "mocha",
-    "build": "tsc"
+    "build": "webpack",
+    "example": "node ./scripts/example.js"
   },
   "repository": {
     "type": "git",
@@ -26,7 +27,12 @@
   },
   "devDependencies": {
     "chai": "^4.2.0",
+    "ignore-loader": "^0.1.2",
     "mocha": "^8.2.1",
-    "typescript": "^4.0.5"
-  }
+    "ts-loader": "^8.0.14",
+    "typescript": "^4.1.3",
+    "webpack": "^5.20.1",
+    "webpack-cli": "^4.5.0"
+  },
+  "dependencies": {}
 }

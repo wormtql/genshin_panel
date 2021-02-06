@@ -1,4 +1,4 @@
-export interface Param {
+export default interface Param {
     countBerserker?: boolean;
     countInstructor?: boolean;
     countBraveHeart?: boolean;

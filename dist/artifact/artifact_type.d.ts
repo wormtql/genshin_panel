@@ -1,3 +1,0 @@
-export declare type ArtifactType = "flower" | "feather" | "sand" | "cup" | "head";
-export declare type ArtifactSet = "archaicPetra" | "retracingBolide" | "noblesseOblige" | "gladiatorFinale" | "maidenBeloved" | "viridescentVenerer" | "lavaWalker" | "crimsonWitch" | "thunderSmoother" | "thunderingFury" | "bloodstainedChivalry" | "wandererTroupe" | "scholar" | "gambler" | "tinyMiracle" | "martialArtist" | "braveHeart" | "resolutionOfSojourner" | "defenderWill" | "berserker" | "instructor" | "exile" | "adventurer" | "luckyDog" | "travelingDoctor" | "prayersForWisdom" | "prayersToSpringtime" | "prayersForIllumination" | "prayersForDestiny";
-export declare const SET_COUNT = 29;
