@@ -1,6 +1,6 @@
 {
   "name": "genshin_panel",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "genshin panel calculator",
   "main": "dist/index.js",
   "files": [
@@ -9,7 +9,8 @@
   "scripts": {
     "test": "mocha",
     "build": "webpack",
-    "example": "node ./scripts/example.js"
+    "example": "node ./scripts/example.js",
+    "idk": "node ./scripts/test.js"
   },
   "repository": {
     "type": "git",

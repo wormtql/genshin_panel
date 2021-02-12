@@ -5,6 +5,9 @@ export function getBaseValue (family: number[], level: number, ascend: boolean):
     if (level < 1) {
         throw "level < 1";
     }
+    if (level === 1) {
+        return family[0];
+    }
 
     let temp = [1, 20, 40, 50, 60, 70, 80, 90];
     let index = 0;

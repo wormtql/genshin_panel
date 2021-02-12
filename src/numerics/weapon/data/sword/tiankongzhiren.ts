@@ -2,7 +2,7 @@ import Attribute from "../../../../attribute/attribute";
 import Weapon from "../../weapon";
 import WeaponDataType from "../../data_type";
 
-export const tiankongzhirenData = {
+export default {
     alt: ["tiankongzhiren", "天空之刃", "skywardblade"],
     effect: function (attribute: Attribute) {
         let that = this as any as Weapon;

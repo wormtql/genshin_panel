@@ -32,7 +32,7 @@ importAll(require.context("./", true, /\.ts$/));
 export default function getWeaponData (name) {
     let item = nameMap[name];
     if (!item) {
-        throw "error from numerics/weapon/index.js";
+        throw `weapon ${name} not found`;
     }
 
     return item;
