@@ -12,7 +12,7 @@ export default {
     effect: function (attribute: Attribute) {
         let that = this as any as Weapon;
 
-        let value = 0.01 + that.refine + 0.03;
+        let value = 0.01 * that.refine + 0.03;
         attribute.attackPercentage += attribute.attackBasic * value * 2.5;
     }
 } as WeaponDataType

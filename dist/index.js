@@ -1036,7 +1036,7 @@ eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\n
 /***/ ((__unused_webpack_module, exports) => {
 
 "use strict";
-eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\nexports.default = {\r\n    alt: [\"chenshizhisuo\", \"尘世之锁\", \"memoryofdust\"],\r\n    baseAtkFamily: \"atk46\",\r\n    secondary: {\r\n        name: \"attackPercentage\",\r\n        family: \"atk108\"\r\n    },\r\n    effect: function (attribute) {\r\n        let that = this;\r\n        let value = 0.01 + that.refine + 0.03;\r\n        attribute.attackPercentage += attribute.attackBasic * value * 2.5;\r\n    }\r\n};\r\n\n\n//# sourceURL=webpack://genshinPanel/./src/numerics/weapon/data/book/chenshizhisuo.ts?");
+eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\nexports.default = {\r\n    alt: [\"chenshizhisuo\", \"尘世之锁\", \"memoryofdust\"],\r\n    baseAtkFamily: \"atk46\",\r\n    secondary: {\r\n        name: \"attackPercentage\",\r\n        family: \"atk108\"\r\n    },\r\n    effect: function (attribute) {\r\n        let that = this;\r\n        let value = 0.01 * that.refine + 0.03;\r\n        attribute.attackPercentage += attribute.attackBasic * value * 2.5;\r\n    }\r\n};\r\n\n\n//# sourceURL=webpack://genshinPanel/./src/numerics/weapon/data/book/chenshizhisuo.ts?");
 
 /***/ }),
 
@@ -1465,7 +1465,7 @@ eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\n
 /***/ ((__unused_webpack_module, exports) => {
 
 "use strict";
-eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\nexports.default = {\r\n    alt: [\"guanhonhzhishuo\", \"贯虹之槊\", \"vortexvanquisher\"],\r\n    baseAtkFamily: \"atk46\",\r\n    secondary: {\r\n        name: \"attackPercentage\",\r\n        family: \"atk108\"\r\n    },\r\n    effect: function (attribute) {\r\n        let that = this;\r\n        let value = that.refine * 0.05 + 0.15;\r\n        attribute.shield += value;\r\n        value = that.refine * 0.01 + 0.03;\r\n        attribute.attackPercentage += attribute.attackBasic * value * 2.5;\r\n    }\r\n};\r\n\n\n//# sourceURL=webpack://genshinPanel/./src/numerics/weapon/data/stick/guanhongzhishuo.ts?");
+eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\nexports.default = {\r\n    alt: [\"guanhongzhishuo\", \"贯虹之槊\", \"vortexvanquisher\"],\r\n    baseAtkFamily: \"atk46\",\r\n    secondary: {\r\n        name: \"attackPercentage\",\r\n        family: \"atk108\"\r\n    },\r\n    effect: function (attribute) {\r\n        let that = this;\r\n        let value = that.refine * 0.05 + 0.15;\r\n        attribute.shield += value;\r\n        value = that.refine * 0.01 + 0.03;\r\n        attribute.attackPercentage += attribute.attackBasic * value * 2.5;\r\n    }\r\n};\r\n\n\n//# sourceURL=webpack://genshinPanel/./src/numerics/weapon/data/stick/guanhongzhishuo.ts?");
 
 /***/ }),
 

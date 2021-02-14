@@ -3,7 +3,7 @@ import Weapon from "../../weapon";
 import WeaponDataType from "../../data_type";
 
 export default {
-    alt: ["guanhonhzhishuo", "贯虹之槊", "vortexvanquisher"],
+    alt: ["guanhongzhishuo", "贯虹之槊", "vortexvanquisher"],
     baseAtkFamily: "atk46",
     secondary: {
         name: "attackPercentage",
