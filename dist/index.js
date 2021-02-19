@@ -1894,7 +1894,7 @@ eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\n
 /***/ ((__unused_webpack_module, exports) => {
 
 "use strict";
-eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\nexports.default = {\r\n    alt: [\"fengyingjian\", \"风鹰剑\", \"aquilafavonia\"],\r\n    effect: function (attribute) {\r\n        let that = this;\r\n        let percentage = that.refine * 0.05 + 0.2;\r\n        attribute.attackPercentage += attribute.attackBasic * percentage;\r\n    },\r\n    baseAtkFamily: \"atk48\",\r\n    secondary: {\r\n        name: \"physicalBonus\",\r\n        family: \"physical90\"\r\n    }\r\n};\r\n\n\n//# sourceURL=webpack://genshinPanel/./src/numerics/weapon/data/sword/fengyingjian.ts?");
+eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\nexports.default = {\r\n    alt: [\"fengyingjian\", \"风鹰剑\", \"aquilafavonia\"],\r\n    effect: function (attribute) {\r\n        let that = this;\r\n        let percentage = that.refine * 0.05 + 0.15;\r\n        attribute.attackPercentage += attribute.attackBasic * percentage;\r\n    },\r\n    baseAtkFamily: \"atk48\",\r\n    secondary: {\r\n        name: \"physicalBonus\",\r\n        family: \"physical90\"\r\n    }\r\n};\r\n\n\n//# sourceURL=webpack://genshinPanel/./src/numerics/weapon/data/sword/fengyingjian.ts?");
 
 /***/ }),
 
