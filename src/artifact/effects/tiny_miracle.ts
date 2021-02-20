@@ -1,7 +1,8 @@
 import Attribute from "../../attribute/attribute"
+import ApplyContext from "../../common/context";
 import Param from "../param";
 
-function apply2(attribute: Attribute, params: Param) {
+function apply2(attribute: Attribute, ctx: ApplyContext, params: Param) {
     attribute.thunderRes += 0.2;
     attribute.iceRes += 0.2;
     attribute.rockRes += 0.2;
@@ -10,7 +11,7 @@ function apply2(attribute: Attribute, params: Param) {
     attribute.waterRes += 0.2;
 }
 
-function apply4(attribute: Attribute, params: Param) {
+function apply4(attribute: Attribute, ctx: ApplyContext, params: Param) {
 
 }
 

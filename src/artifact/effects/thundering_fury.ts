@@ -1,11 +1,12 @@
 import Attribute from "../../attribute/attribute"
+import ApplyContext from "../../common/context";
 import Param from "../param";
 
-function apply2(attribute: Attribute, params: Param) {
+function apply2(attribute: Attribute, ctx: ApplyContext, params: Param) {
     attribute.thunderBonus += 0.15;
 }
 
-function apply4(attribute: Attribute, params: Param) {
+function apply4(attribute: Attribute, ctx: ApplyContext, params: Param) {
     // if (params.countThunderingFury) {
     //     attribute.bonus += 0.4;
     //     if (typeof attribute.tag !== "undefined") {

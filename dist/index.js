@@ -68,7 +68,7 @@ eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\n
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
 "use strict";
-eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\nconst effects_1 = __webpack_require__(/*! ./effects */ \"./src/artifact/effects/index.ts\");\r\nclass ArtifactSet {\r\n    constructor() {\r\n        this.arts = [];\r\n    }\r\n    addArtifact(artifact) {\r\n        this.arts.push(artifact);\r\n    }\r\n    length() {\r\n        return this.arts.length;\r\n    }\r\n    get(i) {\r\n        return this.arts[i];\r\n    }\r\n    apply(attribute, params) {\r\n        for (let art of this.arts) {\r\n            art.apply(attribute);\r\n        }\r\n        effects_1.default(attribute, params, this);\r\n    }\r\n}\r\nexports.default = ArtifactSet;\r\n\n\n//# sourceURL=webpack://genshinPanel/./src/artifact/artifact_set.ts?");
+eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\nconst effects_1 = __webpack_require__(/*! ./effects */ \"./src/artifact/effects/index.ts\");\r\nclass ArtifactSet {\r\n    constructor() {\r\n        this.arts = [];\r\n    }\r\n    addArtifact(artifact) {\r\n        this.arts.push(artifact);\r\n    }\r\n    length() {\r\n        return this.arts.length;\r\n    }\r\n    get(i) {\r\n        return this.arts[i];\r\n    }\r\n    apply(attribute, ctx, params) {\r\n        for (let art of this.arts) {\r\n            art.apply(attribute);\r\n        }\r\n        effects_1.default(attribute, ctx, params, this);\r\n    }\r\n}\r\nexports.default = ArtifactSet;\r\n\n\n//# sourceURL=webpack://genshinPanel/./src/artifact/artifact_set.ts?");
 
 /***/ }),
 
@@ -79,7 +79,7 @@ eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\n
 /***/ ((__unused_webpack_module, exports) => {
 
 "use strict";
-eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\nfunction apply2(attribute, params) {\r\n    attribute.lifeStatic += 1000;\r\n}\r\nfunction apply4(attribute, params) {\r\n}\r\nexports.default = [null, apply2, null, apply4, null];\r\n\n\n//# sourceURL=webpack://genshinPanel/./src/artifact/effects/adventurer.ts?");
+eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\nfunction apply2(attribute, ctx, params) {\r\n    attribute.lifeStatic += 1000;\r\n}\r\nfunction apply4(attribute, ctx, params) {\r\n}\r\nexports.default = [null, apply2, null, apply4, null];\r\n\n\n//# sourceURL=webpack://genshinPanel/./src/artifact/effects/adventurer.ts?");
 
 /***/ }),
 
@@ -90,7 +90,7 @@ eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\n
 /***/ ((__unused_webpack_module, exports) => {
 
 "use strict";
-eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\nfunction apply2(attribute, params) {\r\n    attribute.rockBonus += 0.15;\r\n}\r\nfunction apply4(attribute, params) {\r\n}\r\nexports.default = [null, apply2, null, apply4, null];\r\n\n\n//# sourceURL=webpack://genshinPanel/./src/artifact/effects/archaic_petra.ts?");
+eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\nfunction apply2(attribute, ctx, params) {\r\n    attribute.rockBonus += 0.15;\r\n}\r\nfunction apply4(attribute, ctx, params) {\r\n}\r\nexports.default = [null, apply2, null, apply4, null];\r\n\n\n//# sourceURL=webpack://genshinPanel/./src/artifact/effects/archaic_petra.ts?");
 
 /***/ }),
 
@@ -101,7 +101,7 @@ eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\n
 /***/ ((__unused_webpack_module, exports) => {
 
 "use strict";
-eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\nfunction apply2(attribute, params) {\r\n    attribute.critical += 0.12;\r\n    attribute.bCritical += 0.12;\r\n    attribute.qCritical += 0.12;\r\n    attribute.eCritical += 0.12;\r\n    attribute.airCritical += 0.12;\r\n}\r\nfunction apply4(attribute, params) {\r\n    if (params.countBerserker) {\r\n        attribute.critical += 0.24;\r\n        attribute.bCritical += 0.24;\r\n        attribute.eCritical += 0.24;\r\n        attribute.qCritical += 0.24;\r\n        attribute.airCritical += 0.24;\r\n    }\r\n}\r\nexports.default = [null, apply2, null, apply4, null];\r\n\n\n//# sourceURL=webpack://genshinPanel/./src/artifact/effects/berserker.ts?");
+eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\nfunction apply2(attribute, ctx, params) {\r\n    attribute.critical += 0.12;\r\n    attribute.bCritical += 0.12;\r\n    attribute.qCritical += 0.12;\r\n    attribute.eCritical += 0.12;\r\n    attribute.airCritical += 0.12;\r\n}\r\nfunction apply4(attribute, ctx, params) {\r\n    if (params.countBerserker) {\r\n        attribute.critical += 0.24;\r\n        attribute.bCritical += 0.24;\r\n        attribute.eCritical += 0.24;\r\n        attribute.qCritical += 0.24;\r\n        attribute.airCritical += 0.24;\r\n    }\r\n}\r\nexports.default = [null, apply2, null, apply4, null];\r\n\n\n//# sourceURL=webpack://genshinPanel/./src/artifact/effects/berserker.ts?");
 
 /***/ }),
 
@@ -112,7 +112,7 @@ eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\n
 /***/ ((__unused_webpack_module, exports) => {
 
 "use strict";
-eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\nfunction apply2(attribute, params) {\r\n    attribute.iceBonus += 0.15;\r\n}\r\nfunction apply4(attribute, params) {\r\n}\r\nexports.default = [null, apply2, null, apply4, null];\r\n\n\n//# sourceURL=webpack://genshinPanel/./src/artifact/effects/blizzard_strayer.ts?");
+eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\nfunction apply2(attribute, ctx, params) {\r\n    attribute.iceBonus += 0.15;\r\n}\r\nfunction apply4(attribute, ctx, params) {\r\n}\r\nexports.default = [null, apply2, null, apply4, null];\r\n\n\n//# sourceURL=webpack://genshinPanel/./src/artifact/effects/blizzard_strayer.ts?");
 
 /***/ }),
 
@@ -123,7 +123,7 @@ eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\n
 /***/ ((__unused_webpack_module, exports) => {
 
 "use strict";
-eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\nfunction apply2(attribute, params) {\r\n    attribute.physicalBonus += 0.25;\r\n}\r\nfunction apply4(attribute, params) {\r\n    if (params.countBloodstainedChinalry) {\r\n        attribute.bBonus += 0.5;\r\n    }\r\n}\r\nexports.default = [null, apply2, null, apply4, null];\r\n\n\n//# sourceURL=webpack://genshinPanel/./src/artifact/effects/bloodstained_chivalry.ts?");
+eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\nfunction apply2(attribute, ctx, params) {\r\n    attribute.physicalBonus += 0.25;\r\n}\r\nfunction apply4(attribute, ctx, params) {\r\n    if (params.countBloodstainedChinalry) {\r\n        attribute.bBonus += 0.5;\r\n    }\r\n}\r\nexports.default = [null, apply2, null, apply4, null];\r\n\n\n//# sourceURL=webpack://genshinPanel/./src/artifact/effects/bloodstained_chivalry.ts?");
 
 /***/ }),
 
@@ -134,7 +134,7 @@ eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\n
 /***/ ((__unused_webpack_module, exports) => {
 
 "use strict";
-eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\nfunction apply2(attribute, params) {\r\n    attribute.attackPercentage += attribute.attackBasic * 0.18;\r\n}\r\nfunction apply4(attribute, params) {\r\n    if (params.countBraveHeart) {\r\n        attribute.bonus += 0.3;\r\n    }\r\n}\r\nexports.default = [null, apply2, null, apply4, null];\r\n\n\n//# sourceURL=webpack://genshinPanel/./src/artifact/effects/brave_heart.ts?");
+eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\nfunction apply2(attribute, ctx, params) {\r\n    attribute.attackPercentage += attribute.attackBasic * 0.18;\r\n}\r\nfunction apply4(attribute, ctx, params) {\r\n    if (params.countBraveHeart) {\r\n        attribute.bonus += 0.3;\r\n    }\r\n}\r\nexports.default = [null, apply2, null, apply4, null];\r\n\n\n//# sourceURL=webpack://genshinPanel/./src/artifact/effects/brave_heart.ts?");
 
 /***/ }),
 
@@ -145,7 +145,7 @@ eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\n
 /***/ ((__unused_webpack_module, exports) => {
 
 "use strict";
-eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\nfunction apply2(attribute, params) {\r\n    attribute.fireBonus += 0.15;\r\n}\r\nfunction apply4(attribute, params) {\r\n    if (params.countCrimsonWitch1) {\r\n        attribute.fireBonus += 1;\r\n    }\r\n}\r\nexports.default = [null, apply2, null, apply4, null];\r\n\n\n//# sourceURL=webpack://genshinPanel/./src/artifact/effects/crimson_witch.ts?");
+eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\nfunction apply2(attribute, ctx, params) {\r\n    attribute.fireBonus += 0.15;\r\n}\r\nfunction apply4(attribute, ctx, params) {\r\n    if (params.countCrimsonWitch1) {\r\n        attribute.fireBonus += 1;\r\n    }\r\n}\r\nexports.default = [null, apply2, null, apply4, null];\r\n\n\n//# sourceURL=webpack://genshinPanel/./src/artifact/effects/crimson_witch.ts?");
 
 /***/ }),
 
@@ -156,7 +156,7 @@ eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\n
 /***/ ((__unused_webpack_module, exports) => {
 
 "use strict";
-eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\nfunction apply2(attribute, params) {\r\n    attribute.defendPercentage += attribute.defendBasic * 0.3;\r\n}\r\nfunction apply4(attribute, params) {\r\n}\r\nexports.default = [null, apply2, null, apply4, null];\r\n\n\n//# sourceURL=webpack://genshinPanel/./src/artifact/effects/defender_will.ts?");
+eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\nfunction apply2(attribute, ctx, params) {\r\n    attribute.defendPercentage += attribute.defendBasic * 0.3;\r\n}\r\nfunction apply4(attribute, ctx, params) {\r\n}\r\nexports.default = [null, apply2, null, apply4, null];\r\n\n\n//# sourceURL=webpack://genshinPanel/./src/artifact/effects/defender_will.ts?");
 
 /***/ }),
 
@@ -167,7 +167,7 @@ eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\n
 /***/ ((__unused_webpack_module, exports) => {
 
 "use strict";
-eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\nfunction apply2(attribute, params) {\r\n    attribute.recharge += 0.2;\r\n}\r\nfunction apply4(attribute, params) {\r\n}\r\nexports.default = [null, apply2, null, apply4, null];\r\n\n\n//# sourceURL=webpack://genshinPanel/./src/artifact/effects/exile.ts?");
+eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\nfunction apply2(attribute, ctx, params) {\r\n    attribute.recharge += 0.2;\r\n}\r\nfunction apply4(attribute, ctx, params) {\r\n}\r\nexports.default = [null, apply2, null, apply4, null];\r\n\n\n//# sourceURL=webpack://genshinPanel/./src/artifact/effects/exile.ts?");
 
 /***/ }),
 
@@ -178,7 +178,7 @@ eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\n
 /***/ ((__unused_webpack_module, exports) => {
 
 "use strict";
-eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\nfunction apply2(attribute, params) {\r\n    attribute.eBonus += 0.2;\r\n}\r\nfunction apply4(attribute, params) {\r\n}\r\nexports.default = [null, apply2, null, apply4, null];\r\n\n\n//# sourceURL=webpack://genshinPanel/./src/artifact/effects/gambler.ts?");
+eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\nfunction apply2(attribute, ctx, params) {\r\n    attribute.eBonus += 0.2;\r\n}\r\nfunction apply4(attribute, ctx, params) {\r\n}\r\nexports.default = [null, apply2, null, apply4, null];\r\n\n\n//# sourceURL=webpack://genshinPanel/./src/artifact/effects/gambler.ts?");
 
 /***/ }),
 
@@ -189,7 +189,7 @@ eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\n
 /***/ ((__unused_webpack_module, exports) => {
 
 "use strict";
-eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\nfunction apply2(attribute, params) {\r\n    attribute.attackPercentage += attribute.attackBasic * 0.18;\r\n}\r\nfunction apply4(attribute, params) {\r\n    if (params.countGladiatorFinale) {\r\n        attribute.aBonus += 0.35;\r\n    }\r\n}\r\nexports.default = [null, apply2, null, apply4, null];\r\n\n\n//# sourceURL=webpack://genshinPanel/./src/artifact/effects/gladiator_finale.ts?");
+eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\nfunction apply2(attribute, ctx, params) {\r\n    attribute.attackPercentage += attribute.attackBasic * 0.18;\r\n}\r\nfunction apply4(attribute, ctx, params) {\r\n    let weaponType = ctx.character.weapon;\r\n    if (weaponType === 0 /* Sword */ || weaponType === 4 /* Sword2 */ || weaponType === 3 /* Stick */) {\r\n        attribute.aBonus += 0.35;\r\n    }\r\n}\r\nexports.default = [null, apply2, null, apply4, null];\r\n\n\n//# sourceURL=webpack://genshinPanel/./src/artifact/effects/gladiator_finale.ts?");
 
 /***/ }),
 
@@ -200,7 +200,7 @@ eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\n
 /***/ ((__unused_webpack_module, exports) => {
 
 "use strict";
-eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\nfunction apply2(attribute, params) {\r\n    attribute.waterBonus += 0.15;\r\n}\r\nfunction apply4(attribute, params) {\r\n}\r\nexports.default = [null, apply2, null, apply4, null];\r\n\n\n//# sourceURL=webpack://genshinPanel/./src/artifact/effects/heart_of_depth.ts?");
+eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\nfunction apply2(attribute, ctx, params) {\r\n    attribute.waterBonus += 0.15;\r\n}\r\nfunction apply4(attribute, ctx, params) {\r\n}\r\nexports.default = [null, apply2, null, apply4, null];\r\n\n\n//# sourceURL=webpack://genshinPanel/./src/artifact/effects/heart_of_depth.ts?");
 
 /***/ }),
 
@@ -211,7 +211,7 @@ eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\n
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
 "use strict";
-eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\nconst adventurer_1 = __webpack_require__(/*! ./adventurer */ \"./src/artifact/effects/adventurer.ts\");\r\nconst archaic_petra_1 = __webpack_require__(/*! ./archaic_petra */ \"./src/artifact/effects/archaic_petra.ts\");\r\nconst berserker_1 = __webpack_require__(/*! ./berserker */ \"./src/artifact/effects/berserker.ts\");\r\nconst bloodstained_chivalry_1 = __webpack_require__(/*! ./bloodstained_chivalry */ \"./src/artifact/effects/bloodstained_chivalry.ts\");\r\nconst brave_heart_1 = __webpack_require__(/*! ./brave_heart */ \"./src/artifact/effects/brave_heart.ts\");\r\nconst crimson_witch_1 = __webpack_require__(/*! ./crimson_witch */ \"./src/artifact/effects/crimson_witch.ts\");\r\nconst defender_will_1 = __webpack_require__(/*! ./defender_will */ \"./src/artifact/effects/defender_will.ts\");\r\nconst exile_1 = __webpack_require__(/*! ./exile */ \"./src/artifact/effects/exile.ts\");\r\nconst gambler_1 = __webpack_require__(/*! ./gambler */ \"./src/artifact/effects/gambler.ts\");\r\nconst gladiator_finale_1 = __webpack_require__(/*! ./gladiator_finale */ \"./src/artifact/effects/gladiator_finale.ts\");\r\nconst instructor_1 = __webpack_require__(/*! ./instructor */ \"./src/artifact/effects/instructor.ts\");\r\nconst lava_walker_1 = __webpack_require__(/*! ./lava_walker */ \"./src/artifact/effects/lava_walker.ts\");\r\nconst lucky_dog_1 = __webpack_require__(/*! ./lucky_dog */ \"./src/artifact/effects/lucky_dog.ts\");\r\nconst maiden_beloved_1 = __webpack_require__(/*! ./maiden_beloved */ \"./src/artifact/effects/maiden_beloved.ts\");\r\nconst martial_artist_1 = __webpack_require__(/*! ./martial_artist */ \"./src/artifact/effects/martial_artist.ts\");\r\nconst noblesse_oblige_1 = __webpack_require__(/*! ./noblesse_oblige */ \"./src/artifact/effects/noblesse_oblige.ts\");\r\nconst prayers_for_destiny_1 = __webpack_require__(/*! ./prayers_for_destiny */ \"./src/artifact/effects/prayers_for_destiny.ts\");\r\nconst prayers_for_illumination_1 = __webpack_require__(/*! ./prayers_for_illumination */ \"./src/artifact/effects/prayers_for_illumination.ts\");\r\nconst prayers_for_wisdom_1 = __webpack_require__(/*! ./prayers_for_wisdom */ \"./src/artifact/effects/prayers_for_wisdom.ts\");\r\nconst prayers_to_springtime_1 = __webpack_require__(/*! ./prayers_to_springtime */ \"./src/artifact/effects/prayers_to_springtime.ts\");\r\nconst resolution_of_sojourner_1 = __webpack_require__(/*! ./resolution_of_sojourner */ \"./src/artifact/effects/resolution_of_sojourner.ts\");\r\nconst retracing_bolide_1 = __webpack_require__(/*! ./retracing_bolide */ \"./src/artifact/effects/retracing_bolide.ts\");\r\nconst scholar_1 = __webpack_require__(/*! ./scholar */ \"./src/artifact/effects/scholar.ts\");\r\nconst thunder_smoother_1 = __webpack_require__(/*! ./thunder_smoother */ \"./src/artifact/effects/thunder_smoother.ts\");\r\nconst thundering_fury_1 = __webpack_require__(/*! ./thundering_fury */ \"./src/artifact/effects/thundering_fury.ts\");\r\nconst tiny_miracle_1 = __webpack_require__(/*! ./tiny_miracle */ \"./src/artifact/effects/tiny_miracle.ts\");\r\nconst traveling_doctor_1 = __webpack_require__(/*! ./traveling_doctor */ \"./src/artifact/effects/traveling_doctor.ts\");\r\nconst viridescent_venerer_1 = __webpack_require__(/*! ./viridescent_venerer */ \"./src/artifact/effects/viridescent_venerer.ts\");\r\nconst wanderer_troupe_1 = __webpack_require__(/*! ./wanderer_troupe */ \"./src/artifact/effects/wanderer_troupe.ts\");\r\nconst heart_of_depth_1 = __webpack_require__(/*! ./heart_of_depth */ \"./src/artifact/effects/heart_of_depth.ts\");\r\nconst blizzard_strayer_1 = __webpack_require__(/*! ./blizzard_strayer */ \"./src/artifact/effects/blizzard_strayer.ts\");\r\nlet applyFunctions = {};\r\napplyFunctions[\"adventurer\"] = adventurer_1.default;\r\napplyFunctions[\"archaicPetra\"] = archaic_petra_1.default;\r\napplyFunctions[\"berserker\"] = berserker_1.default;\r\napplyFunctions[\"bloodstainedChivalry\"] = bloodstained_chivalry_1.default;\r\napplyFunctions[\"braveHeart\"] = brave_heart_1.default;\r\napplyFunctions[\"crimsonWitch\"] = crimson_witch_1.default;\r\napplyFunctions[\"defenderWill\"] = defender_will_1.default;\r\napplyFunctions[\"exile\"] = exile_1.default;\r\napplyFunctions[\"gambler\"] = gambler_1.default;\r\napplyFunctions[\"gladiatorFinale\"] = gladiator_finale_1.default;\r\napplyFunctions[\"instructor\"] = instructor_1.default;\r\napplyFunctions[\"lavaWalker\"] = lava_walker_1.default;\r\napplyFunctions[\"luckyDog\"] = lucky_dog_1.default;\r\napplyFunctions[\"maidenBeloved\"] = maiden_beloved_1.default;\r\napplyFunctions[\"martialArtist\"] = martial_artist_1.default;\r\napplyFunctions[\"noblesseOblige\"] = noblesse_oblige_1.default;\r\napplyFunctions[\"prayersForDestiny\"] = prayers_for_destiny_1.default;\r\napplyFunctions[\"prayersForIllumination\"] = prayers_for_illumination_1.default;\r\napplyFunctions[\"prayersForWisdom\"] = prayers_for_wisdom_1.default;\r\napplyFunctions[\"prayersToSpringtime\"] = prayers_to_springtime_1.default;\r\napplyFunctions[\"resolutionOfSojourner\"] = resolution_of_sojourner_1.default;\r\napplyFunctions[\"retracingBolide\"] = retracing_bolide_1.default;\r\napplyFunctions[\"scholar\"] = scholar_1.default;\r\napplyFunctions[\"thunderSmoother\"] = thunder_smoother_1.default;\r\napplyFunctions[\"thunderingFury\"] = thundering_fury_1.default;\r\napplyFunctions[\"tinyMiracle\"] = tiny_miracle_1.default;\r\napplyFunctions[\"travelingDoctor\"] = traveling_doctor_1.default;\r\napplyFunctions[\"viridescentVenerer\"] = viridescent_venerer_1.default;\r\napplyFunctions[\"wandererTroupe\"] = wanderer_troupe_1.default;\r\napplyFunctions[\"heartOfDepth\"] = heart_of_depth_1.default;\r\napplyFunctions[\"blizzardStrayer\"] = blizzard_strayer_1.default;\r\nfunction apply(attribute, params, artifacts) {\r\n    let temp = {};\r\n    let len = artifacts.length();\r\n    params = params || {};\r\n    for (let i = 0; i < len; i++) {\r\n        let art = artifacts.get(i);\r\n        let setName = art.setName;\r\n        if (temp[setName]) {\r\n            temp[setName]++;\r\n        }\r\n        else {\r\n            temp[setName] = 1;\r\n        }\r\n    }\r\n    for (let key in temp) {\r\n        let count = temp[key];\r\n        while (count > 0) {\r\n            if (applyFunctions[key][count - 1] !== null) {\r\n                applyFunctions[key][count - 1](attribute, params);\r\n            }\r\n            count--;\r\n        }\r\n    }\r\n}\r\nexports.default = apply;\r\n\n\n//# sourceURL=webpack://genshinPanel/./src/artifact/effects/index.ts?");
+eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\nconst adventurer_1 = __webpack_require__(/*! ./adventurer */ \"./src/artifact/effects/adventurer.ts\");\r\nconst archaic_petra_1 = __webpack_require__(/*! ./archaic_petra */ \"./src/artifact/effects/archaic_petra.ts\");\r\nconst berserker_1 = __webpack_require__(/*! ./berserker */ \"./src/artifact/effects/berserker.ts\");\r\nconst bloodstained_chivalry_1 = __webpack_require__(/*! ./bloodstained_chivalry */ \"./src/artifact/effects/bloodstained_chivalry.ts\");\r\nconst brave_heart_1 = __webpack_require__(/*! ./brave_heart */ \"./src/artifact/effects/brave_heart.ts\");\r\nconst crimson_witch_1 = __webpack_require__(/*! ./crimson_witch */ \"./src/artifact/effects/crimson_witch.ts\");\r\nconst defender_will_1 = __webpack_require__(/*! ./defender_will */ \"./src/artifact/effects/defender_will.ts\");\r\nconst exile_1 = __webpack_require__(/*! ./exile */ \"./src/artifact/effects/exile.ts\");\r\nconst gambler_1 = __webpack_require__(/*! ./gambler */ \"./src/artifact/effects/gambler.ts\");\r\nconst gladiator_finale_1 = __webpack_require__(/*! ./gladiator_finale */ \"./src/artifact/effects/gladiator_finale.ts\");\r\nconst instructor_1 = __webpack_require__(/*! ./instructor */ \"./src/artifact/effects/instructor.ts\");\r\nconst lava_walker_1 = __webpack_require__(/*! ./lava_walker */ \"./src/artifact/effects/lava_walker.ts\");\r\nconst lucky_dog_1 = __webpack_require__(/*! ./lucky_dog */ \"./src/artifact/effects/lucky_dog.ts\");\r\nconst maiden_beloved_1 = __webpack_require__(/*! ./maiden_beloved */ \"./src/artifact/effects/maiden_beloved.ts\");\r\nconst martial_artist_1 = __webpack_require__(/*! ./martial_artist */ \"./src/artifact/effects/martial_artist.ts\");\r\nconst noblesse_oblige_1 = __webpack_require__(/*! ./noblesse_oblige */ \"./src/artifact/effects/noblesse_oblige.ts\");\r\nconst prayers_for_destiny_1 = __webpack_require__(/*! ./prayers_for_destiny */ \"./src/artifact/effects/prayers_for_destiny.ts\");\r\nconst prayers_for_illumination_1 = __webpack_require__(/*! ./prayers_for_illumination */ \"./src/artifact/effects/prayers_for_illumination.ts\");\r\nconst prayers_for_wisdom_1 = __webpack_require__(/*! ./prayers_for_wisdom */ \"./src/artifact/effects/prayers_for_wisdom.ts\");\r\nconst prayers_to_springtime_1 = __webpack_require__(/*! ./prayers_to_springtime */ \"./src/artifact/effects/prayers_to_springtime.ts\");\r\nconst resolution_of_sojourner_1 = __webpack_require__(/*! ./resolution_of_sojourner */ \"./src/artifact/effects/resolution_of_sojourner.ts\");\r\nconst retracing_bolide_1 = __webpack_require__(/*! ./retracing_bolide */ \"./src/artifact/effects/retracing_bolide.ts\");\r\nconst scholar_1 = __webpack_require__(/*! ./scholar */ \"./src/artifact/effects/scholar.ts\");\r\nconst thunder_smoother_1 = __webpack_require__(/*! ./thunder_smoother */ \"./src/artifact/effects/thunder_smoother.ts\");\r\nconst thundering_fury_1 = __webpack_require__(/*! ./thundering_fury */ \"./src/artifact/effects/thundering_fury.ts\");\r\nconst tiny_miracle_1 = __webpack_require__(/*! ./tiny_miracle */ \"./src/artifact/effects/tiny_miracle.ts\");\r\nconst traveling_doctor_1 = __webpack_require__(/*! ./traveling_doctor */ \"./src/artifact/effects/traveling_doctor.ts\");\r\nconst viridescent_venerer_1 = __webpack_require__(/*! ./viridescent_venerer */ \"./src/artifact/effects/viridescent_venerer.ts\");\r\nconst wanderer_troupe_1 = __webpack_require__(/*! ./wanderer_troupe */ \"./src/artifact/effects/wanderer_troupe.ts\");\r\nconst heart_of_depth_1 = __webpack_require__(/*! ./heart_of_depth */ \"./src/artifact/effects/heart_of_depth.ts\");\r\nconst blizzard_strayer_1 = __webpack_require__(/*! ./blizzard_strayer */ \"./src/artifact/effects/blizzard_strayer.ts\");\r\nlet applyFunctions = {};\r\napplyFunctions[\"adventurer\"] = adventurer_1.default;\r\napplyFunctions[\"archaicPetra\"] = archaic_petra_1.default;\r\napplyFunctions[\"berserker\"] = berserker_1.default;\r\napplyFunctions[\"bloodstainedChivalry\"] = bloodstained_chivalry_1.default;\r\napplyFunctions[\"braveHeart\"] = brave_heart_1.default;\r\napplyFunctions[\"crimsonWitch\"] = crimson_witch_1.default;\r\napplyFunctions[\"defenderWill\"] = defender_will_1.default;\r\napplyFunctions[\"exile\"] = exile_1.default;\r\napplyFunctions[\"gambler\"] = gambler_1.default;\r\napplyFunctions[\"gladiatorFinale\"] = gladiator_finale_1.default;\r\napplyFunctions[\"instructor\"] = instructor_1.default;\r\napplyFunctions[\"lavaWalker\"] = lava_walker_1.default;\r\napplyFunctions[\"luckyDog\"] = lucky_dog_1.default;\r\napplyFunctions[\"maidenBeloved\"] = maiden_beloved_1.default;\r\napplyFunctions[\"martialArtist\"] = martial_artist_1.default;\r\napplyFunctions[\"noblesseOblige\"] = noblesse_oblige_1.default;\r\napplyFunctions[\"prayersForDestiny\"] = prayers_for_destiny_1.default;\r\napplyFunctions[\"prayersForIllumination\"] = prayers_for_illumination_1.default;\r\napplyFunctions[\"prayersForWisdom\"] = prayers_for_wisdom_1.default;\r\napplyFunctions[\"prayersToSpringtime\"] = prayers_to_springtime_1.default;\r\napplyFunctions[\"resolutionOfSojourner\"] = resolution_of_sojourner_1.default;\r\napplyFunctions[\"retracingBolide\"] = retracing_bolide_1.default;\r\napplyFunctions[\"scholar\"] = scholar_1.default;\r\napplyFunctions[\"thunderSmoother\"] = thunder_smoother_1.default;\r\napplyFunctions[\"thunderingFury\"] = thundering_fury_1.default;\r\napplyFunctions[\"tinyMiracle\"] = tiny_miracle_1.default;\r\napplyFunctions[\"travelingDoctor\"] = traveling_doctor_1.default;\r\napplyFunctions[\"viridescentVenerer\"] = viridescent_venerer_1.default;\r\napplyFunctions[\"wandererTroupe\"] = wanderer_troupe_1.default;\r\napplyFunctions[\"heartOfDepth\"] = heart_of_depth_1.default;\r\napplyFunctions[\"blizzardStrayer\"] = blizzard_strayer_1.default;\r\nfunction apply(attribute, ctx, params, artifacts) {\r\n    let temp = {};\r\n    let len = artifacts.length();\r\n    params = params || {};\r\n    for (let i = 0; i < len; i++) {\r\n        let art = artifacts.get(i);\r\n        let setName = art.setName;\r\n        if (temp[setName]) {\r\n            temp[setName]++;\r\n        }\r\n        else {\r\n            temp[setName] = 1;\r\n        }\r\n    }\r\n    for (let key in temp) {\r\n        let count = temp[key];\r\n        while (count > 0) {\r\n            if (applyFunctions[key][count - 1] !== null) {\r\n                applyFunctions[key][count - 1](attribute, ctx, params);\r\n            }\r\n            count--;\r\n        }\r\n    }\r\n}\r\nexports.default = apply;\r\n\n\n//# sourceURL=webpack://genshinPanel/./src/artifact/effects/index.ts?");
 
 /***/ }),
 
@@ -222,7 +222,7 @@ eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\n
 /***/ ((__unused_webpack_module, exports) => {
 
 "use strict";
-eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\nfunction apply2(attribute, params) {\r\n    attribute.elementalMastery += 80;\r\n}\r\nfunction apply4(attribute, params) {\r\n    if (params.countInstructor) {\r\n        attribute.elementalMastery += 120;\r\n    }\r\n}\r\nexports.default = [null, apply2, null, apply4, null];\r\n\n\n//# sourceURL=webpack://genshinPanel/./src/artifact/effects/instructor.ts?");
+eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\nfunction apply2(attribute, ctx, params) {\r\n    attribute.elementalMastery += 80;\r\n}\r\nfunction apply4(attribute, ctx, params) {\r\n    if (params.countInstructor) {\r\n        attribute.elementalMastery += 120;\r\n    }\r\n}\r\nexports.default = [null, apply2, null, apply4, null];\r\n\n\n//# sourceURL=webpack://genshinPanel/./src/artifact/effects/instructor.ts?");
 
 /***/ }),
 
@@ -233,7 +233,7 @@ eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\n
 /***/ ((__unused_webpack_module, exports) => {
 
 "use strict";
-eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\nfunction apply2(attribute, params) {\r\n    attribute.fireRes += 0.4;\r\n}\r\nfunction apply4(attribute, params) {\r\n    if (params.countLavaWalker) {\r\n        attribute.bonus += 0.35;\r\n    }\r\n}\r\nexports.default = [null, apply2, null, apply4, null];\r\n\n\n//# sourceURL=webpack://genshinPanel/./src/artifact/effects/lava_walker.ts?");
+eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\nfunction apply2(attribute, ctx, params) {\r\n    attribute.fireRes += 0.4;\r\n}\r\nfunction apply4(attribute, ctx, params) {\r\n    if (params.countLavaWalker) {\r\n        attribute.bonus += 0.35;\r\n    }\r\n}\r\nexports.default = [null, apply2, null, apply4, null];\r\n\n\n//# sourceURL=webpack://genshinPanel/./src/artifact/effects/lava_walker.ts?");
 
 /***/ }),
 
@@ -244,7 +244,7 @@ eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\n
 /***/ ((__unused_webpack_module, exports) => {
 
 "use strict";
-eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\nfunction apply2(attribute, params) {\r\n    attribute.defendStatic += 100;\r\n}\r\nfunction apply4(attribute, params) {\r\n}\r\nexports.default = [null, apply2, null, apply4, null];\r\n\n\n//# sourceURL=webpack://genshinPanel/./src/artifact/effects/lucky_dog.ts?");
+eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\nfunction apply2(attribute, ctx, params) {\r\n    attribute.defendStatic += 100;\r\n}\r\nfunction apply4(attribute, ctx, params) {\r\n}\r\nexports.default = [null, apply2, null, apply4, null];\r\n\n\n//# sourceURL=webpack://genshinPanel/./src/artifact/effects/lucky_dog.ts?");
 
 /***/ }),
 
@@ -255,7 +255,7 @@ eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\n
 /***/ ((__unused_webpack_module, exports) => {
 
 "use strict";
-eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\nfunction apply2(attribute, params) {\r\n    attribute.cureEffect += 0.15;\r\n}\r\nfunction apply4(attribute, params) {\r\n}\r\nexports.default = [null, apply2, null, apply4, null];\r\n\n\n//# sourceURL=webpack://genshinPanel/./src/artifact/effects/maiden_beloved.ts?");
+eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\nfunction apply2(attribute, ctx, params) {\r\n    attribute.cureEffect += 0.15;\r\n}\r\nfunction apply4(attribute, ctx, params) {\r\n}\r\nexports.default = [null, apply2, null, apply4, null];\r\n\n\n//# sourceURL=webpack://genshinPanel/./src/artifact/effects/maiden_beloved.ts?");
 
 /***/ }),
 
@@ -266,7 +266,7 @@ eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\n
 /***/ ((__unused_webpack_module, exports) => {
 
 "use strict";
-eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\nfunction apply2(attribute, params) {\r\n    attribute.aBonus += 0.15;\r\n    attribute.bBonus += 0.15;\r\n}\r\nfunction apply4(attribute, params) {\r\n    if (params.countMartialArtist) {\r\n        attribute.aBonus += 0.25;\r\n        attribute.bBonus += 0.25;\r\n    }\r\n}\r\nexports.default = [null, apply2, null, apply4, null];\r\n\n\n//# sourceURL=webpack://genshinPanel/./src/artifact/effects/martial_artist.ts?");
+eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\nfunction apply2(attribute, ctx, params) {\r\n    attribute.aBonus += 0.15;\r\n    attribute.bBonus += 0.15;\r\n}\r\nfunction apply4(attribute, ctx, params) {\r\n    if (params.countMartialArtist) {\r\n        attribute.aBonus += 0.25;\r\n        attribute.bBonus += 0.25;\r\n    }\r\n}\r\nexports.default = [null, apply2, null, apply4, null];\r\n\n\n//# sourceURL=webpack://genshinPanel/./src/artifact/effects/martial_artist.ts?");
 
 /***/ }),
 
@@ -277,7 +277,7 @@ eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\n
 /***/ ((__unused_webpack_module, exports) => {
 
 "use strict";
-eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\nfunction apply2(attribute, params) {\r\n    attribute.qBonus += 0.2;\r\n}\r\nfunction apply4(attribute, params) {\r\n}\r\nexports.default = [null, apply2, null, apply4, null];\r\n\n\n//# sourceURL=webpack://genshinPanel/./src/artifact/effects/noblesse_oblige.ts?");
+eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\nfunction apply2(attribute, ctx, params) {\r\n    attribute.qBonus += 0.2;\r\n}\r\nfunction apply4(attribute, ctx, params) {\r\n}\r\nexports.default = [null, apply2, null, apply4, null];\r\n\n\n//# sourceURL=webpack://genshinPanel/./src/artifact/effects/noblesse_oblige.ts?");
 
 /***/ }),
 
@@ -288,7 +288,7 @@ eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\n
 /***/ ((__unused_webpack_module, exports) => {
 
 "use strict";
-eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\n// 祭水之人\r\nfunction apply1(attribute, params) {\r\n    attribute.waterTime += 0.4;\r\n}\r\nexports.default = [apply1, null, null, null, null];\r\n\n\n//# sourceURL=webpack://genshinPanel/./src/artifact/effects/prayers_for_destiny.ts?");
+eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\n// 祭水之人\r\nfunction apply1(attribute, ctx, params) {\r\n    attribute.waterTime += 0.4;\r\n}\r\nexports.default = [apply1, null, null, null, null];\r\n\n\n//# sourceURL=webpack://genshinPanel/./src/artifact/effects/prayers_for_destiny.ts?");
 
 /***/ }),
 
@@ -299,7 +299,7 @@ eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\n
 /***/ ((__unused_webpack_module, exports) => {
 
 "use strict";
-eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\n// 祭火之人\r\nfunction apply1(attribute, params) {\r\n    attribute.fireTime += 0.4;\r\n}\r\nexports.default = [apply1, null, null, null, null];\r\n\n\n//# sourceURL=webpack://genshinPanel/./src/artifact/effects/prayers_for_illumination.ts?");
+eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\n// 祭火之人\r\nfunction apply1(attribute, ctx, params) {\r\n    attribute.fireTime += 0.4;\r\n}\r\nexports.default = [apply1, null, null, null, null];\r\n\n\n//# sourceURL=webpack://genshinPanel/./src/artifact/effects/prayers_for_illumination.ts?");
 
 /***/ }),
 
@@ -310,7 +310,7 @@ eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\n
 /***/ ((__unused_webpack_module, exports) => {
 
 "use strict";
-eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\n// 祭雷之人\r\nfunction apply1(attribute, params) {\r\n    attribute.thunderTime += 0.4;\r\n}\r\nexports.default = [apply1, null, null, null, null];\r\n\n\n//# sourceURL=webpack://genshinPanel/./src/artifact/effects/prayers_for_wisdom.ts?");
+eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\n// 祭雷之人\r\nfunction apply1(attribute, ctx, params) {\r\n    attribute.thunderTime += 0.4;\r\n}\r\nexports.default = [apply1, null, null, null, null];\r\n\n\n//# sourceURL=webpack://genshinPanel/./src/artifact/effects/prayers_for_wisdom.ts?");
 
 /***/ }),
 
@@ -321,7 +321,7 @@ eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\n
 /***/ ((__unused_webpack_module, exports) => {
 
 "use strict";
-eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\n// 祭冰之人\r\nfunction apply1(attribute, params) {\r\n    attribute.iceTime += 0.4;\r\n}\r\nexports.default = [apply1, null, null, null, null];\r\n\n\n//# sourceURL=webpack://genshinPanel/./src/artifact/effects/prayers_to_springtime.ts?");
+eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\n// 祭冰之人\r\nfunction apply1(attribute, ctx, params) {\r\n    attribute.iceTime += 0.4;\r\n}\r\nexports.default = [apply1, null, null, null, null];\r\n\n\n//# sourceURL=webpack://genshinPanel/./src/artifact/effects/prayers_to_springtime.ts?");
 
 /***/ }),
 
@@ -332,7 +332,7 @@ eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\n
 /***/ ((__unused_webpack_module, exports) => {
 
 "use strict";
-eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\nfunction apply2(attribute, params) {\r\n    attribute.attackPercentage += attribute.attackBasic * 0.18;\r\n}\r\nfunction apply4(attribute, params) {\r\n    attribute.bCritical += 0.3;\r\n}\r\nexports.default = [null, apply2, null, apply4, null];\r\n\n\n//# sourceURL=webpack://genshinPanel/./src/artifact/effects/resolution_of_sojourner.ts?");
+eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\nfunction apply2(attribute, ctx, params) {\r\n    attribute.attackPercentage += attribute.attackBasic * 0.18;\r\n}\r\nfunction apply4(attribute, ctx, params) {\r\n    attribute.bCritical += 0.3;\r\n}\r\nexports.default = [null, apply2, null, apply4, null];\r\n\n\n//# sourceURL=webpack://genshinPanel/./src/artifact/effects/resolution_of_sojourner.ts?");
 
 /***/ }),
 
@@ -343,7 +343,7 @@ eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\n
 /***/ ((__unused_webpack_module, exports) => {
 
 "use strict";
-eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\nfunction apply2(attribute, params) {\r\n    attribute.shield += 0.35;\r\n}\r\nfunction apply4(attribute, params) {\r\n    if (params.countRetracingBolide) {\r\n        attribute.aBonus += 0.4;\r\n        attribute.bBonus += 0.4;\r\n    }\r\n}\r\nexports.default = [null, apply2, null, apply4, null];\r\n\n\n//# sourceURL=webpack://genshinPanel/./src/artifact/effects/retracing_bolide.ts?");
+eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\nfunction apply2(attribute, ctx, params) {\r\n    attribute.shield += 0.35;\r\n}\r\nfunction apply4(attribute, ctx, params) {\r\n    if (params.countRetracingBolide) {\r\n        attribute.aBonus += 0.4;\r\n        attribute.bBonus += 0.4;\r\n    }\r\n}\r\nexports.default = [null, apply2, null, apply4, null];\r\n\n\n//# sourceURL=webpack://genshinPanel/./src/artifact/effects/retracing_bolide.ts?");
 
 /***/ }),
 
@@ -354,7 +354,7 @@ eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\n
 /***/ ((__unused_webpack_module, exports) => {
 
 "use strict";
-eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\nfunction apply2(attribute, params) {\r\n    attribute.recharge += 0.2;\r\n}\r\nfunction apply4(attribute, params) {\r\n}\r\nexports.default = [null, apply2, null, apply4, null];\r\n\n\n//# sourceURL=webpack://genshinPanel/./src/artifact/effects/scholar.ts?");
+eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\nfunction apply2(attribute, ctx, params) {\r\n    attribute.recharge += 0.2;\r\n}\r\nfunction apply4(attribute, ctx, params) {\r\n}\r\nexports.default = [null, apply2, null, apply4, null];\r\n\n\n//# sourceURL=webpack://genshinPanel/./src/artifact/effects/scholar.ts?");
 
 /***/ }),
 
@@ -365,7 +365,7 @@ eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\n
 /***/ ((__unused_webpack_module, exports) => {
 
 "use strict";
-eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\nfunction apply2(attribute, params) {\r\n    attribute.thunderRes += 0.4;\r\n}\r\nfunction apply4(attribute, params) {\r\n    if (params.countThunderSmoother) {\r\n        attribute.bonus += 0.35;\r\n    }\r\n}\r\nexports.default = [null, apply2, null, apply4, null];\r\n\n\n//# sourceURL=webpack://genshinPanel/./src/artifact/effects/thunder_smoother.ts?");
+eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\nfunction apply2(attribute, ctx, params) {\r\n    attribute.thunderRes += 0.4;\r\n}\r\nfunction apply4(attribute, ctx, params) {\r\n    if (params.countThunderSmoother) {\r\n        attribute.bonus += 0.35;\r\n    }\r\n}\r\nexports.default = [null, apply2, null, apply4, null];\r\n\n\n//# sourceURL=webpack://genshinPanel/./src/artifact/effects/thunder_smoother.ts?");
 
 /***/ }),
 
@@ -376,7 +376,7 @@ eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\n
 /***/ ((__unused_webpack_module, exports) => {
 
 "use strict";
-eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\nfunction apply2(attribute, params) {\r\n    attribute.thunderBonus += 0.15;\r\n}\r\nfunction apply4(attribute, params) {\r\n    // if (params.countThunderingFury) {\r\n    //     attribute.bonus += 0.4;\r\n    //     if (typeof attribute.tag !== \"undefined\") {\r\n    //         attribute.tag.push(\"计入如雷的盛怒4件套\");\r\n    //     }\r\n    // }\r\n}\r\nexports.default = [null, apply2, null, apply4, null];\r\n\n\n//# sourceURL=webpack://genshinPanel/./src/artifact/effects/thundering_fury.ts?");
+eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\nfunction apply2(attribute, ctx, params) {\r\n    attribute.thunderBonus += 0.15;\r\n}\r\nfunction apply4(attribute, ctx, params) {\r\n    // if (params.countThunderingFury) {\r\n    //     attribute.bonus += 0.4;\r\n    //     if (typeof attribute.tag !== \"undefined\") {\r\n    //         attribute.tag.push(\"计入如雷的盛怒4件套\");\r\n    //     }\r\n    // }\r\n}\r\nexports.default = [null, apply2, null, apply4, null];\r\n\n\n//# sourceURL=webpack://genshinPanel/./src/artifact/effects/thundering_fury.ts?");
 
 /***/ }),
 
@@ -387,7 +387,7 @@ eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\n
 /***/ ((__unused_webpack_module, exports) => {
 
 "use strict";
-eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\nfunction apply2(attribute, params) {\r\n    attribute.thunderRes += 0.2;\r\n    attribute.iceRes += 0.2;\r\n    attribute.rockRes += 0.2;\r\n    attribute.fireRes += 0.2;\r\n    attribute.windRes += 0.2;\r\n    attribute.waterRes += 0.2;\r\n}\r\nfunction apply4(attribute, params) {\r\n}\r\nexports.default = [null, apply2, null, apply4, null];\r\n\n\n//# sourceURL=webpack://genshinPanel/./src/artifact/effects/tiny_miracle.ts?");
+eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\nfunction apply2(attribute, ctx, params) {\r\n    attribute.thunderRes += 0.2;\r\n    attribute.iceRes += 0.2;\r\n    attribute.rockRes += 0.2;\r\n    attribute.fireRes += 0.2;\r\n    attribute.windRes += 0.2;\r\n    attribute.waterRes += 0.2;\r\n}\r\nfunction apply4(attribute, ctx, params) {\r\n}\r\nexports.default = [null, apply2, null, apply4, null];\r\n\n\n//# sourceURL=webpack://genshinPanel/./src/artifact/effects/tiny_miracle.ts?");
 
 /***/ }),
 
@@ -398,7 +398,7 @@ eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\n
 /***/ ((__unused_webpack_module, exports) => {
 
 "use strict";
-eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\nfunction apply2(attribute, params) {\r\n    attribute.curedEffect += 0.2;\r\n}\r\nfunction apply4(attribute, params) {\r\n}\r\nexports.default = [null, apply2, null, apply4, null];\r\n\n\n//# sourceURL=webpack://genshinPanel/./src/artifact/effects/traveling_doctor.ts?");
+eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\nfunction apply2(attribute, ctx, params) {\r\n    attribute.curedEffect += 0.2;\r\n}\r\nfunction apply4(attribute, ctx, params) {\r\n}\r\nexports.default = [null, apply2, null, apply4, null];\r\n\n\n//# sourceURL=webpack://genshinPanel/./src/artifact/effects/traveling_doctor.ts?");
 
 /***/ }),
 
@@ -409,7 +409,7 @@ eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\n
 /***/ ((__unused_webpack_module, exports) => {
 
 "use strict";
-eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\nfunction apply2(attribute, params) {\r\n    attribute.windBonus += 0.15;\r\n}\r\nfunction apply4(attribute, params) {\r\n    // if (params.countViridescentVenerer) {\r\n    //     attribute.bonus += 0.6;\r\n    //     if (typeof attribute.tag !== \"undefined\") {\r\n    //         attribute.tag.push(\"计入翠绿之影4件套\");\r\n    //     }\r\n    // }\r\n}\r\nexports.default = [null, apply2, null, apply4, null];\r\n\n\n//# sourceURL=webpack://genshinPanel/./src/artifact/effects/viridescent_venerer.ts?");
+eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\nfunction apply2(attribute, ctx, params) {\r\n    attribute.windBonus += 0.15;\r\n}\r\nfunction apply4(attribute, ctx, params) {\r\n    // if (params.countViridescentVenerer) {\r\n    //     attribute.bonus += 0.6;\r\n    //     if (typeof attribute.tag !== \"undefined\") {\r\n    //         attribute.tag.push(\"计入翠绿之影4件套\");\r\n    //     }\r\n    // }\r\n}\r\nexports.default = [null, apply2, null, apply4, null];\r\n\n\n//# sourceURL=webpack://genshinPanel/./src/artifact/effects/viridescent_venerer.ts?");
 
 /***/ }),
 
@@ -420,7 +420,7 @@ eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\n
 /***/ ((__unused_webpack_module, exports) => {
 
 "use strict";
-eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\nfunction apply2(attribute, params) {\r\n    attribute.elementalMastery += 80;\r\n}\r\nfunction apply4(attribute, params) {\r\n    if (params.countWandererTroupe) {\r\n        attribute.bBonus += 0.35;\r\n    }\r\n}\r\nexports.default = [null, apply2, null, apply4, null];\r\n\n\n//# sourceURL=webpack://genshinPanel/./src/artifact/effects/wanderer_troupe.ts?");
+eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\nfunction apply2(attribute, ctx, params) {\r\n    attribute.elementalMastery += 80;\r\n}\r\nfunction apply4(attribute, ctx, params) {\r\n    let weapon = ctx.character.weapon;\r\n    if (weapon === 1 /* Book */ || weapon === 2 /* Bow */) {\r\n        attribute.bBonus += 0.35;\r\n    }\r\n}\r\nexports.default = [null, apply2, null, apply4, null];\r\n\n\n//# sourceURL=webpack://genshinPanel/./src/artifact/effects/wanderer_troupe.ts?");
 
 /***/ }),
 
@@ -442,7 +442,7 @@ eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\n
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
 "use strict";
-eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\nconst artifact_1 = __webpack_require__(/*! ../artifact/artifact */ \"./src/artifact/artifact.ts\");\r\nconst artifact_set_1 = __webpack_require__(/*! ../artifact/artifact_set */ \"./src/artifact/artifact_set.ts\");\r\nconst attribute_1 = __webpack_require__(/*! ../attribute/attribute */ \"./src/attribute/attribute.ts\");\r\nconst common_1 = __webpack_require__(/*! ../common/common */ \"./src/common/common.ts\");\r\nclass AttributeBuilder {\r\n    constructor() {\r\n        this._character = null;\r\n        this._weapon = null;\r\n        this._artifacts = new artifact_set_1.default();\r\n        this._single = [];\r\n        this._useWeaponEffect = true;\r\n    }\r\n    weaponEffect(value) {\r\n        this._useWeaponEffect = value;\r\n    }\r\n    character(value) {\r\n        this._character = value;\r\n        return this;\r\n    }\r\n    weapon(value) {\r\n        this._weapon = value;\r\n        return this;\r\n    }\r\n    artifact(art) {\r\n        this._artifacts.addArtifact(art);\r\n        return this;\r\n    }\r\n    artifacts(arts) {\r\n        if (arts instanceof artifact_set_1.default) {\r\n            for (let i = 0; i < arts.length(); i++) {\r\n                this.artifact(arts.get(i));\r\n            }\r\n        }\r\n        else if (Array.isArray(arts)) {\r\n            for (let item of arts) {\r\n                if (item instanceof artifact_1.default) {\r\n                    this.artifact(item);\r\n                }\r\n            }\r\n        }\r\n        return this;\r\n    }\r\n    single(key, value) {\r\n        this._single.push({\r\n            key,\r\n            value,\r\n        });\r\n        return this;\r\n    }\r\n    // 1. weapon basic\r\n    // 2. character basic\r\n    // 3. weapon secondary\r\n    // 4. character secondary\r\n    // 5. artifacts\r\n    // 6. weapon effects\r\n    build() {\r\n        var _a;\r\n        let attribute = new attribute_1.default();\r\n        // apply primary\r\n        if (this._weapon) {\r\n            this._weapon.applyPrimary(attribute);\r\n        }\r\n        if (this._character) {\r\n            this._character.applyPrimary(attribute);\r\n        }\r\n        // apply secondary\r\n        if (this._weapon) {\r\n            this._weapon.applySecondary(attribute);\r\n        }\r\n        if (this._character) {\r\n            this._character.applySecondary(attribute);\r\n        }\r\n        // apply artifacts\r\n        this._artifacts.apply(attribute, null);\r\n        for (let s of this._single) {\r\n            common_1.applySecondaryTag(attribute, s.key, s.value);\r\n        }\r\n        // apply weapon effect\r\n        if (this._weapon && this._useWeaponEffect) {\r\n            (_a = this._weapon) === null || _a === void 0 ? void 0 : _a.applyEffect(attribute);\r\n        }\r\n        return attribute;\r\n    }\r\n}\r\nexports.default = AttributeBuilder;\r\n\n\n//# sourceURL=webpack://genshinPanel/./src/builder/attribute_builder.ts?");
+eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\nconst artifact_1 = __webpack_require__(/*! ../artifact/artifact */ \"./src/artifact/artifact.ts\");\r\nconst artifact_set_1 = __webpack_require__(/*! ../artifact/artifact_set */ \"./src/artifact/artifact_set.ts\");\r\nconst attribute_1 = __webpack_require__(/*! ../attribute/attribute */ \"./src/attribute/attribute.ts\");\r\nconst common_1 = __webpack_require__(/*! ../common/common */ \"./src/common/common.ts\");\r\nclass AttributeBuilder {\r\n    constructor() {\r\n        this._character = null;\r\n        this._weapon = null;\r\n        this._artifacts = new artifact_set_1.default();\r\n        this._single = [];\r\n        this._useWeaponEffect = true;\r\n    }\r\n    weaponEffect(value) {\r\n        this._useWeaponEffect = value;\r\n    }\r\n    character(value) {\r\n        this._character = value;\r\n        return this;\r\n    }\r\n    weapon(value) {\r\n        this._weapon = value;\r\n        return this;\r\n    }\r\n    artifact(art) {\r\n        this._artifacts.addArtifact(art);\r\n        return this;\r\n    }\r\n    artifacts(arts) {\r\n        if (arts instanceof artifact_set_1.default) {\r\n            for (let i = 0; i < arts.length(); i++) {\r\n                this.artifact(arts.get(i));\r\n            }\r\n        }\r\n        else if (Array.isArray(arts)) {\r\n            for (let item of arts) {\r\n                if (item instanceof artifact_1.default) {\r\n                    this.artifact(item);\r\n                }\r\n            }\r\n        }\r\n        return this;\r\n    }\r\n    single(key, value) {\r\n        this._single.push({\r\n            key,\r\n            value,\r\n        });\r\n        return this;\r\n    }\r\n    // 1. weapon basic\r\n    // 2. character basic\r\n    // 3. weapon secondary\r\n    // 4. character secondary\r\n    // 5. artifacts\r\n    // 6. character talent\r\n    // 7. weapon effects\r\n    build() {\r\n        var _a;\r\n        if (this._character === null || this._weapon === null) {\r\n            throw new Error(\"weapon and character must be specified\");\r\n        }\r\n        let attribute = new attribute_1.default();\r\n        // apply primary\r\n        if (this._weapon) {\r\n            this._weapon.applyPrimary(attribute);\r\n        }\r\n        if (this._character) {\r\n            this._character.applyPrimary(attribute);\r\n        }\r\n        // apply secondary\r\n        if (this._weapon) {\r\n            this._weapon.applySecondary(attribute);\r\n        }\r\n        if (this._character) {\r\n            this._character.applySecondary(attribute);\r\n        }\r\n        let context = {\r\n            character: this._character,\r\n            weapon: this._weapon,\r\n        };\r\n        // apply artifacts\r\n        this._artifacts.apply(attribute, context, null);\r\n        for (let s of this._single) {\r\n            common_1.applySecondaryTag(attribute, s.key, s.value);\r\n        }\r\n        // character talent\r\n        this._character.applyTalent(attribute);\r\n        // apply weapon effect\r\n        if (this._weapon && this._useWeaponEffect) {\r\n            (_a = this._weapon) === null || _a === void 0 ? void 0 : _a.applyEffect(attribute);\r\n        }\r\n        return attribute;\r\n    }\r\n}\r\nexports.default = AttributeBuilder;\r\n\n\n//# sourceURL=webpack://genshinPanel/./src/builder/attribute_builder.ts?");
 
 /***/ }),
 
@@ -475,7 +475,7 @@ eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\n
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
 "use strict";
-eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\nconst data_1 = __webpack_require__(/*! ./data */ \"./src/numerics/character/data/index.js\");\r\nconst common_1 = __webpack_require__(/*! ../../common/common */ \"./src/common/common.ts\");\r\nconst common_2 = __webpack_require__(/*! ../preset/common */ \"./src/numerics/preset/common.ts\");\r\nconst get_attribute_1 = __webpack_require__(/*! ../preset/get_attribute */ \"./src/numerics/preset/get_attribute.ts\");\r\nclass Character {\r\n    constructor(name, level, ascend, constellation) {\r\n        this.name = name;\r\n        this.eng = \"\";\r\n        this.star = 0;\r\n        this.level = level;\r\n        this.ascend = ascend;\r\n        this.constellation = constellation;\r\n        let charSpec = data_1.default(name);\r\n        this.baseAtk = common_2.getBaseValue(charSpec.attack, level, ascend);\r\n        this.baseDef = common_2.getBaseValue(charSpec.defend, level, ascend);\r\n        this.baseHp = common_2.getBaseValue(charSpec.life, level, ascend);\r\n        this.secondary = {\r\n            name: charSpec.secondary.name,\r\n            value: get_attribute_1.getCharacterSecondary(charSpec.secondary.family, level, ascend),\r\n        };\r\n    }\r\n    applyPrimary(attribute) {\r\n        common_1.applyPrimaryTag(attribute, \"attack\", this.baseAtk);\r\n        common_1.applyPrimaryTag(attribute, \"defend\", this.baseDef);\r\n        common_1.applyPrimaryTag(attribute, \"life\", this.baseHp);\r\n    }\r\n    applySecondary(attribute) {\r\n        common_1.applySecondaryTag(attribute, this.secondary.name, this.secondary.value);\r\n    }\r\n}\r\nexports.default = Character;\r\n\n\n//# sourceURL=webpack://genshinPanel/./src/numerics/character/character.ts?");
+eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\nconst data_1 = __webpack_require__(/*! ./data */ \"./src/numerics/character/data/index.js\");\r\nconst common_1 = __webpack_require__(/*! ../../common/common */ \"./src/common/common.ts\");\r\nconst common_2 = __webpack_require__(/*! ../preset/common */ \"./src/numerics/preset/common.ts\");\r\nconst get_attribute_1 = __webpack_require__(/*! ../preset/get_attribute */ \"./src/numerics/preset/get_attribute.ts\");\r\nclass Character {\r\n    constructor(name, level, ascend, constellation) {\r\n        this.name = name;\r\n        this.eng = \"\";\r\n        this.star = 0;\r\n        this.level = level;\r\n        this.ascend = ascend;\r\n        this.constellation = constellation;\r\n        this.hasTalent1 = (level === 20 && ascend) || (level > 20);\r\n        this.hasTalent2 = (level === 60 && ascend) || (level > 60);\r\n        let charSpec = data_1.default(name);\r\n        this.baseAtk = common_2.getBaseValue(charSpec.attack, level, ascend);\r\n        this.baseDef = common_2.getBaseValue(charSpec.defend, level, ascend);\r\n        this.baseHp = common_2.getBaseValue(charSpec.life, level, ascend);\r\n        this.weapon = charSpec.weapon;\r\n        if (charSpec.createTalent) {\r\n            this.talent = charSpec.createTalent.call(this);\r\n        }\r\n        else {\r\n            this.talent = null;\r\n        }\r\n        this.secondary = {\r\n            name: charSpec.secondary.name,\r\n            value: get_attribute_1.getCharacterSecondary(charSpec.secondary.family, level, ascend),\r\n        };\r\n    }\r\n    applyPrimary(attribute) {\r\n        common_1.applyPrimaryTag(attribute, \"attack\", this.baseAtk);\r\n        common_1.applyPrimaryTag(attribute, \"defend\", this.baseDef);\r\n        common_1.applyPrimaryTag(attribute, \"life\", this.baseHp);\r\n    }\r\n    applySecondary(attribute) {\r\n        common_1.applySecondaryTag(attribute, this.secondary.name, this.secondary.value);\r\n    }\r\n    applyTalent(attribute) {\r\n        if (this.talent) {\r\n            this.talent(attribute);\r\n        }\r\n    }\r\n}\r\nexports.default = Character;\r\n\n\n//# sourceURL=webpack://genshinPanel/./src/numerics/character/character.ts?");
 
 /***/ }),
 
@@ -486,7 +486,7 @@ eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\n
 /***/ ((__unused_webpack_module, exports) => {
 
 "use strict";
-eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\nexports.default = {\r\n    alt: [\"anbo\", \"amber\", \"安柏\"],\r\n    life: [793, 2038, 2630, 3940, 4361, 5016, 5578, 6233, 6654, 7309, 7730, 8358, 8806, 9461],\r\n    attack: [19, 48, 62, 93, 103, 118, 131, 147, 157, 172, 182, 198, 208, 223],\r\n    defend: [50, 129, 167, 250, 277, 318, 354, 396, 422, 464, 491, 532, 559, 601],\r\n    secondary: {\r\n        name: \"attackPercentage\",\r\n        family: \"atk240\",\r\n    }\r\n};\r\n\n\n//# sourceURL=webpack://genshinPanel/./src/numerics/character/data/fire/anbo.ts?");
+eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\nexports.default = {\r\n    alt: [\"anbo\", \"amber\", \"安柏\"],\r\n    life: [793, 2038, 2630, 3940, 4361, 5016, 5578, 6233, 6654, 7309, 7730, 8358, 8806, 9461],\r\n    attack: [19, 48, 62, 93, 103, 118, 131, 147, 157, 172, 182, 198, 208, 223],\r\n    defend: [50, 129, 167, 250, 277, 318, 354, 396, 422, 464, 491, 532, 559, 601],\r\n    secondary: {\r\n        name: \"attackPercentage\",\r\n        family: \"atk240\",\r\n    },\r\n    createTalent: function () {\r\n        let that = this;\r\n        if (that.hasTalent1) {\r\n            return function (attribute) {\r\n                attribute.qCritical += 0.1;\r\n            };\r\n        }\r\n        return null;\r\n    },\r\n    weapon: 2 /* Bow */,\r\n};\r\n\n\n//# sourceURL=webpack://genshinPanel/./src/numerics/character/data/fire/anbo.ts?");
 
 /***/ }),
 
@@ -497,7 +497,7 @@ eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\n
 /***/ ((__unused_webpack_module, exports) => {
 
 "use strict";
-eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\nexports.default = {\r\n    alt: [\"bennett\", \"bannite\", \"班尼特\"],\r\n    life: [1039, 2670, 3447, 5163, 5715, 6573, 7309, 8186, 8719, 9577, 10129, 10987, 11539, 12397],\r\n    attack: [16, 41, 53, 80, 88, 101, 113, 126, 134, 148, 156, 169, 178, 191],\r\n    defend: [65, 166, 214, 321, 356, 409, 455, 508, 542, 596, 630, 684, 718, 771],\r\n    secondary: {\r\n        name: \"recharge\",\r\n        family: \"recharge267\"\r\n    }\r\n};\r\n\n\n//# sourceURL=webpack://genshinPanel/./src/numerics/character/data/fire/bannite.ts?");
+eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\nexports.default = {\r\n    alt: [\"bennett\", \"bannite\", \"班尼特\"],\r\n    life: [1039, 2670, 3447, 5163, 5715, 6573, 7309, 8186, 8719, 9577, 10129, 10987, 11539, 12397],\r\n    attack: [16, 41, 53, 80, 88, 101, 113, 126, 134, 148, 156, 169, 178, 191],\r\n    defend: [65, 166, 214, 321, 356, 409, 455, 508, 542, 596, 630, 684, 718, 771],\r\n    secondary: {\r\n        name: \"recharge\",\r\n        family: \"recharge267\"\r\n    },\r\n    weapon: 0 /* Sword */,\r\n};\r\n\n\n//# sourceURL=webpack://genshinPanel/./src/numerics/character/data/fire/bannite.ts?");
 
 /***/ }),
 
@@ -508,7 +508,7 @@ eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\n
 /***/ ((__unused_webpack_module, exports) => {
 
 "use strict";
-eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\nexports.default = {\r\n    alt: [\"diluke\", \"diluc\", \"迪卢克\"],\r\n    life: [1011, 2621, 3488, 5219, 5834, 6712, 7533, 8421, 9036, 9932, 10547, 11453, 12068, 12981],\r\n    attack: [26, 68, 90, 135, 151, 173, 194, 217, 233, 256, 272, 295, 311, 335],\r\n    defend: [61, 158, 211, 315, 352, 405, 455, 509, 546, 600, 637, 692, 729, 784],\r\n    secondary: {\r\n        name: \"critical\",\r\n        family: \"cr192\",\r\n    }\r\n};\r\n\n\n//# sourceURL=webpack://genshinPanel/./src/numerics/character/data/fire/diluke.ts?");
+eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\nexports.default = {\r\n    alt: [\"diluke\", \"diluc\", \"迪卢克\"],\r\n    life: [1011, 2621, 3488, 5219, 5834, 6712, 7533, 8421, 9036, 9932, 10547, 11453, 12068, 12981],\r\n    attack: [26, 68, 90, 135, 151, 173, 194, 217, 233, 256, 272, 295, 311, 335],\r\n    defend: [61, 158, 211, 315, 352, 405, 455, 509, 546, 600, 637, 692, 729, 784],\r\n    secondary: {\r\n        name: \"critical\",\r\n        family: \"cr192\",\r\n    },\r\n    weapon: 4 /* Sword2 */,\r\n};\r\n\n\n//# sourceURL=webpack://genshinPanel/./src/numerics/character/data/fire/diluke.ts?");
 
 /***/ }),
 
@@ -519,7 +519,7 @@ eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\n
 /***/ ((__unused_webpack_module, exports) => {
 
 "use strict";
-eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\nexports.default = {\r\n    alt: [\"keli\", \"klee\", \"可莉\"],\r\n    life: [801, 2077, 2764, 4136, 4623, 5319, 5970, 6673, 7161, 7870, 8358, 9076, 9563, 10287],\r\n    attack: [24, 63, 84, 125, 140, 161, 180, 202, 216, 238, 253, 274, 289, 311],\r\n    defend: [48, 124, 165, 247, 276, 318, 357, 399, 428, 470, 500, 542, 572, 615],\r\n    secondary: {\r\n        name: \"fireBonus\",\r\n        family: \"bonus288\"\r\n    }\r\n};\r\n\n\n//# sourceURL=webpack://genshinPanel/./src/numerics/character/data/fire/keli.ts?");
+eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\nexports.default = {\r\n    alt: [\"keli\", \"klee\", \"可莉\"],\r\n    life: [801, 2077, 2764, 4136, 4623, 5319, 5970, 6673, 7161, 7870, 8358, 9076, 9563, 10287],\r\n    attack: [24, 63, 84, 125, 140, 161, 180, 202, 216, 238, 253, 274, 289, 311],\r\n    defend: [48, 124, 165, 247, 276, 318, 357, 399, 428, 470, 500, 542, 572, 615],\r\n    secondary: {\r\n        name: \"fireBonus\",\r\n        family: \"bonus288\"\r\n    },\r\n    weapon: 1 /* Book */,\r\n};\r\n\n\n//# sourceURL=webpack://genshinPanel/./src/numerics/character/data/fire/keli.ts?");
 
 /***/ }),
 
@@ -530,7 +530,7 @@ eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\n
 /***/ ((__unused_webpack_module, exports) => {
 
 "use strict";
-eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\nexports.default = {\r\n    alt: [\"xiangling\", \"香菱\"],\r\n    life: [912, 2342, 3024, 4529, 5013, 5766, 6411, 7164, 7648, 8401, 8885, 9638, 10122, 10875],\r\n    attack: [19, 48, 63, 94, 104, 119, 133, 148, 158, 174, 184, 200, 210, 225],\r\n    defend: [56, 144, 186, 279, 308, 355, 394, 441, 470, 517, 546, 593, 623, 669],\r\n    secondary: {\r\n        name: \"elementalMastery\",\r\n        family: \"em96\"\r\n    }\r\n};\r\n\n\n//# sourceURL=webpack://genshinPanel/./src/numerics/character/data/fire/xiangling.ts?");
+eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\nexports.default = {\r\n    alt: [\"xiangling\", \"香菱\"],\r\n    life: [912, 2342, 3024, 4529, 5013, 5766, 6411, 7164, 7648, 8401, 8885, 9638, 10122, 10875],\r\n    attack: [19, 48, 63, 94, 104, 119, 133, 148, 158, 174, 184, 200, 210, 225],\r\n    defend: [56, 144, 186, 279, 308, 355, 394, 441, 470, 517, 546, 593, 623, 669],\r\n    secondary: {\r\n        name: \"elementalMastery\",\r\n        family: \"em96\"\r\n    },\r\n    weapon: 3 /* Stick */,\r\n};\r\n\n\n//# sourceURL=webpack://genshinPanel/./src/numerics/character/data/fire/xiangling.ts?");
 
 /***/ }),
 
@@ -541,7 +541,7 @@ eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\n
 /***/ ((__unused_webpack_module, exports) => {
 
 "use strict";
-eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\nexports.default = {\r\n    alt: [\"xinyan\", \"辛焱\"],\r\n    life: [939, 2413, 3114, 4665, 5163, 5939, 6604, 7379, 7878, 8653, 9151, 9927, 10425, 11201],\r\n    attack: [21, 54, 69, 103, 115, 132, 147, 164, 175, 192, 203, 220, 231, 249],\r\n    defend: [67, 172, 222, 333, 368, 423, 471, 526, 562, 617, 652, 708, 743, 799],\r\n    secondary: {\r\n        name: \"attackPercentage\",\r\n        family: \"atk240\"\r\n    }\r\n};\r\n\n\n//# sourceURL=webpack://genshinPanel/./src/numerics/character/data/fire/xinyan.ts?");
+eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\nexports.default = {\r\n    alt: [\"xinyan\", \"辛焱\"],\r\n    life: [939, 2413, 3114, 4665, 5163, 5939, 6604, 7379, 7878, 8653, 9151, 9927, 10425, 11201],\r\n    attack: [21, 54, 69, 103, 115, 132, 147, 164, 175, 192, 203, 220, 231, 249],\r\n    defend: [67, 172, 222, 333, 368, 423, 471, 526, 562, 617, 652, 708, 743, 799],\r\n    secondary: {\r\n        name: \"attackPercentage\",\r\n        family: \"atk240\"\r\n    },\r\n    weapon: 4 /* Sword2 */,\r\n};\r\n\n\n//# sourceURL=webpack://genshinPanel/./src/numerics/character/data/fire/xinyan.ts?");
 
 /***/ }),
 
@@ -552,7 +552,7 @@ eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\n
 /***/ ((__unused_webpack_module, exports) => {
 
 "use strict";
-eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\nexports.default = {\r\n    alt: [\"chongyun\", \"重云\"],\r\n    life: [921, 2366, 3054, 4574, 5063, 5824, 6475, 7236, 7725, 8485, 8974, 9734, 10223, 10984],\r\n    attack: [19, 48, 62, 93, 103, 118, 131, 147, 157, 172, 182, 197, 208, 223],\r\n    defend: [54, 140, 180, 270, 299, 344, 382, 427, 456, 501, 530, 575, 603, 648],\r\n    secondary: {\r\n        name: \"attackPercentage\",\r\n        family: \"atk240\",\r\n    }\r\n};\r\n\n\n//# sourceURL=webpack://genshinPanel/./src/numerics/character/data/ice/chongyun.ts?");
+eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\nexports.default = {\r\n    alt: [\"chongyun\", \"重云\"],\r\n    life: [921, 2366, 3054, 4574, 5063, 5824, 6475, 7236, 7725, 8485, 8974, 9734, 10223, 10984],\r\n    attack: [19, 48, 62, 93, 103, 118, 131, 147, 157, 172, 182, 197, 208, 223],\r\n    defend: [54, 140, 180, 270, 299, 344, 382, 427, 456, 501, 530, 575, 603, 648],\r\n    secondary: {\r\n        name: \"attackPercentage\",\r\n        family: \"atk240\",\r\n    },\r\n    weapon: 4 /* Sword2 */,\r\n};\r\n\n\n//# sourceURL=webpack://genshinPanel/./src/numerics/character/data/ice/chongyun.ts?");
 
 /***/ }),
 
@@ -563,7 +563,7 @@ eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\n
 /***/ ((__unused_webpack_module, exports) => {
 
 "use strict";
-eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\nexports.default = {\r\n    alt: [\"diaona\", \"迪奥娜\", \"diona\"],\r\n    life: [802, 2061, 2661, 3985, 4411, 5074, 5642, 6305, 6731, 7393, 7818, 8481, 8907, 9570],\r\n    attack: [18, 46, 59, 88, 98, 113, 125, 140, 149, 164, 174, 188, 198, 212],\r\n    defend: [50, 129, 167, 250, 277, 318, 354, 396, 422, 464, 491, 532, 559, 601],\r\n    secondary: {\r\n        name: \"iceBonus\",\r\n        family: \"bonus240\",\r\n    }\r\n};\r\n\n\n//# sourceURL=webpack://genshinPanel/./src/numerics/character/data/ice/diaona.ts?");
+eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\nexports.default = {\r\n    alt: [\"diaona\", \"迪奥娜\", \"diona\"],\r\n    life: [802, 2061, 2661, 3985, 4411, 5074, 5642, 6305, 6731, 7393, 7818, 8481, 8907, 9570],\r\n    attack: [18, 46, 59, 88, 98, 113, 125, 140, 149, 164, 174, 188, 198, 212],\r\n    defend: [50, 129, 167, 250, 277, 318, 354, 396, 422, 464, 491, 532, 559, 601],\r\n    secondary: {\r\n        name: \"iceBonus\",\r\n        family: \"bonus240\",\r\n    },\r\n    weapon: 2 /* Bow */,\r\n};\r\n\n\n//# sourceURL=webpack://genshinPanel/./src/numerics/character/data/ice/diaona.ts?");
 
 /***/ }),
 
@@ -574,7 +574,7 @@ eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\n
 /***/ ((__unused_webpack_module, exports) => {
 
 "use strict";
-eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\nexports.default = {\r\n    alt: [\"ganyu\", \"甘雨\"],\r\n    life: [763, 1978, 2632, 3939, 4403, 5066, 5686, 6355, 6820, 7495, 7960, 8643, 9108, 9797],\r\n    attack: [26, 68, 90, 135, 151, 173, 194, 217, 233, 256, 272, 295, 311, 335],\r\n    defend: [49, 127, 169, 253, 283, 326, 366, 409, 439, 482, 512, 556, 586, 630],\r\n    secondary: {\r\n        name: \"criticalDamage\",\r\n        family: \"cd384\",\r\n    }\r\n};\r\n\n\n//# sourceURL=webpack://genshinPanel/./src/numerics/character/data/ice/ganyu.ts?");
+eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\nexports.default = {\r\n    alt: [\"ganyu\", \"甘雨\"],\r\n    life: [763, 1978, 2632, 3939, 4403, 5066, 5686, 6355, 6820, 7495, 7960, 8643, 9108, 9797],\r\n    attack: [26, 68, 90, 135, 151, 173, 194, 217, 233, 256, 272, 295, 311, 335],\r\n    defend: [49, 127, 169, 253, 283, 326, 366, 409, 439, 482, 512, 556, 586, 630],\r\n    secondary: {\r\n        name: \"criticalDamage\",\r\n        family: \"cd384\",\r\n    },\r\n    weapon: 2 /* Bow */,\r\n};\r\n\n\n//# sourceURL=webpack://genshinPanel/./src/numerics/character/data/ice/ganyu.ts?");
 
 /***/ }),
 
@@ -585,7 +585,7 @@ eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\n
 /***/ ((__unused_webpack_module, exports) => {
 
 "use strict";
-eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\nexports.default = {\r\n    alt: [\"kaiya\", \"凯亚\", \"kaeya\"],\r\n    life: [976, 2506, 3235, 4846, 5364, 6170, 6860, 7666, 8184, 8989, 9507, 10312, 10830, 11636],\r\n    attack: [19, 48, 62, 93, 103, 118, 131, 147, 157, 172, 182, 198, 208, 223],\r\n    defend: [66, 171, 220, 330, 365, 420, 467, 522, 557, 612, 647, 702, 737, 792],\r\n    secondary: {\r\n        name: \"recharge\",\r\n        family: \"recharge267\"\r\n    }\r\n};\r\n\n\n//# sourceURL=webpack://genshinPanel/./src/numerics/character/data/ice/kaiya.ts?");
+eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\nexports.default = {\r\n    alt: [\"kaiya\", \"凯亚\", \"kaeya\"],\r\n    life: [976, 2506, 3235, 4846, 5364, 6170, 6860, 7666, 8184, 8989, 9507, 10312, 10830, 11636],\r\n    attack: [19, 48, 62, 93, 103, 118, 131, 147, 157, 172, 182, 198, 208, 223],\r\n    defend: [66, 171, 220, 330, 365, 420, 467, 522, 557, 612, 647, 702, 737, 792],\r\n    secondary: {\r\n        name: \"recharge\",\r\n        family: \"recharge267\"\r\n    },\r\n    weapon: 0 /* Sword */,\r\n};\r\n\n\n//# sourceURL=webpack://genshinPanel/./src/numerics/character/data/ice/kaiya.ts?");
 
 /***/ }),
 
@@ -596,7 +596,7 @@ eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\n
 /***/ ((__unused_webpack_module, exports) => {
 
 "use strict";
-eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\nexports.default = {\r\n    alt: [\"qiqi\", \"七七\"],\r\n    life: [963, 2498, 3323, 4973, 5559, 6396, 7178, 8023, 8610, 9463, 10050, 10912, 11499, 12368],\r\n    attack: [22, 58, 77, 115, 129, 148, 167, 186, 200, 220, 233, 253, 267, 287],\r\n    defend: [72, 186, 248, 371, 415, 477, 535, 598, 642, 706, 749, 814, 857, 922],\r\n    secondary: {\r\n        name: \"cureEffect\",\r\n        family: \"cure222\"\r\n    }\r\n};\r\n\n\n//# sourceURL=webpack://genshinPanel/./src/numerics/character/data/ice/qiqi.ts?");
+eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\nexports.default = {\r\n    alt: [\"qiqi\", \"七七\"],\r\n    life: [963, 2498, 3323, 4973, 5559, 6396, 7178, 8023, 8610, 9463, 10050, 10912, 11499, 12368],\r\n    attack: [22, 58, 77, 115, 129, 148, 167, 186, 200, 220, 233, 253, 267, 287],\r\n    defend: [72, 186, 248, 371, 415, 477, 535, 598, 642, 706, 749, 814, 857, 922],\r\n    secondary: {\r\n        name: \"cureEffect\",\r\n        family: \"cure222\"\r\n    },\r\n    weapon: 0 /* Sword */,\r\n};\r\n\n\n//# sourceURL=webpack://genshinPanel/./src/numerics/character/data/ice/qiqi.ts?");
 
 /***/ }),
 
@@ -607,7 +607,7 @@ eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\n
 /***/ ((__unused_webpack_module, exports) => {
 
 "use strict";
-eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\nexports.default = {\r\n    alt: [\"abeiduo\", \"阿贝多\", \"albedo\"],\r\n    life: [1030, 2671, 3554, 5317, 5944, 6839, 7675, 8579, 9207, 10119, 10746, 11669, 12296, 13226],\r\n    attack: [20, 51, 68, 101, 113, 130, 146, 163, 175, 192, 204, 222, 233, 251],\r\n    defend: [68, 177, 235, 352, 394, 453, 508, 568, 610, 670, 712, 773, 815, 876],\r\n    secondary: {\r\n        name: \"rockBonus\",\r\n        family: \"bonus288\",\r\n    }\r\n};\r\n\n\n//# sourceURL=webpack://genshinPanel/./src/numerics/character/data/rock/abeiduo.ts?");
+eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\nexports.default = {\r\n    alt: [\"abeiduo\", \"阿贝多\", \"albedo\"],\r\n    life: [1030, 2671, 3554, 5317, 5944, 6839, 7675, 8579, 9207, 10119, 10746, 11669, 12296, 13226],\r\n    attack: [20, 51, 68, 101, 113, 130, 146, 163, 175, 192, 204, 222, 233, 251],\r\n    defend: [68, 177, 235, 352, 394, 453, 508, 568, 610, 670, 712, 773, 815, 876],\r\n    secondary: {\r\n        name: \"rockBonus\",\r\n        family: \"bonus288\",\r\n    },\r\n    weapon: 0 /* Sword */,\r\n};\r\n\n\n//# sourceURL=webpack://genshinPanel/./src/numerics/character/data/rock/abeiduo.ts?");
 
 /***/ }),
 
@@ -618,7 +618,7 @@ eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\n
 /***/ ((__unused_webpack_module, exports) => {
 
 "use strict";
-eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\nexports.default = {\r\n    alt: [\"me_rock\", \"旅行者-岩\", \"me_geo\"],\r\n    life: [912, 2342, 3024, 4529, 5013, 5766, 6411, 7164, 7648, 8401, 8885, 9638, 10122, 10875],\r\n    attack: [18, 46, 59, 88, 98, 113, 125, 140, 149, 164, 174, 188, 198, 212],\r\n    defend: [57, 147, 190, 284, 315, 362, 402, 450, 480, 527, 558, 605, 635, 683],\r\n    secondary: {\r\n        name: \"attackPercentage\",\r\n        family: \"atk240\"\r\n    }\r\n};\r\n\n\n//# sourceURL=webpack://genshinPanel/./src/numerics/character/data/rock/me_rock.ts?");
+eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\nexports.default = {\r\n    alt: [\"me_rock\", \"旅行者-岩\", \"me_geo\"],\r\n    life: [912, 2342, 3024, 4529, 5013, 5766, 6411, 7164, 7648, 8401, 8885, 9638, 10122, 10875],\r\n    attack: [18, 46, 59, 88, 98, 113, 125, 140, 149, 164, 174, 188, 198, 212],\r\n    defend: [57, 147, 190, 284, 315, 362, 402, 450, 480, 527, 558, 605, 635, 683],\r\n    secondary: {\r\n        name: \"attackPercentage\",\r\n        family: \"atk240\"\r\n    },\r\n    weapon: 0 /* Sword */,\r\n};\r\n\n\n//# sourceURL=webpack://genshinPanel/./src/numerics/character/data/rock/me_rock.ts?");
 
 /***/ }),
 
@@ -629,7 +629,7 @@ eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\n
 /***/ ((__unused_webpack_module, exports) => {
 
 "use strict";
-eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\nexports.default = {\r\n    alt: [\"ningguang\", \"凝光\"],\r\n    life: [821, 2108, 2721, 4076, 4512, 5189, 5770, 6448, 6884, 7561, 7996, 8674, 9110, 9787],\r\n    attack: [18, 46, 59, 88, 98, 113, 125, 140, 149, 164, 174, 188, 198, 212],\r\n    defend: [48, 123, 159, 239, 264, 304, 338, 378, 403, 443, 468, 508, 534, 573],\r\n    secondary: {\r\n        name: \"rockBonus\",\r\n        family: \"bonus240\",\r\n    }\r\n};\r\n\n\n//# sourceURL=webpack://genshinPanel/./src/numerics/character/data/rock/ningguang.ts?");
+eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\nexports.default = {\r\n    alt: [\"ningguang\", \"凝光\"],\r\n    life: [821, 2108, 2721, 4076, 4512, 5189, 5770, 6448, 6884, 7561, 7996, 8674, 9110, 9787],\r\n    attack: [18, 46, 59, 88, 98, 113, 125, 140, 149, 164, 174, 188, 198, 212],\r\n    defend: [48, 123, 159, 239, 264, 304, 338, 378, 403, 443, 468, 508, 534, 573],\r\n    secondary: {\r\n        name: \"rockBonus\",\r\n        family: \"bonus240\",\r\n    },\r\n    weapon: 1 /* Book */,\r\n};\r\n\n\n//# sourceURL=webpack://genshinPanel/./src/numerics/character/data/rock/ningguang.ts?");
 
 /***/ }),
 
@@ -640,7 +640,7 @@ eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\n
 /***/ ((__unused_webpack_module, exports) => {
 
 "use strict";
-eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\nexports.default = {\r\n    alt: [\"nuoaier\", \"诺艾尔\", \"noelle\"],\r\n    life: [1012, 2600, 3356, 5027, 5564, 6400, 7117, 7953, 8490, 9325, 9862, 10698, 11235, 12071],\r\n    attack: [16, 41, 53, 80, 88, 101, 113, 126, 134, 148, 156, 169, 178, 191],\r\n    defend: [67, 172, 222, 333, 368, 423, 471, 526, 562, 617, 652, 708, 743, 799],\r\n    secondary: {\r\n        name: \"defendPercentage\",\r\n        family: \"def300\"\r\n    }\r\n};\r\n\n\n//# sourceURL=webpack://genshinPanel/./src/numerics/character/data/rock/nuoaier.ts?");
+eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\nexports.default = {\r\n    alt: [\"nuoaier\", \"诺艾尔\", \"noelle\"],\r\n    life: [1012, 2600, 3356, 5027, 5564, 6400, 7117, 7953, 8490, 9325, 9862, 10698, 11235, 12071],\r\n    attack: [16, 41, 53, 80, 88, 101, 113, 126, 134, 148, 156, 169, 178, 191],\r\n    defend: [67, 172, 222, 333, 368, 423, 471, 526, 562, 617, 652, 708, 743, 799],\r\n    secondary: {\r\n        name: \"defendPercentage\",\r\n        family: \"def300\"\r\n    },\r\n    weapon: 4 /* Sword2 */,\r\n};\r\n\n\n//# sourceURL=webpack://genshinPanel/./src/numerics/character/data/rock/nuoaier.ts?");
 
 /***/ }),
 
@@ -651,7 +651,7 @@ eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\n
 /***/ ((__unused_webpack_module, exports) => {
 
 "use strict";
-eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\nexports.default = {\r\n    alt: [\"zhongli\", \"钟离\"],\r\n    life: [1144, 2967, 3948, 5908, 6605, 7599, 8528, 9533, 10230, 11243, 11940, 12965, 13662, 14695],\r\n    attack: [20, 51, 67, 101, 113, 130, 146, 163, 175, 192, 204, 222, 233, 251],\r\n    defend: [57, 149, 198, 297, 332, 382, 428, 479, 514, 564, 599, 651, 686, 738],\r\n    secondary: {\r\n        name: \"rockBonus\",\r\n        family: \"bonus288\"\r\n    }\r\n};\r\n\n\n//# sourceURL=webpack://genshinPanel/./src/numerics/character/data/rock/zhongli.ts?");
+eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\nexports.default = {\r\n    alt: [\"zhongli\", \"钟离\"],\r\n    life: [1144, 2967, 3948, 5908, 6605, 7599, 8528, 9533, 10230, 11243, 11940, 12965, 13662, 14695],\r\n    attack: [20, 51, 67, 101, 113, 130, 146, 163, 175, 192, 204, 222, 233, 251],\r\n    defend: [57, 149, 198, 297, 332, 382, 428, 479, 514, 564, 599, 651, 686, 738],\r\n    secondary: {\r\n        name: \"rockBonus\",\r\n        family: \"bonus288\"\r\n    },\r\n    weapon: 3 /* Stick */,\r\n};\r\n\n\n//# sourceURL=webpack://genshinPanel/./src/numerics/character/data/rock/zhongli.ts?");
 
 /***/ }),
 
@@ -662,7 +662,7 @@ eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\n
 /***/ ((__unused_webpack_module, exports) => {
 
 "use strict";
-eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\nexports.default = {\r\n    alt: [\"beidou\", \"北斗\"],\r\n    life: [1094, 2811, 3628, 5435, 6015, 6919, 7694, 8597, 9178, 10081, 10662, 11565, 12146, 13050],\r\n    attack: [19, 48, 63, 94, 104, 119, 133, 148, 158, 174, 184, 200, 210, 225],\r\n    defend: [54, 140, 180, 270, 299, 344, 382, 427, 456, 501, 530, 575, 603, 648],\r\n    secondary: {\r\n        name: \"thunderBonus\",\r\n        family: \"bonus240\"\r\n    }\r\n};\r\n\n\n//# sourceURL=webpack://genshinPanel/./src/numerics/character/data/thunder/beidou.ts?");
+eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\nexports.default = {\r\n    alt: [\"beidou\", \"北斗\"],\r\n    life: [1094, 2811, 3628, 5435, 6015, 6919, 7694, 8597, 9178, 10081, 10662, 11565, 12146, 13050],\r\n    attack: [19, 48, 63, 94, 104, 119, 133, 148, 158, 174, 184, 200, 210, 225],\r\n    defend: [54, 140, 180, 270, 299, 344, 382, 427, 456, 501, 530, 575, 603, 648],\r\n    secondary: {\r\n        name: \"thunderBonus\",\r\n        family: \"bonus240\"\r\n    },\r\n    weapon: 4 /* Sword2 */,\r\n};\r\n\n\n//# sourceURL=webpack://genshinPanel/./src/numerics/character/data/thunder/beidou.ts?");
 
 /***/ }),
 
@@ -673,7 +673,7 @@ eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\n
 /***/ ((__unused_webpack_module, exports) => {
 
 "use strict";
-eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\nexports.default = {\r\n    alt: [\"feixieer\", \"菲谢尔\", \"fischl\"],\r\n    life: [770, 1979, 2555, 3827, 4236, 4872, 5418, 6054, 6463, 7099, 7508, 8144, 8553, 9189],\r\n    attack: [20, 53, 68, 102, 113, 130, 144, 161, 172, 189, 200, 216, 227, 244],\r\n    defend: [50, 128, 165, 247, 274, 315, 350, 391, 418, 459, 485, 526, 553, 594],\r\n    secondary: {\r\n        name: \"attackPercentage\",\r\n        family: \"atk240\"\r\n    }\r\n};\r\n\n\n//# sourceURL=webpack://genshinPanel/./src/numerics/character/data/thunder/feixieer.ts?");
+eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\nexports.default = {\r\n    alt: [\"feixieer\", \"菲谢尔\", \"fischl\"],\r\n    life: [770, 1979, 2555, 3827, 4236, 4872, 5418, 6054, 6463, 7099, 7508, 8144, 8553, 9189],\r\n    attack: [20, 53, 68, 102, 113, 130, 144, 161, 172, 189, 200, 216, 227, 244],\r\n    defend: [50, 128, 165, 247, 274, 315, 350, 391, 418, 459, 485, 526, 553, 594],\r\n    secondary: {\r\n        name: \"attackPercentage\",\r\n        family: \"atk240\"\r\n    },\r\n    weapon: 2 /* Bow */,\r\n};\r\n\n\n//# sourceURL=webpack://genshinPanel/./src/numerics/character/data/thunder/feixieer.ts?");
 
 /***/ }),
 
@@ -684,7 +684,7 @@ eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\n
 /***/ ((__unused_webpack_module, exports) => {
 
 "use strict";
-eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\nexports.default = {\r\n    alt: [\"keqing\", \"刻晴\"],\r\n    life: [1020, 2646, 3521, 5268, 5889, 6776, 7604, 8500, 9121, 10025, 10647, 11561, 12182, 13103],\r\n    attack: [25, 65, 87, 130, 145, 167, 187, 209, 225, 247, 262, 285, 300, 323],\r\n    defend: [62, 161, 215, 321, 359, 413, 464, 519, 556, 612, 649, 705, 743, 799],\r\n    secondary: {\r\n        name: \"criticalDamage\",\r\n        family: \"cd384\"\r\n    }\r\n};\r\n\n\n//# sourceURL=webpack://genshinPanel/./src/numerics/character/data/thunder/keqing.ts?");
+eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\nexports.default = {\r\n    alt: [\"keqing\", \"刻晴\"],\r\n    life: [1020, 2646, 3521, 5268, 5889, 6776, 7604, 8500, 9121, 10025, 10647, 11561, 12182, 13103],\r\n    attack: [25, 65, 87, 130, 145, 167, 187, 209, 225, 247, 262, 285, 300, 323],\r\n    defend: [62, 161, 215, 321, 359, 413, 464, 519, 556, 612, 649, 705, 743, 799],\r\n    secondary: {\r\n        name: \"criticalDamage\",\r\n        family: \"cd384\"\r\n    },\r\n    weapon: 0 /* Sword */,\r\n};\r\n\n\n//# sourceURL=webpack://genshinPanel/./src/numerics/character/data/thunder/keqing.ts?");
 
 /***/ }),
 
@@ -695,7 +695,7 @@ eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\n
 /***/ ((__unused_webpack_module, exports) => {
 
 "use strict";
-eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\nexports.default = {\r\n    alt: [\"leize\", \"雷泽\", \"razor\"],\r\n    life: [1003, 2577, 3326, 4982, 5514, 6343, 7052, 7881, 8413, 9241, 9773, 10602, 11134, 11962],\r\n    attack: [20, 50, 65, 97, 108, 124, 138, 154, 164, 180, 191, 207, 217, 234],\r\n    defend: [63, 162, 209, 313, 346, 398, 443, 495, 528, 580, 613, 665, 699, 751],\r\n    secondary: {\r\n        name: \"physicalBonus\",\r\n        family: \"bonus300\"\r\n    }\r\n};\r\n\n\n//# sourceURL=webpack://genshinPanel/./src/numerics/character/data/thunder/leize.ts?");
+eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\nexports.default = {\r\n    alt: [\"leize\", \"雷泽\", \"razor\"],\r\n    life: [1003, 2577, 3326, 4982, 5514, 6343, 7052, 7881, 8413, 9241, 9773, 10602, 11134, 11962],\r\n    attack: [20, 50, 65, 97, 108, 124, 138, 154, 164, 180, 191, 207, 217, 234],\r\n    defend: [63, 162, 209, 313, 346, 398, 443, 495, 528, 580, 613, 665, 699, 751],\r\n    secondary: {\r\n        name: \"physicalBonus\",\r\n        family: \"bonus300\"\r\n    },\r\n    weapon: 4 /* Sword2 */,\r\n};\r\n\n\n//# sourceURL=webpack://genshinPanel/./src/numerics/character/data/thunder/leize.ts?");
 
 /***/ }),
 
@@ -706,7 +706,7 @@ eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\n
 /***/ ((__unused_webpack_module, exports) => {
 
 "use strict";
-eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\nexports.default = {\r\n    alt: [\"lisha\", \"丽莎\", \"lisa\"],\r\n    life: [802, 2061, 2661, 3985, 4411, 5074, 5642, 6305, 6731, 7393, 7818, 8481, 8907, 9570],\r\n    attack: [19, 50, 64, 96, 107, 123, 136, 153, 163, 179, 189, 205, 215, 232],\r\n    defend: [48, 123, 159, 239, 264, 304, 338, 378, 403, 443, 468, 508, 534, 573],\r\n    secondary: {\r\n        name: \"elementalMastery\",\r\n        family: \"em96\"\r\n    }\r\n};\r\n\n\n//# sourceURL=webpack://genshinPanel/./src/numerics/character/data/thunder/lisha.ts?");
+eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\nexports.default = {\r\n    alt: [\"lisha\", \"丽莎\", \"lisa\"],\r\n    life: [802, 2061, 2661, 3985, 4411, 5074, 5642, 6305, 6731, 7393, 7818, 8481, 8907, 9570],\r\n    attack: [19, 50, 64, 96, 107, 123, 136, 153, 163, 179, 189, 205, 215, 232],\r\n    defend: [48, 123, 159, 239, 264, 304, 338, 378, 403, 443, 468, 508, 534, 573],\r\n    secondary: {\r\n        name: \"elementalMastery\",\r\n        family: \"em96\"\r\n    },\r\n    weapon: 1 /* Book */,\r\n};\r\n\n\n//# sourceURL=webpack://genshinPanel/./src/numerics/character/data/thunder/lisha.ts?");
 
 /***/ }),
 
@@ -717,7 +717,7 @@ eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\n
 /***/ ((__unused_webpack_module, exports) => {
 
 "use strict";
-eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\nexports.default = {\r\n    alt: [\"babala\", \"芭芭拉\", \"barbara\"],\r\n    life: [821, 2108, 2721, 4076, 4512, 5189, 5770, 6448, 6884, 7561, 7996, 8674, 9110, 9787],\r\n    attack: [13, 34, 44, 66, 73, 84, 94, 105, 112, 123, 130, 141, 148, 159],\r\n    defend: [56, 144, 186, 279, 308, 355, 394, 441, 470, 517, 546, 593, 623, 669],\r\n    secondary: {\r\n        name: \"lifePercentage\",\r\n        family: \"hp240\"\r\n    }\r\n};\r\n\n\n//# sourceURL=webpack://genshinPanel/./src/numerics/character/data/water/babala.ts?");
+eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\nexports.default = {\r\n    alt: [\"babala\", \"芭芭拉\", \"barbara\"],\r\n    life: [821, 2108, 2721, 4076, 4512, 5189, 5770, 6448, 6884, 7561, 7996, 8674, 9110, 9787],\r\n    attack: [13, 34, 44, 66, 73, 84, 94, 105, 112, 123, 130, 141, 148, 159],\r\n    defend: [56, 144, 186, 279, 308, 355, 394, 441, 470, 517, 546, 593, 623, 669],\r\n    secondary: {\r\n        name: \"lifePercentage\",\r\n        family: \"hp240\"\r\n    },\r\n    weapon: 1 /* Book */,\r\n};\r\n\n\n//# sourceURL=webpack://genshinPanel/./src/numerics/character/data/water/babala.ts?");
 
 /***/ }),
 
@@ -728,7 +728,7 @@ eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\n
 /***/ ((__unused_webpack_module, exports) => {
 
 "use strict";
-eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\nexports.default = {\r\n    alt: [\"dadaliya\", \"达达利亚\", \"tartaglia\"],\r\n    life: [1020, 2646, 3521, 5268, 5889, 6776, 7604, 8500, 9121, 10025, 10647, 11561, 12182, 13103],\r\n    attack: [23, 61, 81, 121, 135, 156, 175, 195, 210, 231, 245, 266, 280, 301],\r\n    defend: [63, 165, 219, 328, 366, 421, 473, 528, 567, 623, 662, 719, 757, 815],\r\n    secondary: {\r\n        name: \"waterBonus\",\r\n        family: \"bonus288\"\r\n    }\r\n};\r\n\n\n//# sourceURL=webpack://genshinPanel/./src/numerics/character/data/water/dadaliya.ts?");
+eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\nexports.default = {\r\n    alt: [\"dadaliya\", \"达达利亚\", \"tartaglia\"],\r\n    life: [1020, 2646, 3521, 5268, 5889, 6776, 7604, 8500, 9121, 10025, 10647, 11561, 12182, 13103],\r\n    attack: [23, 61, 81, 121, 135, 156, 175, 195, 210, 231, 245, 266, 280, 301],\r\n    defend: [63, 165, 219, 328, 366, 421, 473, 528, 567, 623, 662, 719, 757, 815],\r\n    secondary: {\r\n        name: \"waterBonus\",\r\n        family: \"bonus288\"\r\n    },\r\n    weapon: 2 /* Bow */,\r\n};\r\n\n\n//# sourceURL=webpack://genshinPanel/./src/numerics/character/data/water/dadaliya.ts?");
 
 /***/ }),
 
@@ -739,7 +739,7 @@ eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\n
 /***/ ((__unused_webpack_module, exports) => {
 
 "use strict";
-eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\nexports.default = {\r\n    alt: [\"mona\", \"莫娜\"],\r\n    life: [810, 2102, 2797, 4185, 4678, 5383, 6041, 6752, 7246, 7964, 8458, 9184, 9677, 10409],\r\n    attack: [22, 58, 77, 115, 129, 148, 167, 186, 200, 220, 233, 253, 267, 287],\r\n    defend: [51, 132, 176, 263, 294, 338, 379, 424, 455, 500, 531, 576, 607, 653],\r\n    secondary: {\r\n        name: \"recharge\",\r\n        family: \"recharge320\"\r\n    }\r\n};\r\n\n\n//# sourceURL=webpack://genshinPanel/./src/numerics/character/data/water/mona.ts?");
+eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\nexports.default = {\r\n    alt: [\"mona\", \"莫娜\"],\r\n    life: [810, 2102, 2797, 4185, 4678, 5383, 6041, 6752, 7246, 7964, 8458, 9184, 9677, 10409],\r\n    attack: [22, 58, 77, 115, 129, 148, 167, 186, 200, 220, 233, 253, 267, 287],\r\n    defend: [51, 132, 176, 263, 294, 338, 379, 424, 455, 500, 531, 576, 607, 653],\r\n    secondary: {\r\n        name: \"recharge\",\r\n        family: \"recharge320\"\r\n    },\r\n    weapon: 1 /* Book */,\r\n    createTalent: function () {\r\n        let that = this;\r\n        if (that.hasTalent2) {\r\n            return function (attribute) {\r\n                attribute.waterBonus += attribute.recharge * 0.2;\r\n            };\r\n        }\r\n        return null;\r\n    }\r\n};\r\n\n\n//# sourceURL=webpack://genshinPanel/./src/numerics/character/data/water/mona.ts?");
 
 /***/ }),
 
@@ -750,7 +750,7 @@ eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\n
 /***/ ((__unused_webpack_module, exports) => {
 
 "use strict";
-eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\nexports.default = {\r\n    alt: [\"xingqiu\", \"行秋\"],\r\n    life: [857, 2202, 2842, 4257, 4712, 5420, 6027, 6735, 7190, 7897, 8352, 9060, 9514, 10222],\r\n    attack: [17, 43, 56, 84, 93, 107, 119, 133, 142, 156, 165, 179, 188, 202],\r\n    defend: [64, 163, 211, 316, 349, 402, 447, 499, 533, 585, 619, 671, 705, 758],\r\n    secondary: {\r\n        name: \"attackPercentage\",\r\n        family: \"atk240\"\r\n    }\r\n};\r\n\n\n//# sourceURL=webpack://genshinPanel/./src/numerics/character/data/water/xingqiu.ts?");
+eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\nexports.default = {\r\n    alt: [\"xingqiu\", \"行秋\"],\r\n    life: [857, 2202, 2842, 4257, 4712, 5420, 6027, 6735, 7190, 7897, 8352, 9060, 9514, 10222],\r\n    attack: [17, 43, 56, 84, 93, 107, 119, 133, 142, 156, 165, 179, 188, 202],\r\n    defend: [64, 163, 211, 316, 349, 402, 447, 499, 533, 585, 619, 671, 705, 758],\r\n    secondary: {\r\n        name: \"attackPercentage\",\r\n        family: \"atk240\"\r\n    },\r\n    createTalent: function () {\r\n        let that = this;\r\n        if (that.hasTalent2) {\r\n            return function (attribute) {\r\n                attribute.waterBonus += 0.2;\r\n            };\r\n        }\r\n        return null;\r\n    },\r\n    weapon: 0 /* Sword */,\r\n};\r\n\n\n//# sourceURL=webpack://genshinPanel/./src/numerics/character/data/water/xingqiu.ts?");
 
 /***/ }),
 
@@ -761,7 +761,7 @@ eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\n
 /***/ ((__unused_webpack_module, exports) => {
 
 "use strict";
-eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\nexports.default = {\r\n    alt: [\"me_wind\", \"旅行者-风\", \"me_anemo\"],\r\n    life: [912, 2342, 3024, 4529, 5013, 5766, 6411, 7164, 7648, 8401, 8885, 9638, 10122, 10875],\r\n    attack: [18, 46, 59, 88, 98, 113, 125, 140, 149, 164, 174, 188, 198, 212],\r\n    defend: [57, 147, 190, 284, 315, 362, 402, 450, 480, 527, 558, 605, 635, 683],\r\n    secondary: {\r\n        name: \"attackPercentage\",\r\n        family: \"atk240\"\r\n    }\r\n};\r\n\n\n//# sourceURL=webpack://genshinPanel/./src/numerics/character/data/wind/me_wind.ts?");
+eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\nexports.default = {\r\n    alt: [\"me_wind\", \"旅行者-风\", \"me_anemo\"],\r\n    life: [912, 2342, 3024, 4529, 5013, 5766, 6411, 7164, 7648, 8401, 8885, 9638, 10122, 10875],\r\n    attack: [18, 46, 59, 88, 98, 113, 125, 140, 149, 164, 174, 188, 198, 212],\r\n    defend: [57, 147, 190, 284, 315, 362, 402, 450, 480, 527, 558, 605, 635, 683],\r\n    secondary: {\r\n        name: \"attackPercentage\",\r\n        family: \"atk240\"\r\n    },\r\n    weapon: 0 /* Sword */,\r\n};\r\n\n\n//# sourceURL=webpack://genshinPanel/./src/numerics/character/data/wind/me_wind.ts?");
 
 /***/ }),
 
@@ -772,7 +772,7 @@ eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\n
 /***/ ((__unused_webpack_module, exports) => {
 
 "use strict";
-eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\nexports.default = {\r\n    alt: [\"qin\", \"琴\", \"jean\"],\r\n    life: [1144, 2967, 3948, 5908, 6605, 7599, 8528, 9533, 10230, 11243, 11940, 12965, 13662, 14695],\r\n    attack: [19, 48, 64, 96, 108, 124, 139, 155, 166, 183, 194, 211, 222, 239],\r\n    defend: [60, 155, 206, 309, 345, 397, 446, 499, 535, 588, 624, 678, 715, 769],\r\n    secondary: {\r\n        name: \"cureEffect\",\r\n        family: \"cure222\"\r\n    }\r\n};\r\n\n\n//# sourceURL=webpack://genshinPanel/./src/numerics/character/data/wind/qin.ts?");
+eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\nexports.default = {\r\n    alt: [\"qin\", \"琴\", \"jean\"],\r\n    life: [1144, 2967, 3948, 5908, 6605, 7599, 8528, 9533, 10230, 11243, 11940, 12965, 13662, 14695],\r\n    attack: [19, 48, 64, 96, 108, 124, 139, 155, 166, 183, 194, 211, 222, 239],\r\n    defend: [60, 155, 206, 309, 345, 397, 446, 499, 535, 588, 624, 678, 715, 769],\r\n    secondary: {\r\n        name: \"cureEffect\",\r\n        family: \"cure222\"\r\n    },\r\n    weapon: 0 /* Sword */,\r\n};\r\n\n\n//# sourceURL=webpack://genshinPanel/./src/numerics/character/data/wind/qin.ts?");
 
 /***/ }),
 
@@ -783,7 +783,7 @@ eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\n
 /***/ ((__unused_webpack_module, exports) => {
 
 "use strict";
-eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\nexports.default = {\r\n    alt: [\"shatang\", \"砂糖\", \"sucrose\"],\r\n    life: [775, 1991, 2570, 3850, 4261, 4901, 5450, 6090, 6501, 7141, 7552, 8192, 8604, 9244],\r\n    attack: [14, 37, 47, 71, 78, 90, 100, 112, 120, 131, 139, 151, 158, 170],\r\n    defend: [59, 151, 195, 293, 324, 373, 414, 463, 494, 543, 574, 623, 654, 703],\r\n    secondary: {\r\n        name: \"windBonus\",\r\n        family: \"bonus240\"\r\n    }\r\n};\r\n\n\n//# sourceURL=webpack://genshinPanel/./src/numerics/character/data/wind/shatang.ts?");
+eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\nexports.default = {\r\n    alt: [\"shatang\", \"砂糖\", \"sucrose\"],\r\n    life: [775, 1991, 2570, 3850, 4261, 4901, 5450, 6090, 6501, 7141, 7552, 8192, 8604, 9244],\r\n    attack: [14, 37, 47, 71, 78, 90, 100, 112, 120, 131, 139, 151, 158, 170],\r\n    defend: [59, 151, 195, 293, 324, 373, 414, 463, 494, 543, 574, 623, 654, 703],\r\n    secondary: {\r\n        name: \"windBonus\",\r\n        family: \"bonus240\"\r\n    },\r\n    weapon: 1 /* Book */,\r\n};\r\n\n\n//# sourceURL=webpack://genshinPanel/./src/numerics/character/data/wind/shatang.ts?");
 
 /***/ }),
 
@@ -794,7 +794,7 @@ eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\n
 /***/ ((__unused_webpack_module, exports) => {
 
 "use strict";
-eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\nexports.default = {\r\n    alt: [\"wendi\", \"温迪\", \"venti\"],\r\n    life: [820, 2127, 2830, 4234, 4734, 5446, 6112, 6832, 7331, 8058, 8557, 9292, 9791, 10531],\r\n    attack: [20, 53, 71, 106, 118, 136, 153, 171, 183, 201, 214, 232, 245, 263],\r\n    defend: [52, 135, 180, 269, 301, 346, 388, 434, 465, 512, 543, 590, 622, 669],\r\n    secondary: {\r\n        name: \"recharge\",\r\n        family: \"recharge320\"\r\n    }\r\n};\r\n\n\n//# sourceURL=webpack://genshinPanel/./src/numerics/character/data/wind/wendi.ts?");
+eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\nexports.default = {\r\n    alt: [\"wendi\", \"温迪\", \"venti\"],\r\n    life: [820, 2127, 2830, 4234, 4734, 5446, 6112, 6832, 7331, 8058, 8557, 9292, 9791, 10531],\r\n    attack: [20, 53, 71, 106, 118, 136, 153, 171, 183, 201, 214, 232, 245, 263],\r\n    defend: [52, 135, 180, 269, 301, 346, 388, 434, 465, 512, 543, 590, 622, 669],\r\n    secondary: {\r\n        name: \"recharge\",\r\n        family: \"recharge320\"\r\n    },\r\n    weapon: 2 /* Bow */,\r\n};\r\n\n\n//# sourceURL=webpack://genshinPanel/./src/numerics/character/data/wind/wendi.ts?");
 
 /***/ }),
 
@@ -805,7 +805,7 @@ eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\n
 /***/ ((__unused_webpack_module, exports) => {
 
 "use strict";
-eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\nexports.default = {\r\n    alt: [\"xiao\", \"魈\"],\r\n    life: [991, 2572, 3422, 5120, 5724, 6586, 7391, 8262, 8866, 9744, 10348, 11236, 11840, 12736],\r\n    attack: [27, 71, 94, 140, 157, 181, 203, 227, 243, 267, 284, 308, 325, 349],\r\n    defend: [62, 161, 215, 321, 359, 413, 464, 519, 556, 612, 649, 705, 743, 799],\r\n    secondary: {\r\n        name: \"critical\",\r\n        family: \"cr192\"\r\n    }\r\n};\r\n\n\n//# sourceURL=webpack://genshinPanel/./src/numerics/character/data/wind/xiao.ts?");
+eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\nexports.default = {\r\n    alt: [\"xiao\", \"魈\"],\r\n    life: [991, 2572, 3422, 5120, 5724, 6586, 7391, 8262, 8866, 9744, 10348, 11236, 11840, 12736],\r\n    attack: [27, 71, 94, 140, 157, 181, 203, 227, 243, 267, 284, 308, 325, 349],\r\n    defend: [62, 161, 215, 321, 359, 413, 464, 519, 556, 612, 649, 705, 743, 799],\r\n    secondary: {\r\n        name: \"critical\",\r\n        family: \"cr192\"\r\n    },\r\n    weapon: 3 /* Stick */,\r\n};\r\n\n\n//# sourceURL=webpack://genshinPanel/./src/numerics/character/data/wind/xiao.ts?");
 
 /***/ }),
 

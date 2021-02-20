@@ -3,6 +3,7 @@ import Artifact from "../artifact";
 import ArtifactSet from "../artifact_set";
 import { ArtifactSetName, SET_COUNT } from "../artifact_type";
 import Param from "../param";
+import ApplyContext from "../../common/context";
 
 import {default as adventurerApply} from "./adventurer";
 import {default as archaicPetraApply} from "./archaic_petra";
@@ -37,7 +38,7 @@ import {default as heartOfDepthApply} from "./heart_of_depth";
 import {default as blizzardStrayerApply} from "./blizzard_strayer";
 
 
-type ApplyFunctionType = ((attribute: Attribute, params: Param) => void) | null;
+type ApplyFunctionType = ((attribute: Attribute, ctx: ApplyContext, params: Param) => void) | null;
 let applyFunctions: any = {};
 
 applyFunctions["adventurer"] = adventurerApply;
@@ -73,7 +74,7 @@ applyFunctions["heartOfDepth"] = heartOfDepthApply;
 applyFunctions["blizzardStrayer"] = blizzardStrayerApply;
 
 
-export default function apply(attribute: Attribute, params: Param | undefined | null, artifacts: ArtifactSet) {
+export default function apply(attribute: Attribute, ctx: ApplyContext, params: Param | undefined | null, artifacts: ArtifactSet) {
     let temp: any = {};
     let len = artifacts.length();
 
@@ -94,7 +95,7 @@ export default function apply(attribute: Attribute, params: Param | undefined | 
         let count = temp[key];
         while (count > 0) {
             if (applyFunctions[key][count - 1] !== null) {
-                applyFunctions[key][count - 1](attribute, params);
+                applyFunctions[key][count - 1](attribute, ctx, params);
             }
             count--;
         }

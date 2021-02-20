@@ -5,6 +5,7 @@ import Character from "../numerics/character/character";
 import { applySecondaryTag } from "../common/common";
 import { SecondaryTagName } from "../common/type";
 import Weapon from "../numerics/weapon/weapon";
+import ApplyContext from "../common/context";
 
 
 export default class AttributeBuilder {
@@ -76,8 +77,13 @@ export default class AttributeBuilder {
     // 3. weapon secondary
     // 4. character secondary
     // 5. artifacts
-    // 6. weapon effects
+    // 6. character talent
+    // 7. weapon effects
     build(): Attribute {
+        if (this._character === null || this._weapon === null) {
+            throw new Error("weapon and character must be specified");
+        }
+
         let attribute = new Attribute();
 
         // apply primary
@@ -96,11 +102,19 @@ export default class AttributeBuilder {
             this._character.applySecondary(attribute);
         }
 
+        let context: ApplyContext = {
+            character: this._character,
+            weapon: this._weapon,
+        };
+
         // apply artifacts
-        this._artifacts.apply(attribute, null);
+        this._artifacts.apply(attribute, context, null);
         for (let s of this._single) {
             applySecondaryTag(attribute, s.key, s.value);
         }
+
+        // character talent
+        this._character.applyTalent(attribute);
 
         // apply weapon effect
         if (this._weapon && this._useWeaponEffect) {

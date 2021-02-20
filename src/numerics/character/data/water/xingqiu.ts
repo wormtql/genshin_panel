@@ -1,3 +1,6 @@
+import Attribute from "../../../../attribute/attribute";
+import WeaponType from "../../../weapon/weapon_type";
+import Character from "../../character";
 import CharacterDataType from "../../data_type";
 
 export default {
@@ -8,5 +11,16 @@ export default {
     secondary: {
         name: "attackPercentage",
         family: "atk240"
-    }
+    },
+    createTalent: function () {
+        let that = this as any as Character;
+        if (that.hasTalent2) {
+            return function (attribute: Attribute) {
+                attribute.waterBonus += 0.2;
+            };
+        }
+
+        return null;
+    },
+    weapon: WeaponType.Sword,
 } as CharacterDataType

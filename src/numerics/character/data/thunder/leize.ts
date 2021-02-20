@@ -1,3 +1,4 @@
+import WeaponType from "../../../weapon/weapon_type";
 import CharacterDataType from "../../data_type";
 
 export default {
@@ -8,5 +9,6 @@ export default {
     secondary: {
         name: "physicalBonus",
         family: "bonus300"
-    }
+    },
+    weapon: WeaponType.Sword2,
 } as CharacterDataType

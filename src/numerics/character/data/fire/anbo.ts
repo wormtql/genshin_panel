@@ -1,3 +1,6 @@
+import Attribute from "../../../../attribute/attribute";
+import WeaponType from "../../../weapon/weapon_type";
+import Character from "../../character";
 import CharacterDataType from "../../data_type";
 
 export default {
@@ -8,5 +11,16 @@ export default {
     secondary: {
         name: "attackPercentage",
         family: "atk240",
-    }
+    },
+    createTalent: function () {
+        let that = this as any as Character;
+        if (that.hasTalent1) {
+            return function(attribute: Attribute) {
+                attribute.qCritical += 0.1;
+            }
+        }
+
+        return null;
+    },
+    weapon: WeaponType.Bow,
 } as CharacterDataType

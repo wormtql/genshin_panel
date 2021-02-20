@@ -1,7 +1,8 @@
 import Attribute from "../../attribute/attribute"
+import ApplyContext from "../../common/context";
 import Param from "../param";
 
-function apply2(attribute: Attribute, params: Param) {
+function apply2(attribute: Attribute, ctx: ApplyContext, params: Param) {
     attribute.critical += 0.12;
     attribute.bCritical += 0.12;
     attribute.qCritical += 0.12;
@@ -9,7 +10,7 @@ function apply2(attribute: Attribute, params: Param) {
     attribute.airCritical += 0.12;
 }
 
-function apply4(attribute: Attribute, params: Param) {
+function apply4(attribute: Attribute, ctx: ApplyContext, params: Param) {
     if (params.countBerserker) {
         attribute.critical += 0.24;
         attribute.bCritical += 0.24;

@@ -1,3 +1,6 @@
+import Attribute from "../../../../attribute/attribute";
+import WeaponType from "../../../weapon/weapon_type";
+import Character from "../../character";
 import CharacterDataType from "../../data_type";
 
 export default {
@@ -8,5 +11,15 @@ export default {
     secondary: {
         name: "recharge",
         family: "recharge320"
+    },
+    weapon: WeaponType.Book,
+    createTalent: function () {
+        let that = this as any as Character;
+        if (that.hasTalent2) {
+            return function (attribute: Attribute) {
+                attribute.waterBonus += attribute.recharge * 0.2;
+            }
+        }
+        return null;
     }
 } as CharacterDataType

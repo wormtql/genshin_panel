@@ -1,3 +1,4 @@
+import WeaponType from "../../../weapon/weapon_type";
 import CharacterDataType from "../../data_type";
 
 export default {
@@ -8,5 +9,6 @@ export default {
     secondary: {
         name: "recharge",
         family: "recharge320"
-    }
+    },
+    weapon: WeaponType.Bow,
 } as CharacterDataType

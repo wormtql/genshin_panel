@@ -1,4 +1,6 @@
+import Attribute from "../../attribute/attribute";
 import { SecondaryTagName } from "../../common/type";
+import WeaponType from "../weapon/weapon_type";
 
 export default interface CharacterDataType {
     alt: string[],
@@ -8,5 +10,8 @@ export default interface CharacterDataType {
     secondary: {
         name: SecondaryTagName,
         family: string,
-    }
+    },
+    weapon: WeaponType;
+    createTalent?: () => ((attribute: Attribute) => void) | null;
+    constellation?: (attribute: Attribute) => void;
 }
