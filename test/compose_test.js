@@ -52,4 +52,16 @@ describe("#test1", () => {
 
         expect(attribute.bBonus).eq(0.47);
     })
+
+    it("千岩", () => {
+        const c = new genshin.Character("keqing", 90, false, 0);
+        const w = new genshin.Weapon("qianyangujian", 90, false, 2, { liyueCount: 2 });
+        const attribute = new genshin.AttributeBuilder()
+            .character(c)
+            .weapon(w)
+            .build()
+        ;
+
+        expect(attribute.critical).eq(0.13);
+    })
 })

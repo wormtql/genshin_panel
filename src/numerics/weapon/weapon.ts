@@ -21,13 +21,16 @@ export default class Weapon {
     // 特效
     effect: ((attribute: Attribute) => void) | null;
 
+    // 特殊参数
+    args: any;
+
     baseAtk: number;
     secondary: {
         name: SecondaryTagName,
         value: number
     } | null;
 
-    constructor(name: string, level: number, ascend: boolean, refine: number) {
+    constructor(name: string, level: number, ascend: boolean, refine: number, args: any) {
         this.star = 0;
         this.eng = "";
         this.name = name;
@@ -48,6 +51,8 @@ export default class Weapon {
         } else {
             this.secondary = null;
         }
+
+        this.args = args || {};
     }
 
     applyPrimary(attribute: Attribute) {

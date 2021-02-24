@@ -8,7 +8,7 @@ export default {
         let that = this as any as Weapon;
 
         let percentage = that.refine * 0.05 + 0.15;
-        attribute.attackPercentage += attribute.attackBasic + percentage;
+        attribute.attackPercentage += attribute.attackBasic * percentage;
     },
     baseAtkFamily: "atk46",
     secondary: {
