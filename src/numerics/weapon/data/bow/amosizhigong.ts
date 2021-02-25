@@ -11,9 +11,6 @@ export default {
         let percentage = that.refine * 0.03 + 0.09;
         attribute.aBonus += percentage;
         attribute.bBonus += percentage;
-
-        percentage = that.refine * 0.02 + 0.06;
-        attribute.bonus += 2 * percentage;
     },
     secondary: {
         name: "attackPercentage",

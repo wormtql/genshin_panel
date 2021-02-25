@@ -1256,7 +1256,7 @@ eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\n
 /***/ ((__unused_webpack_module, exports) => {
 
 "use strict";
-eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\nexports.default = {\r\n    alt: [\"amosizhigong\", \"阿莫斯之弓\", \"amosbow\"],\r\n    baseAtkFamily: \"atk46\",\r\n    effect: function (attribute) {\r\n        let that = this;\r\n        let percentage = that.refine * 0.03 + 0.09;\r\n        attribute.aBonus += percentage;\r\n        attribute.bBonus += percentage;\r\n        percentage = that.refine * 0.02 + 0.06;\r\n        attribute.bonus += 2 * percentage;\r\n    },\r\n    secondary: {\r\n        name: \"attackPercentage\",\r\n        family: \"atk108\"\r\n    }\r\n};\r\n\n\n//# sourceURL=webpack://genshinPanel/./src/numerics/weapon/data/bow/amosizhigong.ts?");
+eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\nexports.default = {\r\n    alt: [\"amosizhigong\", \"阿莫斯之弓\", \"amosbow\"],\r\n    baseAtkFamily: \"atk46\",\r\n    effect: function (attribute) {\r\n        let that = this;\r\n        let percentage = that.refine * 0.03 + 0.09;\r\n        attribute.aBonus += percentage;\r\n        attribute.bBonus += percentage;\r\n    },\r\n    secondary: {\r\n        name: \"attackPercentage\",\r\n        family: \"atk108\"\r\n    }\r\n};\r\n\n\n//# sourceURL=webpack://genshinPanel/./src/numerics/weapon/data/bow/amosizhigong.ts?");
 
 /***/ }),
 
