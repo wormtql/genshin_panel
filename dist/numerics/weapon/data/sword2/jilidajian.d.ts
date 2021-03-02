@@ -1,2 +1,3 @@
 import WeaponDataType from "../../data_type";
-export declare const jilidajianData: WeaponDataType;
+declare const _default: WeaponDataType;
+export default _default;

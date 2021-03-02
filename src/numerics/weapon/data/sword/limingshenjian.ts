@@ -6,9 +6,11 @@ export default {
     alt: ["limingshenjian", "黎明神剑", "harbingerofdawn"],
     effect: function (attribute: Attribute) {
         let that = this as any as Weapon;
-        let percentage = that.refine * 0.025 + 0.115;
         
-        attribute.critical += percentage;
+        if (that.args.lifeAbove90) {
+            let percentage = 0.035 * that.refine + 0.105;
+            attribute.crit(percentage);
+        }
     },
     baseAtkFamily: "atk39",
     secondary: {

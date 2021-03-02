@@ -431,7 +431,7 @@ eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\n
 /***/ ((__unused_webpack_module, exports) => {
 
 "use strict";
-eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\nclass Attribute {\r\n    constructor() {\r\n        this.cureEffect = 0; // 治疗效果 \r\n        this.curedEffect = 0; // 被治疗效果\r\n        this.lifeBasic = 0; // 基础生命值\r\n        this.lifeStatic = 0; // 固定增加生命值\r\n        this.lifePercentage = 0; // %增加生命值\r\n        this.attackBasic = 0; // 基础攻击力\r\n        this.attackStatic = 0; // 固定攻击力\r\n        this.attackPercentage = 0; // %增加攻击力\r\n        this.defendBasic = 0; // 基础防御力\r\n        this.defendStatic = 0; // 固定防御力\r\n        this.defendPercentage = 0; // %增加防御力\r\n        this.critical = 0.05; // 普通攻击暴击率\r\n        this.bCritical = 0.05; // 重击暴击率\r\n        this.eCritical = 0.05; // 元素战技暴击率\r\n        this.qCritical = 0.05; // 元素爆发暴击率\r\n        this.airCritical = 0.05; // 下落攻击暴击率\r\n        this.criticalDamage = 0.5; // 暴击伤害\r\n        this.thunderRes = 0; // 雷元素抗性\r\n        this.fireRes = 0; //\r\n        this.waterRes = 0; //\r\n        this.iceRes = 0; //\r\n        this.windRes = 0; //\r\n        this.rockRes = 0; //\r\n        this.elementalMastery = 0; // 元素精通\r\n        this.recharge = 1; // 元素充能效率\r\n        this.thunderBonus = 0; // 雷元素伤害加成\r\n        this.fireBonus = 0; //\r\n        this.waterBonus = 0; //\r\n        this.iceBonus = 0; //\r\n        this.windBonus = 0; //\r\n        this.rockBonus = 0; //\r\n        this.physicalBonus = 0; // 物理伤害加成\r\n        this.elementalBonus = 0; // 元素伤害加成\r\n        this.aBonus = 0; // 普通攻击伤害加成\r\n        this.bBonus = 0; // 重击伤害加成\r\n        this.eBonus = 0; // 元素战技伤害加成\r\n        this.qBonus = 0; // 元素爆发伤害加成\r\n        this.airBonus = 0; // 下落攻击伤害加成\r\n        this.bonus = 0; // 伤害加成\r\n        this.thunderTime = 0; // 雷元素附着持续时间\r\n        this.fireTime = 0; //\r\n        this.waterTime = 0; //\r\n        this.iceTime = 0; //\r\n        this.windTime = 0; //\r\n        this.rockTime = 0; //\r\n        this.shield = 0; // 护盾强效\r\n    }\r\n    attack() {\r\n        return this.attackBasic + this.attackPercentage + this.attackStatic;\r\n    }\r\n    life() {\r\n        return this.lifeBasic + this.lifePercentage + this.lifeStatic;\r\n    }\r\n    defend() {\r\n        return this.defendBasic + this.defendPercentage + this.defendStatic;\r\n    }\r\n}\r\nexports.default = Attribute;\r\n\n\n//# sourceURL=webpack://genshinPanel/./src/attribute/attribute.ts?");
+eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\nclass Attribute {\r\n    constructor() {\r\n        this.cureEffect = 0; // 治疗效果 \r\n        this.curedEffect = 0; // 被治疗效果\r\n        this.lifeBasic = 0; // 基础生命值\r\n        this.lifeStatic = 0; // 固定增加生命值\r\n        this.lifePercentage = 0; // %增加生命值\r\n        this.attackBasic = 0; // 基础攻击力\r\n        this.attackStatic = 0; // 固定攻击力\r\n        this.attackPercentage = 0; // %增加攻击力\r\n        this.defendBasic = 0; // 基础防御力\r\n        this.defendStatic = 0; // 固定防御力\r\n        this.defendPercentage = 0; // %增加防御力\r\n        this.critical = 0.05; // 普通攻击暴击率\r\n        this.bCritical = 0.05; // 重击暴击率\r\n        this.eCritical = 0.05; // 元素战技暴击率\r\n        this.qCritical = 0.05; // 元素爆发暴击率\r\n        this.airCritical = 0.05; // 下落攻击暴击率\r\n        this.criticalDamage = 0.5; // 暴击伤害\r\n        this.thunderRes = 0; // 雷元素抗性\r\n        this.fireRes = 0; //\r\n        this.waterRes = 0; //\r\n        this.iceRes = 0; //\r\n        this.windRes = 0; //\r\n        this.rockRes = 0; //\r\n        this.elementalMastery = 0; // 元素精通\r\n        this.recharge = 1; // 元素充能效率\r\n        this.thunderBonus = 0; // 雷元素伤害加成\r\n        this.fireBonus = 0; //\r\n        this.waterBonus = 0; //\r\n        this.iceBonus = 0; //\r\n        this.windBonus = 0; //\r\n        this.rockBonus = 0; //\r\n        this.physicalBonus = 0; // 物理伤害加成\r\n        this.elementalBonus = 0; // 元素伤害加成\r\n        this.aBonus = 0; // 普通攻击伤害加成\r\n        this.bBonus = 0; // 重击伤害加成\r\n        this.eBonus = 0; // 元素战技伤害加成\r\n        this.qBonus = 0; // 元素爆发伤害加成\r\n        this.airBonus = 0; // 下落攻击伤害加成\r\n        this.bonus = 0; // 伤害加成\r\n        this.thunderTime = 0; // 雷元素附着持续时间\r\n        this.fireTime = 0; //\r\n        this.waterTime = 0; //\r\n        this.iceTime = 0; //\r\n        this.windTime = 0; //\r\n        this.rockTime = 0; //\r\n        this.shield = 0; // 护盾强效\r\n    }\r\n    attack() {\r\n        return this.attackBasic + this.attackPercentage + this.attackStatic;\r\n    }\r\n    life() {\r\n        return this.lifeBasic + this.lifePercentage + this.lifeStatic;\r\n    }\r\n    defend() {\r\n        return this.defendBasic + this.defendPercentage + this.defendStatic;\r\n    }\r\n    crit(value) {\r\n        this.critical += value;\r\n        this.bCritical += value;\r\n        this.eCritical += value;\r\n        this.qCritical += value;\r\n        this.airCritical += value;\r\n    }\r\n}\r\nexports.default = Attribute;\r\n\n\n//# sourceURL=webpack://genshinPanel/./src/attribute/attribute.ts?");
 
 /***/ }),
 
@@ -509,6 +509,17 @@ eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\n
 
 "use strict";
 eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\nexports.default = {\r\n    alt: [\"diluke\", \"diluc\", \"迪卢克\"],\r\n    life: [1011, 2621, 3488, 5219, 5834, 6712, 7533, 8421, 9036, 9932, 10547, 11453, 12068, 12981],\r\n    attack: [26, 68, 90, 135, 151, 173, 194, 217, 233, 256, 272, 295, 311, 335],\r\n    defend: [61, 158, 211, 315, 352, 405, 455, 509, 546, 600, 637, 692, 729, 784],\r\n    secondary: {\r\n        name: \"critical\",\r\n        family: \"cr192\",\r\n    },\r\n    weapon: 4 /* Sword2 */,\r\n};\r\n\n\n//# sourceURL=webpack://genshinPanel/./src/numerics/character/data/fire/diluke.ts?");
+
+/***/ }),
+
+/***/ "./src/numerics/character/data/fire/hutao.ts":
+/*!***************************************************!*\
+  !*** ./src/numerics/character/data/fire/hutao.ts ***!
+  \***************************************************/
+/***/ ((__unused_webpack_module, exports) => {
+
+"use strict";
+eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\nexports.default = {\r\n    alt: [\"hutao\", \"胡桃\"],\r\n    life: [1211, 3141, 4179, 6253, 6990, 8042, 9026, 10089, 10826, 11899, 12637, 13721, 14459, 15552],\r\n    attack: [8, 21, 29, 43, 48, 55, 62, 69, 74, 81, 86, 94, 99, 106],\r\n    defend: [68, 177, 235, 352, 394, 453, 508, 568, 610, 670, 712, 773, 815, 876],\r\n    secondary: {\r\n        name: \"criticalDamage\",\r\n        family: \"cd384\",\r\n    },\r\n    weapon: 3 /* Stick */,\r\n};\r\n\n\n//# sourceURL=webpack://genshinPanel/./src/numerics/character/data/fire/hutao.ts?");
 
 /***/ }),
 
@@ -1036,7 +1047,7 @@ eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\n
 /***/ ((__unused_webpack_module, exports) => {
 
 "use strict";
-eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\nexports.default = {\r\n    alt: [\"chenshizhisuo\", \"尘世之锁\", \"memoryofdust\"],\r\n    baseAtkFamily: \"atk46\",\r\n    secondary: {\r\n        name: \"attackPercentage\",\r\n        family: \"atk108\"\r\n    },\r\n    effect: function (attribute) {\r\n        let that = this;\r\n        let value = 0.01 * that.refine + 0.03;\r\n        attribute.attackPercentage += attribute.attackBasic * value * 2.5;\r\n    }\r\n};\r\n\n\n//# sourceURL=webpack://genshinPanel/./src/numerics/weapon/data/book/chenshizhisuo.ts?");
+eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\nexports.default = {\r\n    alt: [\"chenshizhisuo\", \"尘世之锁\", \"memoryofdust\"],\r\n    baseAtkFamily: \"atk46\",\r\n    secondary: {\r\n        name: \"attackPercentage\",\r\n        family: \"atk108\"\r\n    },\r\n    effect: function (attribute) {\r\n        let that = this;\r\n        let value = 0.05 * that.refine + 0.15;\r\n        attribute.shield += value;\r\n    }\r\n};\r\n\n\n//# sourceURL=webpack://genshinPanel/./src/numerics/weapon/data/book/chenshizhisuo.ts?");
 
 /***/ }),
 
@@ -1113,7 +1124,7 @@ eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\n
 /***/ ((__unused_webpack_module, exports) => {
 
 "use strict";
-eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\nexports.default = {\r\n    alt: [\"modaoxulun\", \"魔导绪论\", \"magicguide\"],\r\n    baseAtkFamily: \"atk38\",\r\n    secondary: {\r\n        name: \"elementalMastery\",\r\n        family: \"em41\",\r\n    },\r\n    effect: function (attribute) {\r\n        let that = this;\r\n        let value = that.refine * 0.03 + 0.09;\r\n        attribute.bonus += value;\r\n    }\r\n};\r\n\n\n//# sourceURL=webpack://genshinPanel/./src/numerics/weapon/data/book/modaoxulun.ts?");
+eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\nexports.default = {\r\n    alt: [\"modaoxulun\", \"魔导绪论\", \"magicguide\"],\r\n    baseAtkFamily: \"atk38\",\r\n    secondary: {\r\n        name: \"elementalMastery\",\r\n        family: \"em41\",\r\n    },\r\n};\r\n\n\n//# sourceURL=webpack://genshinPanel/./src/numerics/weapon/data/book/modaoxulun.ts?");
 
 /***/ }),
 
@@ -1146,7 +1157,7 @@ eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\n
 /***/ ((__unused_webpack_module, exports) => {
 
 "use strict";
-eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\nexports.default = {\r\n    alt: [\"sifengyuandian\", \"四风原典\", \"lostprayertothesacredwinds\"],\r\n    baseAtkFamily: \"atk46\",\r\n    secondary: {\r\n        name: \"critical\",\r\n        family: \"cr72\",\r\n    },\r\n    effect: function (attribute) {\r\n        let that = this;\r\n        let value = that.refine * 0.02 + 0.06;\r\n        attribute.elementalBonus += value * 4;\r\n    }\r\n};\r\n\n\n//# sourceURL=webpack://genshinPanel/./src/numerics/weapon/data/book/sifengyuandian.ts?");
+eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\nexports.default = {\r\n    alt: [\"sifengyuandian\", \"四风原典\", \"lostprayertothesacredwinds\"],\r\n    baseAtkFamily: \"atk46\",\r\n    secondary: {\r\n        name: \"critical\",\r\n        family: \"cr72\",\r\n    },\r\n};\r\n\n\n//# sourceURL=webpack://genshinPanel/./src/numerics/weapon/data/book/sifengyuandian.ts?");
 
 /***/ }),
 
@@ -1179,7 +1190,7 @@ eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\n
 /***/ ((__unused_webpack_module, exports) => {
 
 "use strict";
-eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\nexports.default = {\r\n    alt: [\"wanguozhuhaitupu\", \"万国诸海图谱\", \"mappamare\"],\r\n    baseAtkFamily: \"atk44\",\r\n    secondary: {\r\n        name: \"elementalMastery\",\r\n        family: \"em24\"\r\n    },\r\n    effect: function (attribute) {\r\n        let that = this;\r\n        let value = that.refine * 0.02 + 0.06;\r\n        attribute.elementalBonus += value;\r\n    }\r\n};\r\n\n\n//# sourceURL=webpack://genshinPanel/./src/numerics/weapon/data/book/wanguozhuhaitupu.ts?");
+eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\nexports.default = {\r\n    alt: [\"wanguozhuhaitupu\", \"万国诸海图谱\", \"mappamare\"],\r\n    baseAtkFamily: \"atk44\",\r\n    secondary: {\r\n        name: \"elementalMastery\",\r\n        family: \"em24\"\r\n    },\r\n};\r\n\n\n//# sourceURL=webpack://genshinPanel/./src/numerics/weapon/data/book/wanguozhuhaitupu.ts?");
 
 /***/ }),
 
@@ -1289,7 +1300,7 @@ eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\n
 /***/ ((__unused_webpack_module, exports) => {
 
 "use strict";
-eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\nexports.default = {\r\n    alt: [\"ganglungong\", \"钢轮弓\", \"compoundbow\"],\r\n    baseAtkFamily: \"atk41\",\r\n    effect: function (attribute) {\r\n        let that = this;\r\n        let percentage = that.refine * 0.01 + 0.03;\r\n        attribute.attackPercentage += attribute.attackBasic * percentage;\r\n    },\r\n    secondary: {\r\n        name: \"physicalBonus\",\r\n        family: \"physical150\"\r\n    }\r\n};\r\n\n\n//# sourceURL=webpack://genshinPanel/./src/numerics/weapon/data/bow/ganglungong.ts?");
+eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\nexports.default = {\r\n    alt: [\"ganglungong\", \"钢轮弓\", \"compoundbow\"],\r\n    baseAtkFamily: \"atk41\",\r\n    secondary: {\r\n        name: \"physicalBonus\",\r\n        family: \"physical150\"\r\n    }\r\n};\r\n\n\n//# sourceURL=webpack://genshinPanel/./src/numerics/weapon/data/bow/ganglungong.ts?");
 
 /***/ }),
 
@@ -1366,7 +1377,7 @@ eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\n
 /***/ ((__unused_webpack_module, exports) => {
 
 "use strict";
-eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\nexports.default = {\r\n    alt: [\"shensheshouzhishi\", \"神射手之誓\", \"sharpshootersoath\"],\r\n    effect: function (attribute) {\r\n        let that = this;\r\n        let percentage = that.refine * 0.06 + 0.18;\r\n        attribute.bonus += percentage;\r\n    },\r\n    baseAtkFamily: \"atk39\",\r\n    secondary: {\r\n        name: \"criticalDamage\",\r\n        family: \"cd102\"\r\n    }\r\n};\r\n\n\n//# sourceURL=webpack://genshinPanel/./src/numerics/weapon/data/bow/shensheshouzhishi.ts?");
+eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\nexports.default = {\r\n    alt: [\"shensheshouzhishi\", \"神射手之誓\", \"sharpshootersoath\"],\r\n    // effect: function (attribute: Attribute) {\r\n    //     let that = this as any as Weapon;\r\n    //     let percentage = that.refine * 0.06 + 0.18;\r\n    //     attribute.bonus += percentage;\r\n    // },\r\n    baseAtkFamily: \"atk39\",\r\n    secondary: {\r\n        name: \"criticalDamage\",\r\n        family: \"cd102\"\r\n    }\r\n};\r\n\n\n//# sourceURL=webpack://genshinPanel/./src/numerics/weapon/data/bow/shensheshouzhishi.ts?");
 
 /***/ }),
 
@@ -1388,7 +1399,7 @@ eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\n
 /***/ ((__unused_webpack_module, exports) => {
 
 "use strict";
-eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\nexports.default = {\r\n    alt: [\"tangong\", \"弹弓\", \"slingshot\"],\r\n    effect: function (attribute) {\r\n        let that = this;\r\n        let value = that.refine * 0.06 + 0.3;\r\n        attribute.bonus += value;\r\n    },\r\n    baseAtkFamily: \"atk38\",\r\n    secondary: {\r\n        name: \"critical\",\r\n        family: \"cr68\"\r\n    }\r\n};\r\n\n\n//# sourceURL=webpack://genshinPanel/./src/numerics/weapon/data/bow/tangong.ts?");
+eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\nexports.default = {\r\n    alt: [\"tangong\", \"弹弓\", \"slingshot\"],\r\n    effect: function (attribute) {\r\n        let that = this;\r\n        if (that.args.within03) {\r\n            let value = that.refine * 0.06 + 0.3;\r\n            attribute.bonus += value;\r\n        }\r\n        else {\r\n            attribute.bonus = Math.max(attribute.bonus - 0.1, 0);\r\n        }\r\n    },\r\n    baseAtkFamily: \"atk38\",\r\n    secondary: {\r\n        name: \"critical\",\r\n        family: \"cr68\"\r\n    }\r\n};\r\n\n\n//# sourceURL=webpack://genshinPanel/./src/numerics/weapon/data/bow/tangong.ts?");
 
 /***/ }),
 
@@ -1432,7 +1443,7 @@ eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\n
 /***/ ((__unused_webpack_module, exports) => {
 
 "use strict";
-eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\nexports.default = {\r\n    alt: [\"yayugong\", \"鸦羽弓\", \"ravenbow\"],\r\n    effect: function (attribute) {\r\n        let that = this;\r\n        let percentage = that.refine * 0.03 + 0.09;\r\n        attribute.bonus += percentage;\r\n    },\r\n    baseAtkFamily: \"atk40\",\r\n    secondary: {\r\n        name: \"elementalMastery\",\r\n        family: \"em20\"\r\n    }\r\n};\r\n\n\n//# sourceURL=webpack://genshinPanel/./src/numerics/weapon/data/bow/yayugong.ts?");
+eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\nexports.default = {\r\n    alt: [\"yayugong\", \"鸦羽弓\", \"ravenbow\"],\r\n    // effect: function (attribute: Attribute) {\r\n    //     let that = this as any as Weapon;\r\n    //     let percentage = that.refine * 0.03 + 0.09;\r\n    //     attribute.bonus += percentage;\r\n    // },\r\n    baseAtkFamily: \"atk40\",\r\n    secondary: {\r\n        name: \"elementalMastery\",\r\n        family: \"em20\"\r\n    }\r\n};\r\n\n\n//# sourceURL=webpack://genshinPanel/./src/numerics/weapon/data/bow/yayugong.ts?");
 
 /***/ }),
 
@@ -1465,7 +1476,7 @@ eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\n
 /***/ ((__unused_webpack_module, exports) => {
 
 "use strict";
-eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\nexports.default = {\r\n    alt: [\"guanhongzhishuo\", \"贯虹之槊\", \"vortexvanquisher\"],\r\n    baseAtkFamily: \"atk46\",\r\n    secondary: {\r\n        name: \"attackPercentage\",\r\n        family: \"atk108\"\r\n    },\r\n    effect: function (attribute) {\r\n        let that = this;\r\n        let value = that.refine * 0.05 + 0.15;\r\n        attribute.shield += value;\r\n        value = that.refine * 0.01 + 0.03;\r\n        attribute.attackPercentage += attribute.attackBasic * value * 2.5;\r\n    }\r\n};\r\n\n\n//# sourceURL=webpack://genshinPanel/./src/numerics/weapon/data/stick/guanhongzhishuo.ts?");
+eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\nexports.default = {\r\n    alt: [\"guanhongzhishuo\", \"贯虹之槊\", \"vortexvanquisher\"],\r\n    baseAtkFamily: \"atk46\",\r\n    secondary: {\r\n        name: \"attackPercentage\",\r\n        family: \"atk108\"\r\n    },\r\n    effect: function (attribute) {\r\n        let that = this;\r\n        let value = that.refine * 0.05 + 0.15;\r\n        attribute.shield += value;\r\n        // value = that.refine * 0.01 + 0.03;\r\n        // attribute.attackPercentage += attribute.attackBasic * value * 2.5;\r\n    }\r\n};\r\n\n\n//# sourceURL=webpack://genshinPanel/./src/numerics/weapon/data/stick/guanhongzhishuo.ts?");
 
 /***/ }),
 
@@ -1487,7 +1498,7 @@ eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\n
 /***/ ((__unused_webpack_module, exports) => {
 
 "use strict";
-eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\nexports.default = {\r\n    alt: [\"heiyingqiang\", \"黑缨枪\", \"blacktassel\"],\r\n    baseAtkFamily: \"atk38\",\r\n    secondary: {\r\n        name: \"lifePercentage\",\r\n        family: \"hp102\"\r\n    }\r\n};\r\n\n\n//# sourceURL=webpack://genshinPanel/./src/numerics/weapon/data/stick/heiyingqiang.ts?");
+eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\nexports.default = {\r\n    alt: [\"heiyingqiang\", \"黑缨枪\", \"blacktassel\"],\r\n    baseAtkFamily: \"atk38\",\r\n    secondary: {\r\n        name: \"lifePercentage\",\r\n        family: \"hp102\"\r\n    },\r\n    effect: function (attribute) {\r\n        let that = this;\r\n        if (that.args.slime) {\r\n            attribute.bonus += that.refine * 0.1 + 0.3;\r\n        }\r\n    }\r\n};\r\n\n\n//# sourceURL=webpack://genshinPanel/./src/numerics/weapon/data/stick/heiyingqiang.ts?");
 
 /***/ }),
 
@@ -1498,7 +1509,7 @@ eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\n
 /***/ ((__unused_webpack_module, exports) => {
 
 "use strict";
-eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\nexports.default = {\r\n    alt: [\"hepuyuan\", \"和璞鸢\", \"primordialjadewingedspear\"],\r\n    baseAtkFamily: \"atk48\",\r\n    secondary: {\r\n        name: \"critical\",\r\n        family: \"cr48\",\r\n    },\r\n    effect: function (attribute) {\r\n        let that = this;\r\n        let value = that.refine * 0.007 + 0.025;\r\n        attribute.attackPercentage += attribute.attackBasic * value * 3;\r\n    }\r\n};\r\n\n\n//# sourceURL=webpack://genshinPanel/./src/numerics/weapon/data/stick/hepuyuan.ts?");
+eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\nexports.default = {\r\n    alt: [\"hepuyuan\", \"和璞鸢\", \"primordialjadewingedspear\"],\r\n    baseAtkFamily: \"atk48\",\r\n    secondary: {\r\n        name: \"critical\",\r\n        family: \"cr48\",\r\n    },\r\n};\r\n\n\n//# sourceURL=webpack://genshinPanel/./src/numerics/weapon/data/stick/hepuyuan.ts?");
 
 /***/ }),
 
@@ -1520,7 +1531,7 @@ eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\n
 /***/ ((__unused_webpack_module, exports) => {
 
 "use strict";
-eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\nexports.default = {\r\n    alt: [\"juedouzhiqiang\", \"决斗之枪\", \"deathmatch\"],\r\n    baseAtkFamily: \"atk41\",\r\n    secondary: {\r\n        name: \"critical\",\r\n        family: \"cr80\",\r\n    },\r\n    effect: function (attribute) {\r\n        let that = this;\r\n        let value = 0.04 * that.refine + 0.12;\r\n        attribute.attackPercentage += attribute.attackBasic * value * 1.25;\r\n    }\r\n};\r\n\n\n//# sourceURL=webpack://genshinPanel/./src/numerics/weapon/data/stick/juedouzhiqiang.ts?");
+eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\nexports.default = {\r\n    alt: [\"juedouzhiqiang\", \"决斗之枪\", \"deathmatch\"],\r\n    baseAtkFamily: \"atk41\",\r\n    secondary: {\r\n        name: \"critical\",\r\n        family: \"cr80\",\r\n    },\r\n    effect: function (attribute) {\r\n        let that = this;\r\n        if (that.args.enemyAbove2) {\r\n            let percentage = that.refine * 0.04 + 0.12;\r\n            attribute.attackPercentage += attribute.attackBasic * percentage;\r\n            attribute.defendPercentage += attribute.defendBasic * percentage;\r\n        }\r\n        else {\r\n            let percentage = that.refine * 0.06 + 0.18;\r\n            attribute.attackPercentage += attribute.attackBasic * percentage;\r\n        }\r\n    }\r\n};\r\n\n\n//# sourceURL=webpack://genshinPanel/./src/numerics/weapon/data/stick/juedouzhiqiang.ts?");
 
 /***/ }),
 
@@ -1553,7 +1564,7 @@ eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\n
 /***/ ((__unused_webpack_module, exports) => {
 
 "use strict";
-eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\nexports.default = {\r\n    alt: [\"qianyanchangqiang\", \"千岩长枪\", \"lithicspear\"],\r\n    effect: function (attribute) {\r\n        let that = this;\r\n        let liyueCount = that.args.liyueCount || 0;\r\n        let percentage = that.refine * 0.01 + 0.06;\r\n        attribute.attackPercentage += attribute.attackBasic * percentage * liyueCount;\r\n        percentage = that.refine * 0.01 + 0.02;\r\n        attribute.critical += percentage * liyueCount;\r\n        attribute.bCritical += percentage * liyueCount;\r\n        attribute.eCritical += percentage * liyueCount;\r\n        attribute.qCritical += percentage * liyueCount;\r\n        attribute.airCritical += percentage * liyueCount;\r\n    },\r\n    baseAtkFamily: \"atk44\",\r\n    secondary: {\r\n        name: \"attackPercentage\",\r\n        family: \"atk60\"\r\n    }\r\n};\r\n\n\n//# sourceURL=webpack://genshinPanel/./src/numerics/weapon/data/stick/qianyanchangqiang.ts?");
+eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\nexports.default = {\r\n    alt: [\"qianyanchangqiang\", \"千岩长枪\", \"lithicspear\"],\r\n    effect: function (attribute) {\r\n        let that = this;\r\n        let liyueCount = that.args.liyueCount || 0;\r\n        let percentage = that.refine * 0.01 + 0.06;\r\n        attribute.attackPercentage += attribute.attackBasic * percentage * liyueCount;\r\n        percentage = that.refine * 0.01 + 0.02;\r\n        attribute.crit(percentage * liyueCount);\r\n    },\r\n    baseAtkFamily: \"atk44\",\r\n    secondary: {\r\n        name: \"attackPercentage\",\r\n        family: \"atk60\"\r\n    }\r\n};\r\n\n\n//# sourceURL=webpack://genshinPanel/./src/numerics/weapon/data/stick/qianyanchangqiang.ts?");
 
 /***/ }),
 
@@ -1575,7 +1586,7 @@ eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\n
 /***/ ((__unused_webpack_module, exports) => {
 
 "use strict";
-eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\nexports.default = {\r\n    alt: [\"tiankongzhiji\", \"天空之脊\", \"skywardspine\"],\r\n    baseAtkFamily: \"atk48\",\r\n    secondary: {\r\n        name: \"recharge\",\r\n        family: \"recharge80\",\r\n    },\r\n    effect: function (attribute) {\r\n        let that = this;\r\n        let value = that.refine * 0.02 + 0.06;\r\n        attribute.critical += value;\r\n        attribute.bCritical += value;\r\n        attribute.eCritical += value;\r\n        attribute.qCritical += value;\r\n        attribute.airCritical += value;\r\n    }\r\n};\r\n\n\n//# sourceURL=webpack://genshinPanel/./src/numerics/weapon/data/stick/tiankongzhiji.ts?");
+eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\nexports.default = {\r\n    alt: [\"tiankongzhiji\", \"天空之脊\", \"skywardspine\"],\r\n    baseAtkFamily: \"atk48\",\r\n    secondary: {\r\n        name: \"recharge\",\r\n        family: \"recharge80\",\r\n    },\r\n    effect: function (attribute) {\r\n        let that = this;\r\n        let value = that.refine * 0.02 + 0.06;\r\n        attribute.crit(value);\r\n    }\r\n};\r\n\n\n//# sourceURL=webpack://genshinPanel/./src/numerics/weapon/data/stick/tiankongzhiji.ts?");
 
 /***/ }),
 
@@ -1597,7 +1608,7 @@ eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\n
 /***/ ((__unused_webpack_module, exports) => {
 
 "use strict";
-eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\nexports.default = {\r\n    alt: [\"xialimiechen\", \"匣里灭辰\", \"dragonsbane\"],\r\n    baseAtkFamily: \"atk41\",\r\n    secondary: {\r\n        name: \"elementalMastery\",\r\n        family: \"em48\"\r\n    },\r\n    effect: function (attribute) {\r\n        let that = this;\r\n        let value = that.refine * 0.04 + 0.16;\r\n        attribute.bonus += value;\r\n    }\r\n};\r\n\n\n//# sourceURL=webpack://genshinPanel/./src/numerics/weapon/data/stick/xialimiechen.ts?");
+eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\nexports.default = {\r\n    alt: [\"xialimiechen\", \"匣里灭辰\", \"dragonsbane\"],\r\n    baseAtkFamily: \"atk41\",\r\n    secondary: {\r\n        name: \"elementalMastery\",\r\n        family: \"em48\"\r\n    },\r\n};\r\n\n\n//# sourceURL=webpack://genshinPanel/./src/numerics/weapon/data/stick/xialimiechen.ts?");
 
 /***/ }),
 
@@ -1674,7 +1685,7 @@ eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\n
 /***/ ((__unused_webpack_module, exports) => {
 
 "use strict";
-eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\nexports.default = {\r\n    alt: [\"chigujian\", \"螭骨剑\", \"serpentspine\"],\r\n    effect: function (attribute) {\r\n        let that = this;\r\n        let value = that.refine * 0.01 + 0.05;\r\n        attribute.bonus += value;\r\n    },\r\n    baseAtkFamily: \"atk42\",\r\n    secondary: {\r\n        name: \"critical\",\r\n        family: \"cr60\"\r\n    }\r\n};\r\n\n\n//# sourceURL=webpack://genshinPanel/./src/numerics/weapon/data/sword2/chigujian.ts?");
+eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\nexports.default = {\r\n    alt: [\"chigujian\", \"螭骨剑\", \"serpentspine\"],\r\n    baseAtkFamily: \"atk42\",\r\n    secondary: {\r\n        name: \"critical\",\r\n        family: \"cr60\"\r\n    }\r\n};\r\n\n\n//# sourceURL=webpack://genshinPanel/./src/numerics/weapon/data/sword2/chigujian.ts?");
 
 /***/ }),
 
@@ -1707,7 +1718,7 @@ eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\n
 /***/ ((__unused_webpack_module, exports) => {
 
 "use strict";
-eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\nexports.jilidajianData = void 0;\r\nexports.jilidajianData = {\r\n    alt: [\"jilidajian\", \"祭礼大剑\", \"sacrificialgreatsword\"],\r\n    baseAtkFamily: \"atk44\",\r\n    secondary: {\r\n        name: \"recharge\",\r\n        family: \"recharge67\"\r\n    }\r\n};\r\n\n\n//# sourceURL=webpack://genshinPanel/./src/numerics/weapon/data/sword2/jilidajian.ts?");
+eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\nexports.default = {\r\n    alt: [\"jilidajian\", \"祭礼大剑\", \"sacrificialgreatsword\"],\r\n    baseAtkFamily: \"atk44\",\r\n    secondary: {\r\n        name: \"recharge\",\r\n        family: \"recharge67\"\r\n    }\r\n};\r\n\n\n//# sourceURL=webpack://genshinPanel/./src/numerics/weapon/data/sword2/jilidajian.ts?");
 
 /***/ }),
 
@@ -1740,7 +1751,7 @@ eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\n
 /***/ ((__unused_webpack_module, exports) => {
 
 "use strict";
-eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\nexports.default = {\r\n    alt: [\"qianyangujian\", \"千岩古剑\", \"lithicblade\"],\r\n    effect: function (attribute) {\r\n        let that = this;\r\n        let liyueCount = that.args.liyueCount || 0;\r\n        let percentage = that.refine * 0.01 + 0.06;\r\n        attribute.attackPercentage += attribute.attackBasic * percentage * liyueCount;\r\n        percentage = that.refine * 0.01 + 0.02;\r\n        attribute.critical += percentage * liyueCount;\r\n        attribute.bCritical += percentage * liyueCount;\r\n        attribute.eCritical += percentage * liyueCount;\r\n        attribute.qCritical += percentage * liyueCount;\r\n        attribute.airCritical += percentage * liyueCount;\r\n    },\r\n    baseAtkFamily: \"atk42\",\r\n    secondary: {\r\n        name: \"attackPercentage\",\r\n        family: \"atk90\"\r\n    }\r\n};\r\n\n\n//# sourceURL=webpack://genshinPanel/./src/numerics/weapon/data/sword2/qianyangujian.ts?");
+eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\nexports.default = {\r\n    alt: [\"qianyangujian\", \"千岩古剑\", \"lithicblade\"],\r\n    effect: function (attribute) {\r\n        let that = this;\r\n        let liyueCount = that.args.liyueCount || 0;\r\n        let percentage = that.refine * 0.01 + 0.06;\r\n        attribute.attackPercentage += attribute.attackBasic * percentage * liyueCount;\r\n        percentage = that.refine * 0.01 + 0.02;\r\n        attribute.crit(percentage * liyueCount);\r\n    },\r\n    baseAtkFamily: \"atk42\",\r\n    secondary: {\r\n        name: \"attackPercentage\",\r\n        family: \"atk90\"\r\n    }\r\n};\r\n\n\n//# sourceURL=webpack://genshinPanel/./src/numerics/weapon/data/sword2/qianyangujian.ts?");
 
 /***/ }),
 
@@ -1773,7 +1784,7 @@ eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\n
 /***/ ((__unused_webpack_module, exports) => {
 
 "use strict";
-eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\nexports.default = {\r\n    alt: [\"tieyingkuojian\", \"铁影阔剑\", \"ferrousshadow\"],\r\n    effect: function (attribute) {\r\n        let that = this;\r\n        let value = that.refine * 0.05 + 0.25;\r\n        attribute.bBonus += value;\r\n    },\r\n    baseAtkFamily: \"atk39\",\r\n    secondary: {\r\n        name: \"lifePercentage\",\r\n        family: \"hp77\",\r\n    }\r\n};\r\n\n\n//# sourceURL=webpack://genshinPanel/./src/numerics/weapon/data/sword2/tieyingkuojian.ts?");
+eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\nexports.default = {\r\n    alt: [\"tieyingkuojian\", \"铁影阔剑\", \"ferrousshadow\"],\r\n    baseAtkFamily: \"atk39\",\r\n    secondary: {\r\n        name: \"lifePercentage\",\r\n        family: \"hp77\",\r\n    }\r\n};\r\n\n\n//# sourceURL=webpack://genshinPanel/./src/numerics/weapon/data/sword2/tieyingkuojian.ts?");
 
 /***/ }),
 
@@ -1784,7 +1795,7 @@ eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\n
 /***/ ((__unused_webpack_module, exports) => {
 
 "use strict";
-eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\nexports.default = {\r\n    alt: [\"wugongzhijian\", \"无工之剑\", \"theunforged\"],\r\n    baseAtkFamily: \"atk46\",\r\n    secondary: {\r\n        name: \"attackPercentage\",\r\n        family: \"atk108\"\r\n    }\r\n};\r\n\n\n//# sourceURL=webpack://genshinPanel/./src/numerics/weapon/data/sword2/wugongzhijian.ts?");
+eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\nexports.default = {\r\n    alt: [\"wugongzhijian\", \"无工之剑\", \"theunforged\"],\r\n    baseAtkFamily: \"atk46\",\r\n    secondary: {\r\n        name: \"attackPercentage\",\r\n        family: \"atk108\"\r\n    },\r\n    effect: function (attribute) {\r\n        let that = this;\r\n        attribute.shield += that.refine * 0.05 + 0.15;\r\n    }\r\n};\r\n\n\n//# sourceURL=webpack://genshinPanel/./src/numerics/weapon/data/sword2/wugongzhijian.ts?");
 
 /***/ }),
 
@@ -1916,7 +1927,7 @@ eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\n
 /***/ ((__unused_webpack_module, exports) => {
 
 "use strict";
-eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\nexports.default = {\r\n    alt: [\"飞天御剑\", \"feitianyujian\", \"skyridersword\"],\r\n    effect: function (attribute) {\r\n        let that = this;\r\n        let percentage = that.refine * 0.03 + 0.09;\r\n        attribute.attackPercentage += attribute.attackBasic * percentage;\r\n    },\r\n    baseAtkFamily: \"atk38\",\r\n    secondary: {\r\n        name: \"recharge\",\r\n        family: \"recharge113\",\r\n    },\r\n};\r\n\n\n//# sourceURL=webpack://genshinPanel/./src/numerics/weapon/data/sword/feitianyujian.ts?");
+eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\nexports.default = {\r\n    alt: [\"飞天御剑\", \"feitianyujian\", \"skyridersword\"],\r\n    baseAtkFamily: \"atk38\",\r\n    secondary: {\r\n        name: \"recharge\",\r\n        family: \"recharge113\",\r\n    },\r\n};\r\n\n\n//# sourceURL=webpack://genshinPanel/./src/numerics/weapon/data/sword/feitianyujian.ts?");
 
 /***/ }),
 
@@ -2004,7 +2015,7 @@ eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\n
 /***/ ((__unused_webpack_module, exports) => {
 
 "use strict";
-eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\nexports.default = {\r\n    alt: [\"limingshenjian\", \"黎明神剑\", \"harbingerofdawn\"],\r\n    effect: function (attribute) {\r\n        let that = this;\r\n        let percentage = that.refine * 0.025 + 0.115;\r\n        attribute.critical += percentage;\r\n    },\r\n    baseAtkFamily: \"atk39\",\r\n    secondary: {\r\n        name: \"criticalDamage\",\r\n        family: \"cd102\"\r\n    },\r\n};\r\n\n\n//# sourceURL=webpack://genshinPanel/./src/numerics/weapon/data/sword/limingshenjian.ts?");
+eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\nexports.default = {\r\n    alt: [\"limingshenjian\", \"黎明神剑\", \"harbingerofdawn\"],\r\n    effect: function (attribute) {\r\n        let that = this;\r\n        if (that.args.lifeAbove90) {\r\n            let percentage = 0.035 * that.refine + 0.105;\r\n            attribute.crit(percentage);\r\n        }\r\n    },\r\n    baseAtkFamily: \"atk39\",\r\n    secondary: {\r\n        name: \"criticalDamage\",\r\n        family: \"cd102\"\r\n    },\r\n};\r\n\n\n//# sourceURL=webpack://genshinPanel/./src/numerics/weapon/data/sword/limingshenjian.ts?");
 
 /***/ }),
 
@@ -2048,7 +2059,7 @@ eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\n
 /***/ ((__unused_webpack_module, exports) => {
 
 "use strict";
-eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\nexports.default = {\r\n    alt: [\"tiankongzhiren\", \"天空之刃\", \"skywardblade\"],\r\n    effect: function (attribute) {\r\n        let that = this;\r\n        let percentage = that.refine * 0.01 + 0.03;\r\n        attribute.critical += percentage;\r\n    },\r\n    baseAtkFamily: \"atk46\",\r\n    secondary: {\r\n        name: \"recharge\",\r\n        family: \"recharge120\"\r\n    }\r\n};\r\n\n\n//# sourceURL=webpack://genshinPanel/./src/numerics/weapon/data/sword/tiankongzhiren.ts?");
+eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\nexports.default = {\r\n    alt: [\"tiankongzhiren\", \"天空之刃\", \"skywardblade\"],\r\n    effect: function (attribute) {\r\n        let that = this;\r\n        let percentage = that.refine * 0.01 + 0.03;\r\n        attribute.crit(percentage);\r\n    },\r\n    baseAtkFamily: \"atk46\",\r\n    secondary: {\r\n        name: \"recharge\",\r\n        family: \"recharge120\"\r\n    }\r\n};\r\n\n\n//# sourceURL=webpack://genshinPanel/./src/numerics/weapon/data/sword/tiankongzhiren.ts?");
 
 /***/ }),
 
@@ -2081,7 +2092,7 @@ eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\n
 /***/ ((__unused_webpack_module, exports) => {
 
 "use strict";
-eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\nexports.default = {\r\n    alt: [\"xialilongyin\", \"匣里龙吟\", \"lionsroar\"],\r\n    effect: function (attribute) {\r\n        let that = this;\r\n        let percentage = that.refine * 0.04 + 0.15;\r\n        attribute.bonus += percentage;\r\n    },\r\n    baseAtkFamily: \"atk42\",\r\n    secondary: {\r\n        name: \"attackPercentage\",\r\n        family: \"atk90\"\r\n    }\r\n};\r\n\n\n//# sourceURL=webpack://genshinPanel/./src/numerics/weapon/data/sword/xialilongyin.ts?");
+eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\nexports.default = {\r\n    alt: [\"xialilongyin\", \"匣里龙吟\", \"lionsroar\"],\r\n    baseAtkFamily: \"atk42\",\r\n    secondary: {\r\n        name: \"attackPercentage\",\r\n        family: \"atk90\"\r\n    }\r\n};\r\n\n\n//# sourceURL=webpack://genshinPanel/./src/numerics/weapon/data/sword/xialilongyin.ts?");
 
 /***/ }),
 
@@ -2114,7 +2125,7 @@ eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\n
 /***/ ((__unused_webpack_module, exports) => {
 
 "use strict";
-eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\nexports.default = {\r\n    alt: [\"zhuofengzhiren\", \"斫峰之刃\", \"summitshaper\"],\r\n    baseAtkFamily: \"atk46\",\r\n    secondary: {\r\n        name: \"attackPercentage\",\r\n        family: \"atk108\"\r\n    }\r\n};\r\n\n\n//# sourceURL=webpack://genshinPanel/./src/numerics/weapon/data/sword/zhuofengzhiren.ts?");
+eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\nexports.default = {\r\n    alt: [\"zhuofengzhiren\", \"斫峰之刃\", \"summitshaper\"],\r\n    baseAtkFamily: \"atk46\",\r\n    secondary: {\r\n        name: \"attackPercentage\",\r\n        family: \"atk108\"\r\n    },\r\n    effect: function (attribute) {\r\n        let that = this;\r\n        let percentage = that.refine * 0.05 + 0.15;\r\n        attribute.shield += percentage;\r\n    }\r\n};\r\n\n\n//# sourceURL=webpack://genshinPanel/./src/numerics/weapon/data/sword/zhuofengzhiren.ts?");
 
 /***/ }),
 
@@ -2157,7 +2168,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
   \*************************************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
-eval("var map = {\n\t\"./fire/anbo.ts\": \"./src/numerics/character/data/fire/anbo.ts\",\n\t\"./fire/bannite.ts\": \"./src/numerics/character/data/fire/bannite.ts\",\n\t\"./fire/diluke.ts\": \"./src/numerics/character/data/fire/diluke.ts\",\n\t\"./fire/keli.ts\": \"./src/numerics/character/data/fire/keli.ts\",\n\t\"./fire/xiangling.ts\": \"./src/numerics/character/data/fire/xiangling.ts\",\n\t\"./fire/xinyan.ts\": \"./src/numerics/character/data/fire/xinyan.ts\",\n\t\"./ice/chongyun.ts\": \"./src/numerics/character/data/ice/chongyun.ts\",\n\t\"./ice/diaona.ts\": \"./src/numerics/character/data/ice/diaona.ts\",\n\t\"./ice/ganyu.ts\": \"./src/numerics/character/data/ice/ganyu.ts\",\n\t\"./ice/kaiya.ts\": \"./src/numerics/character/data/ice/kaiya.ts\",\n\t\"./ice/qiqi.ts\": \"./src/numerics/character/data/ice/qiqi.ts\",\n\t\"./index.d.ts\": \"./src/numerics/character/data/index.d.ts\",\n\t\"./rock/abeiduo.ts\": \"./src/numerics/character/data/rock/abeiduo.ts\",\n\t\"./rock/me_rock.ts\": \"./src/numerics/character/data/rock/me_rock.ts\",\n\t\"./rock/ningguang.ts\": \"./src/numerics/character/data/rock/ningguang.ts\",\n\t\"./rock/nuoaier.ts\": \"./src/numerics/character/data/rock/nuoaier.ts\",\n\t\"./rock/zhongli.ts\": \"./src/numerics/character/data/rock/zhongli.ts\",\n\t\"./thunder/beidou.ts\": \"./src/numerics/character/data/thunder/beidou.ts\",\n\t\"./thunder/feixieer.ts\": \"./src/numerics/character/data/thunder/feixieer.ts\",\n\t\"./thunder/keqing.ts\": \"./src/numerics/character/data/thunder/keqing.ts\",\n\t\"./thunder/leize.ts\": \"./src/numerics/character/data/thunder/leize.ts\",\n\t\"./thunder/lisha.ts\": \"./src/numerics/character/data/thunder/lisha.ts\",\n\t\"./water/babala.ts\": \"./src/numerics/character/data/water/babala.ts\",\n\t\"./water/dadaliya.ts\": \"./src/numerics/character/data/water/dadaliya.ts\",\n\t\"./water/mona.ts\": \"./src/numerics/character/data/water/mona.ts\",\n\t\"./water/xingqiu.ts\": \"./src/numerics/character/data/water/xingqiu.ts\",\n\t\"./wind/me_wind.ts\": \"./src/numerics/character/data/wind/me_wind.ts\",\n\t\"./wind/qin.ts\": \"./src/numerics/character/data/wind/qin.ts\",\n\t\"./wind/shatang.ts\": \"./src/numerics/character/data/wind/shatang.ts\",\n\t\"./wind/wendi.ts\": \"./src/numerics/character/data/wind/wendi.ts\",\n\t\"./wind/xiao.ts\": \"./src/numerics/character/data/wind/xiao.ts\"\n};\n\n\nfunction webpackContext(req) {\n\tvar id = webpackContextResolve(req);\n\treturn __webpack_require__(id);\n}\nfunction webpackContextResolve(req) {\n\tif(!__webpack_require__.o(map, req)) {\n\t\tvar e = new Error(\"Cannot find module '\" + req + \"'\");\n\t\te.code = 'MODULE_NOT_FOUND';\n\t\tthrow e;\n\t}\n\treturn map[req];\n}\nwebpackContext.keys = function webpackContextKeys() {\n\treturn Object.keys(map);\n};\nwebpackContext.resolve = webpackContextResolve;\nmodule.exports = webpackContext;\nwebpackContext.id = \"./src/numerics/character/data sync recursive \\\\.ts$\";\n\n//# sourceURL=webpack://genshinPanel/./src/numerics/character/data/_sync_\\.ts$?");
+eval("var map = {\n\t\"./fire/anbo.ts\": \"./src/numerics/character/data/fire/anbo.ts\",\n\t\"./fire/bannite.ts\": \"./src/numerics/character/data/fire/bannite.ts\",\n\t\"./fire/diluke.ts\": \"./src/numerics/character/data/fire/diluke.ts\",\n\t\"./fire/hutao.ts\": \"./src/numerics/character/data/fire/hutao.ts\",\n\t\"./fire/keli.ts\": \"./src/numerics/character/data/fire/keli.ts\",\n\t\"./fire/xiangling.ts\": \"./src/numerics/character/data/fire/xiangling.ts\",\n\t\"./fire/xinyan.ts\": \"./src/numerics/character/data/fire/xinyan.ts\",\n\t\"./ice/chongyun.ts\": \"./src/numerics/character/data/ice/chongyun.ts\",\n\t\"./ice/diaona.ts\": \"./src/numerics/character/data/ice/diaona.ts\",\n\t\"./ice/ganyu.ts\": \"./src/numerics/character/data/ice/ganyu.ts\",\n\t\"./ice/kaiya.ts\": \"./src/numerics/character/data/ice/kaiya.ts\",\n\t\"./ice/qiqi.ts\": \"./src/numerics/character/data/ice/qiqi.ts\",\n\t\"./index.d.ts\": \"./src/numerics/character/data/index.d.ts\",\n\t\"./rock/abeiduo.ts\": \"./src/numerics/character/data/rock/abeiduo.ts\",\n\t\"./rock/me_rock.ts\": \"./src/numerics/character/data/rock/me_rock.ts\",\n\t\"./rock/ningguang.ts\": \"./src/numerics/character/data/rock/ningguang.ts\",\n\t\"./rock/nuoaier.ts\": \"./src/numerics/character/data/rock/nuoaier.ts\",\n\t\"./rock/zhongli.ts\": \"./src/numerics/character/data/rock/zhongli.ts\",\n\t\"./thunder/beidou.ts\": \"./src/numerics/character/data/thunder/beidou.ts\",\n\t\"./thunder/feixieer.ts\": \"./src/numerics/character/data/thunder/feixieer.ts\",\n\t\"./thunder/keqing.ts\": \"./src/numerics/character/data/thunder/keqing.ts\",\n\t\"./thunder/leize.ts\": \"./src/numerics/character/data/thunder/leize.ts\",\n\t\"./thunder/lisha.ts\": \"./src/numerics/character/data/thunder/lisha.ts\",\n\t\"./water/babala.ts\": \"./src/numerics/character/data/water/babala.ts\",\n\t\"./water/dadaliya.ts\": \"./src/numerics/character/data/water/dadaliya.ts\",\n\t\"./water/mona.ts\": \"./src/numerics/character/data/water/mona.ts\",\n\t\"./water/xingqiu.ts\": \"./src/numerics/character/data/water/xingqiu.ts\",\n\t\"./wind/me_wind.ts\": \"./src/numerics/character/data/wind/me_wind.ts\",\n\t\"./wind/qin.ts\": \"./src/numerics/character/data/wind/qin.ts\",\n\t\"./wind/shatang.ts\": \"./src/numerics/character/data/wind/shatang.ts\",\n\t\"./wind/wendi.ts\": \"./src/numerics/character/data/wind/wendi.ts\",\n\t\"./wind/xiao.ts\": \"./src/numerics/character/data/wind/xiao.ts\"\n};\n\n\nfunction webpackContext(req) {\n\tvar id = webpackContextResolve(req);\n\treturn __webpack_require__(id);\n}\nfunction webpackContextResolve(req) {\n\tif(!__webpack_require__.o(map, req)) {\n\t\tvar e = new Error(\"Cannot find module '\" + req + \"'\");\n\t\te.code = 'MODULE_NOT_FOUND';\n\t\tthrow e;\n\t}\n\treturn map[req];\n}\nwebpackContext.keys = function webpackContextKeys() {\n\treturn Object.keys(map);\n};\nwebpackContext.resolve = webpackContextResolve;\nmodule.exports = webpackContext;\nwebpackContext.id = \"./src/numerics/character/data sync recursive \\\\.ts$\";\n\n//# sourceURL=webpack://genshinPanel/./src/numerics/character/data/_sync_\\.ts$?");
 
 /***/ }),
 
@@ -2237,10 +2248,13 @@ eval("var map = {\n\t\"./book/chenshizhisuo.ts\": \"./src/numerics/weapon/data/b
 /******/ 	})();
 /******/ 	
 /************************************************************************/
-/******/ 	// module exports must be returned from runtime so entry inlining is disabled
+/******/ 	
 /******/ 	// startup
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__("./src/index.ts");
+/******/ 	// This entry module can't be inlined because the eval devtool is used.
+/******/ 	var __webpack_exports__ = __webpack_require__("./src/index.ts");
+/******/ 	
+/******/ 	return __webpack_exports__;
 /******/ })()
 ;
 });

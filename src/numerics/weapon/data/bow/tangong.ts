@@ -7,8 +7,12 @@ export default {
     effect: function (attribute: Attribute) {
         let that = this as any as Weapon;
 
-        let value = that.refine * 0.06 + 0.3;
-        attribute.bonus += value;
+        if (that.args.within03) {
+            let value = that.refine * 0.06 + 0.3;
+            attribute.bonus += value;
+        } else {
+            attribute.bonus = Math.max(attribute.bonus - 0.1, 0);
+        }
     },
     baseAtkFamily: "atk38",
     secondary: {

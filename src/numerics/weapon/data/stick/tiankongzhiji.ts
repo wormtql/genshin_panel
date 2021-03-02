@@ -13,10 +13,6 @@ export default {
         let that = this as any as Weapon;
 
         let value = that.refine * 0.02 + 0.06;
-        attribute.critical += value;
-        attribute.bCritical += value;
-        attribute.eCritical += value;
-        attribute.qCritical += value;
-        attribute.airCritical += value;
+        attribute.crit(value);
     }
 } as WeaponDataType

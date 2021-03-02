@@ -15,7 +15,7 @@ export default {
         let value = that.refine * 0.05 + 0.15;
         attribute.shield += value;
 
-        value = that.refine * 0.01 + 0.03;
-        attribute.attackPercentage += attribute.attackBasic * value * 2.5;
+        // value = that.refine * 0.01 + 0.03;
+        // attribute.attackPercentage += attribute.attackBasic * value * 2.5;
     }
 } as WeaponDataType

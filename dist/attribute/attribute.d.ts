@@ -48,4 +48,5 @@ export default class Attribute {
     attack(): number;
     life(): number;
     defend(): number;
+    crit(value: number): void;
 }

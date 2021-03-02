@@ -1,6 +1,6 @@
 import WeaponDataType from "../../data_type";
 
-export const jilidajianData = {
+export default {
     alt: ["jilidajian", "祭礼大剑", "sacrificialgreatsword"],
     baseAtkFamily: "atk44",
     secondary: {

@@ -69,4 +69,12 @@ export default class Attribute {
     defend(): number {
         return this.defendBasic + this.defendPercentage + this.defendStatic;
     }
+
+    crit(value: number) {
+        this.critical += value;
+        this.bCritical += value;
+        this.eCritical += value;
+        this.qCritical += value;
+        this.airCritical += value;
+    }
 }

@@ -12,7 +12,13 @@ export default {
     effect: function (attribute: Attribute) {
         let that = this as any as Weapon;
 
-        let value = 0.04 * that.refine + 0.12;
-        attribute.attackPercentage += attribute.attackBasic * value * 1.25;
+        if (that.args.enemyAbove2) {
+            let percentage = that.refine * 0.04 + 0.12;
+            attribute.attackPercentage += attribute.attackBasic * percentage;
+            attribute.defendPercentage += attribute.defendBasic * percentage;
+        } else {
+            let percentage = that.refine * 0.06 + 0.18;
+            attribute.attackPercentage += attribute.attackBasic * percentage;
+        }
     }
 } as WeaponDataType

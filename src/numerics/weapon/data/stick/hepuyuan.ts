@@ -9,10 +9,10 @@ export default {
         name: "critical",
         family: "cr48",
     },
-    effect: function (attribute: Attribute) {
-        let that = this as any as Weapon;
+    // effect: function (attribute: Attribute) {
+    //     let that = this as any as Weapon;
 
-        let value = that.refine * 0.007 + 0.025;
-        attribute.attackPercentage += attribute.attackBasic * value * 3;
-    }
+    //     let value = that.refine * 0.007 + 0.025;
+    //     attribute.attackPercentage += attribute.attackBasic * value * 3;
+    // }
 } as WeaponDataType

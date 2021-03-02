@@ -9,10 +9,10 @@ export default {
         name: "elementalMastery",
         family: "em41",
     },
-    effect: function (attribute: Attribute) {
-        let that = this as any as Weapon;
+    // effect: function (attribute: Attribute) {
+    //     let that = this as any as Weapon;
 
-        let value = that.refine * 0.03 + 0.09;
-        attribute.bonus += value;
-    }
+    //     let value = that.refine * 0.03 + 0.09;
+    //     attribute.bonus += value;
+    // }
 } as WeaponDataType

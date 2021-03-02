@@ -12,11 +12,7 @@ export default {
         attribute.attackPercentage += attribute.attackBasic * percentage * liyueCount;
 
         percentage = that.refine * 0.01 + 0.02;
-        attribute.critical += percentage * liyueCount;
-        attribute.bCritical += percentage * liyueCount;
-        attribute.eCritical += percentage * liyueCount;
-        attribute.qCritical += percentage * liyueCount;
-        attribute.airCritical += percentage * liyueCount;
+        attribute.crit(percentage * liyueCount);
     },
     baseAtkFamily: "atk44",
     secondary: {
