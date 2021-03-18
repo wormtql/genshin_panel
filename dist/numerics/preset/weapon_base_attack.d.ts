@@ -7,6 +7,7 @@ declare const _default: {
     atk41: number[];
     atk42: number[];
     atk44: number[];
+    atk45: number[];
     atk46: number[];
     atk48: number[];
 };

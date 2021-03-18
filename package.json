@@ -1,6 +1,6 @@
 {
   "name": "genshin_panel",
-  "version": "2.1.7",
+  "version": "2.1.8",
   "description": "genshin panel calculator",
   "main": "dist/index.js",
   "files": [

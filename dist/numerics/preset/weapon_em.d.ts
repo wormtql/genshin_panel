@@ -1,4 +1,5 @@
 declare const _default: {
+    em12: number[];
     em20: number[];
     em24: number[];
     em31: number[];
