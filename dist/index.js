@@ -2070,7 +2070,7 @@ eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\n
 /***/ ((__unused_webpack_module, exports) => {
 
 "use strict";
-eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\nexports.default = {\r\n    alt: [\"panyanjielv\", \"磐岩结绿\", \"primordialjadecutter\"],\r\n    effect: function (attribute) {\r\n        let that = this;\r\n        let percentage = that.refine * 0.05 + 0.15;\r\n        attribute.lifePercentage += attribute.lifeBasic * percentage;\r\n        percentage = that.refine * 0.003 + 0.009;\r\n        attribute.attackPercentage += attribute.attackBasic * percentage;\r\n    },\r\n    baseAtkFamily: \"atk44\",\r\n    secondary: {\r\n        name: \"critical\",\r\n        family: \"cr96\",\r\n    }\r\n};\r\n\n\n//# sourceURL=webpack://genshinPanel/./src/numerics/weapon/data/sword/panyanjielv.ts?");
+eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\nexports.default = {\r\n    alt: [\"panyanjielv\", \"磐岩结绿\", \"primordialjadecutter\"],\r\n    effect: function (attribute) {\r\n        let that = this;\r\n        let percentage = that.refine * 0.05 + 0.15;\r\n        attribute.lifePercentage += attribute.lifeBasic * percentage;\r\n        percentage = that.refine * 0.003 + 0.009;\r\n        attribute.attackPercentage += attribute.life() * percentage;\r\n        // attribute.attackPercentage += attribute.attackBasic * percentage;\r\n    },\r\n    baseAtkFamily: \"atk44\",\r\n    secondary: {\r\n        name: \"critical\",\r\n        family: \"cr96\",\r\n    }\r\n};\r\n\n\n//# sourceURL=webpack://genshinPanel/./src/numerics/weapon/data/sword/panyanjielv.ts?");
 
 /***/ }),
 

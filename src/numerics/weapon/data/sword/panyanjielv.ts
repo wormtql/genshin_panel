@@ -10,7 +10,8 @@ export default {
         
         attribute.lifePercentage += attribute.lifeBasic * percentage;
         percentage = that.refine * 0.003 + 0.009;
-        attribute.attackPercentage += attribute.attackBasic * percentage;
+        attribute.attackPercentage += attribute.life() * percentage;
+        // attribute.attackPercentage += attribute.attackBasic * percentage;
     },
     baseAtkFamily: "atk44",
     secondary: {
