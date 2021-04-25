@@ -31,7 +31,6 @@ export default class Attribute {
     windBonus: number;
     rockBonus: number;
     physicalBonus: number;
-    elementalBonus: number;
     aBonus: number;
     bBonus: number;
     eBonus: number;
@@ -45,8 +44,11 @@ export default class Attribute {
     windTime: number;
     rockTime: number;
     shield: number;
+    aSpeed: number;
+    bSpeed: number;
     attack(): number;
     life(): number;
     defend(): number;
     crit(value: number): void;
+    elementalBonus(value: number): void;
 }

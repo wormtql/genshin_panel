@@ -40,7 +40,7 @@ export default class Attribute {
     windBonus: number = 0;          //
     rockBonus: number = 0;          //
     physicalBonus: number = 0;      // 物理伤害加成
-    elementalBonus: number = 0;     // 元素伤害加成
+    // elementalBonus: number = 0;     // 元素伤害加成
 
     aBonus: number = 0;             // 普通攻击伤害加成
     bBonus: number = 0;             // 重击伤害加成
@@ -57,6 +57,11 @@ export default class Attribute {
     rockTime: number = 0;           //
 
     shield: number = 0;             // 护盾强效
+
+    aSpeed: number = 1;             // 攻击速度
+    bSpeed: number = 1;
+
+
 
     attack(): number {
         return this.attackBasic + this.attackPercentage + this.attackStatic;
@@ -76,5 +81,14 @@ export default class Attribute {
         this.eCritical += value;
         this.qCritical += value;
         this.airCritical += value;
+    }
+
+    elementalBonus(value: number) {
+        this.fireBonus += value;
+        this.thunderBonus += value;
+        this.waterBonus += value;
+        this.iceBonus += value;
+        this.windBonus += value;
+        this.rockBonus += value;
     }
 }

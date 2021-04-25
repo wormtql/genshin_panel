@@ -14,5 +14,6 @@ export default {
 
         let value = that.refine * 0.02 + 0.06;
         attribute.crit(value);
+        attribute.aSpeed += 0.12;
     }
 } as WeaponDataType

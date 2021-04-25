@@ -13,6 +13,6 @@ export default {
         let that = this as any as Weapon;
 
         let value = that.refine * 0.03 + 0.09;
-        attribute.elementalBonus += value;
+        attribute.elementalBonus(value);
     }
 } as WeaponDataType
