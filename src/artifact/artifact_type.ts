@@ -41,6 +41,8 @@ export type ArtifactSetName
     | "prayersToSpringtime"        // 祭冰之人
     | "prayersForIllumination"     // 祭火之人
     | "prayersForDestiny"          // 祭水之人
+    | "paleFlame"                  // 苍白之火
+    | "tenacityOfTheMillelith"     // 千岩牢固
 ;
 
 export const SET_COUNT = 29;

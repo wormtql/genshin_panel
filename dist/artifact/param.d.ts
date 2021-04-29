@@ -12,6 +12,7 @@ export default interface Param {
     countBloodstainedChinalry?: boolean;
     countCrimsonWitch1?: boolean;
     countViridescentVenerer?: boolean;
+    paleFlameCount?: number;
 }
 export declare function getParamList(): {
     countBerserker: {
