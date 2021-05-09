@@ -13,6 +13,8 @@ function apply4(attribute: Attribute, ctx: ApplyContext, params: Param) {
     //         attribute.tag.push("计入翠绿之影4件套");
     //     }
     // }
+
+    attribute.swirlEnhance += 0.6;
 }
 
 export default [null, apply2, null, apply4, null];

@@ -7,6 +7,9 @@ function apply2(attribute: Attribute, ctx: ApplyContext, params: Param) {
 }
 
 function apply4(attribute: Attribute, ctx: ApplyContext, params: Param) {
+    attribute.overloadEnhance += 0.4;
+    attribute.electroEnhance += 0.4;
+    attribute.superconductEnhance += 0.4;
     // if (params.countThunderingFury) {
     //     attribute.bonus += 0.4;
     //     if (typeof attribute.tag !== "undefined") {

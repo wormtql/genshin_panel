@@ -7,6 +7,11 @@ function apply2(attribute: Attribute, ctx: ApplyContext, params: Param) {
 }
 
 function apply4(attribute: Attribute, ctx: ApplyContext, params: Param) {
+    attribute.overloadEnhance += 0.4;
+    attribute.burningEnhance += 0.4;
+    attribute.vaporizeEnhance += 0.15;
+    attribute.meltEnhance += 0.15;
+    
     if (params.countCrimsonWitch1) {
         attribute.fireBonus += 1;
     }

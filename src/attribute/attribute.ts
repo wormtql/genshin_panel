@@ -61,6 +61,15 @@ export default class Attribute {
     aSpeed: number = 1;             // 攻击速度
     bSpeed: number = 1;
 
+    overloadEnhance: number = 0;    // 超载强度
+    burningEnhance: number = 0;     // 燃烧强度
+    electroEnhance: number = 0;     // 感电强度
+    superconductEnhance: number = 0;// 超导强度
+    swirlEnhance: number = 0;       // 扩散强度
+
+    vaporizeEnhance: number = 0;    // 蒸发强度
+    meltEnhance: number = 0;        // 融化强度
+
 
 
     attack(): number {
