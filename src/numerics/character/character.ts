@@ -7,9 +7,11 @@ import { getBaseValue } from "../preset/common";
 import { getCharacterSecondary } from "../preset/get_attribute";
 import WeaponType from "../weapon/weapon_type";
 
-export default class Character {
+export default abstract class Character {
+    // character name
     name: string;
-    eng: string;
+
+    // eng: string;
 
     star: number;
     level: number;
@@ -26,16 +28,18 @@ export default class Character {
 
     weapon: WeaponType;
 
+    args: any;
+
+    // 突破加成属性
     secondary: {
         name: SecondaryTagName,
         value: number
     };
 
-    talent: ((attribute: Attribute) => void) | null;
+    applyTalent: ((attribute: Attribute) => void);
 
-    constructor(name: string, level: number, ascend: boolean, constellation: number) {
+    constructor(name: string, level: number, ascend: boolean, constellation: number, args: any) {
         this.name = name;
-        this.eng = "";
 
         this.star = 0;
         this.level = level;
@@ -52,16 +56,19 @@ export default class Character {
 
         this.weapon = charSpec.weapon;
 
-        if (charSpec.createTalent) {
-            this.talent = charSpec.createTalent.call(this);
+        if (charSpec.applyTalent) {
+            this.applyTalent = charSpec.applyTalent;
         } else {
-            this.talent = null;
+            this.applyTalent = () => {};
         }
+        
 
         this.secondary = {
             name: charSpec.secondary.name,
             value: getCharacterSecondary(charSpec.secondary.family, level, ascend),
         };
+
+        this.args = args ?? {};
     }
 
     applyPrimary(attribute: Attribute) {
@@ -72,11 +79,5 @@ export default class Character {
 
     applySecondary(attribute: Attribute) {
         applySecondaryTag(attribute, this.secondary.name, this.secondary.value);
-    }
-
-    applyTalent(attribute: Attribute) {
-        if (this.talent) {
-            this.talent(attribute);
-        }
     }
 }

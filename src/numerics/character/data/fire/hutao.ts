@@ -1,4 +1,6 @@
+import Attribute from "../../../../attribute/attribute";
 import WeaponType from "../../../weapon/weapon_type";
+import Character from "../../character";
 import CharacterDataType from "../../data_type";
 
 export default {
@@ -11,4 +13,11 @@ export default {
         family: "cd384",
     },
     weapon: WeaponType.Stick,
+    applyTalent(attribute: Attribute) {
+        let that = this as any as Character;
+
+        if (that.args.hpBelow50) {
+            attribute.fireBonus += 0.33;
+        }
+    }
 } as CharacterDataType

@@ -1,6 +1,6 @@
 const app = require("../dist");
 
-let keqing = new app.Character("keqing", 90, false, 0);
+let keqing = new app.Character("hutao", 90, false, 0, {hpBelow50: true});
 let weapon = new app.Weapon("heijian", 90, false, 2);
 
 let art1 = new app.ArtifactBuilder()

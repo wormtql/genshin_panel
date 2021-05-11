@@ -13,13 +13,11 @@ export default {
         family: "recharge320"
     },
     weapon: WeaponType.Book,
-    createTalent: function () {
+    applyTalent: function (attribute: Attribute) {
         let that = this as any as Character;
+
         if (that.hasTalent2) {
-            return function (attribute: Attribute) {
-                attribute.waterBonus += attribute.recharge * 0.2;
-            }
+            attribute.waterBonus += attribute.recharge * 0.2;
         }
-        return null;
     }
 } as CharacterDataType

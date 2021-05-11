@@ -39,6 +39,7 @@ export default class Attribute {
     iceBonus: number = 0;           //
     windBonus: number = 0;          //
     rockBonus: number = 0;          //
+    grassBonus: number = 0;         //
     physicalBonus: number = 0;      // 物理伤害加成
     // elementalBonus: number = 0;     // 元素伤害加成
 
@@ -55,6 +56,7 @@ export default class Attribute {
     iceTime: number = 0;            //
     windTime: number = 0;           //
     rockTime: number = 0;           //
+    grassTime: number = 0;          //
 
     shield: number = 0;             // 护盾强效
 
@@ -65,7 +67,11 @@ export default class Attribute {
     burningEnhance: number = 0;     // 燃烧强度
     electroEnhance: number = 0;     // 感电强度
     superconductEnhance: number = 0;// 超导强度
-    swirlEnhance: number = 0;       // 扩散强度
+    swirlThunderEnhance: number = 0;// 扩散（雷）强度
+    swirlFireEnhance: number = 0;
+    swirlWaterEnhance: number = 0;
+    swirlIceEnhance: number = 0;
+
 
     vaporizeEnhance: number = 0;    // 蒸发强度
     meltEnhance: number = 0;        // 融化强度

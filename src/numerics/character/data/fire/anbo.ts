@@ -12,15 +12,11 @@ export default {
         name: "attackPercentage",
         family: "atk240",
     },
-    createTalent: function () {
+    applyTalent(attribute: Attribute) {
         let that = this as any as Character;
         if (that.hasTalent1) {
-            return function(attribute: Attribute) {
-                attribute.qCritical += 0.1;
-            }
+            attribute.qCritical += 0.1;
         }
-
-        return null;
     },
     weapon: WeaponType.Bow,
 } as CharacterDataType

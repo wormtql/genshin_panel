@@ -12,15 +12,11 @@ export default {
         name: "attackPercentage",
         family: "atk240"
     },
-    createTalent: function () {
+    applyTalent(attribute: Attribute) {
         let that = this as any as Character;
         if (that.hasTalent2) {
-            return function (attribute: Attribute) {
-                attribute.waterBonus += 0.2;
-            };
+            attribute.waterBonus += 0.2;
         }
-
-        return null;
     },
     weapon: WeaponType.Sword,
 } as CharacterDataType

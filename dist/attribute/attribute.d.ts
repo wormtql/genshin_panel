@@ -30,6 +30,7 @@ export default class Attribute {
     iceBonus: number;
     windBonus: number;
     rockBonus: number;
+    grassBonus: number;
     physicalBonus: number;
     aBonus: number;
     bBonus: number;
@@ -43,9 +44,20 @@ export default class Attribute {
     iceTime: number;
     windTime: number;
     rockTime: number;
+    grassTime: number;
     shield: number;
     aSpeed: number;
     bSpeed: number;
+    overloadEnhance: number;
+    burningEnhance: number;
+    electroEnhance: number;
+    superconductEnhance: number;
+    swirlThunderEnhance: number;
+    swirlFireEnhance: number;
+    swirlWaterEnhance: number;
+    swirlIceEnhance: number;
+    vaporizeEnhance: number;
+    meltEnhance: number;
     attack(): number;
     life(): number;
     defend(): number;

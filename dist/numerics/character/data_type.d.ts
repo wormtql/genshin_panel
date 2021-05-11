@@ -11,6 +11,6 @@ export default interface CharacterDataType {
         family: string;
     };
     weapon: WeaponType;
-    createTalent?: () => ((attribute: Attribute) => void) | null;
+    applyTalent: (attribute: Attribute) => null;
     constellation?: (attribute: Attribute) => void;
 }
