@@ -9,6 +9,11 @@ export default {
         let percentage = that.refine * 0.01 + 0.03;
         
         attribute.crit(percentage);
+
+        if (that.args.passive) {
+            attribute.aSpeed += 0.1;
+            attribute.bSpeed += 0.1;
+        }
     },
     baseAtkFamily: "atk46",
     secondary: {

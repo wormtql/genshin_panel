@@ -12,9 +12,9 @@ export default {
     effect: function (attribute: Attribute) {
         let that = this as any as Weapon
 
-        if (that.args.passive) {
+        if (that.args.rate) {
             let p = 0.04 * that.refine + 0.12;
-            attribute.attackPercentage += attribute.attackBasic * p;
+            attribute.atkLift(p * that.args.rate);
         }
     },
 } as WeaponDataType

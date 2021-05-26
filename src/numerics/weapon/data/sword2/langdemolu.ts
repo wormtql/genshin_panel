@@ -9,6 +9,11 @@ export default {
 
         let percentage = that.refine * 0.05 + 0.15;
         attribute.attackPercentage += attribute.attackBasic * percentage;
+
+        if (that.args.rate) {
+            let value = 0.1 * that.refine + 0.3;
+            attribute.atkLift(value * that.args.rate);
+        }
     },
     baseAtkFamily: "atk46",
     secondary: {

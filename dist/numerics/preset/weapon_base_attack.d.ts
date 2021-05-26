@@ -10,5 +10,6 @@ declare const _default: {
     atk45: number[];
     atk46: number[];
     atk48: number[];
+    atk49: number[];
 };
 export default _default;

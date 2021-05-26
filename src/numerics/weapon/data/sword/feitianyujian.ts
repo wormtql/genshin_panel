@@ -9,4 +9,11 @@ export default {
         name: "recharge",
         family: "recharge113",
     },
+    effect(attribute) {
+        let that = this as any as Weapon;
+        if (that.args.rate) {
+            let value = 0.03 * that.refine + 0.09;
+            attribute.atkLift(value * that.args.rate);
+        }
+    }
 } as WeaponDataType

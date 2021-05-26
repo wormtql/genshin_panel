@@ -58,9 +58,13 @@ export default class Attribute {
     swirlIceEnhance: number;
     vaporizeEnhance: number;
     meltEnhance: number;
+    moveSpeed: number;
     attack(): number;
+    atkLift(value: number): void;
     life(): number;
+    lifeLift(value: number): void;
     defend(): number;
+    defLift(value: number): void;
     crit(value: number): void;
     elementalBonus(value: number): void;
 }

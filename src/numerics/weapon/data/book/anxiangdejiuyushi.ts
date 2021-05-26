@@ -12,9 +12,9 @@ export default {
     effect(attribute: Attribute) {
         let that = this as any as Weapon;
 
-        if (that.args.afterDash) {
+        if (that.args.rate) {
             let value = that.refine * 0.05 + 0.15;
-            attribute.attackPercentage += value * attribute.attackBasic;
+            attribute.atkLift(value * that.args.rate);
         }
     }
 } as WeaponDataType

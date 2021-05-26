@@ -76,18 +76,30 @@ export default class Attribute {
     vaporizeEnhance: number = 0;    // 蒸发强度
     meltEnhance: number = 0;        // 融化强度
 
-
+    moveSpeed: number = 1;
 
     attack(): number {
         return this.attackBasic + this.attackPercentage + this.attackStatic;
+    }
+
+    atkLift(value: number) {
+        this.attackPercentage += this.attackBasic * value;
     }
 
     life(): number {
         return this.lifeBasic + this.lifePercentage + this.lifeStatic;
     }
 
+    lifeLift(value: number) {
+        this.lifePercentage += this.lifeBasic * value;
+    }
+
     defend(): number {
         return this.defendBasic + this.defendPercentage + this.defendStatic;
+    }
+
+    defLift(value: number) {
+        this.defendPercentage += this.defendBasic * value;
     }
 
     crit(value: number) {

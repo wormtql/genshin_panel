@@ -1,4 +1,5 @@
 declare const _default: {
+    physical45: number[];
     physical75: number[];
     physical90: number[];
     physical96: number[];

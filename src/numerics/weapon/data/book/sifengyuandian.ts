@@ -9,10 +9,12 @@ export default {
         name: "critical",
         family: "cr72",
     },
-    // effect: function (attribute: Attribute) {
-    //     let that = this as any as Weapon;
-
-    //     let value = that.refine * 0.02 + 0.06;
-    //     attribute.elementalBonus += value * 4;
-    // }
+    effect: function (attribute: Attribute) {
+        let that = this as any as Weapon;
+        if (that.args.level) {
+            let value = that.refine * 0.02 + 0.06;
+            let level = Math.min(that.args.level, 4);
+            attribute.elementalBonus(value * level);
+        }
+    }
 } as WeaponDataType

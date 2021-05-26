@@ -12,11 +12,11 @@ export default {
     effect: function (attribute: Attribute) {
         let that = this as any as Weapon
 
-        if (that.args.backendSeconds) {
-            let p = that.args.backendSeconds * (0.005 * that.refine + 0.015);
-            p = Math.min(p, 0.05 * that.refine + 0.15);
+        if (that.args.level) {
+            let value = 0.005 * that.refine + 0.015;
+            let level = Math.min(that.args.level, 10);
             
-            attribute.bonus += p;
+            attribute.bonus += value * level;
         }
     },
 } as WeaponDataType
