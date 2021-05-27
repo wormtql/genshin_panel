@@ -6,6 +6,7 @@ import { applySecondaryTag } from "../common/common";
 import { SecondaryTagName } from "../common/type";
 import Weapon from "../numerics/weapon/weapon";
 import ApplyContext from "../common/context";
+import Param from "../artifact/param";
 
 
 export default class AttributeBuilder {
@@ -15,6 +16,7 @@ export default class AttributeBuilder {
 
     _single: any;
     _useWeaponEffect: boolean;
+    _artifactsConfig: Param;
 
     constructor() {
         this._character = null;
@@ -23,6 +25,7 @@ export default class AttributeBuilder {
 
         this._single = [];
         this._useWeaponEffect = true;
+        this._artifactsConfig = {};
     }
 
     weaponEffect(value: boolean) {
@@ -72,6 +75,12 @@ export default class AttributeBuilder {
         return this;
     }
 
+    artifactsConfig(config: Param): AttributeBuilder {
+        this._artifactsConfig = config;
+
+        return this;
+    }
+
     // 1. weapon basic
     // 2. character basic
     // 3. weapon secondary
@@ -108,7 +117,7 @@ export default class AttributeBuilder {
         };
 
         // apply artifacts
-        this._artifacts.apply(attribute, context, null);
+        this._artifacts.apply(attribute, context, this._artifactsConfig);
         for (let s of this._single) {
             applySecondaryTag(attribute, s.key, s.value);
         }

@@ -28,6 +28,7 @@ export default class Attribute {
     iceRes: number = 0;             //
     windRes: number = 0;            //
     rockRes: number = 0;            //
+    grassRes: number = 0;
 
     elementalMastery: number = 0;   // 元素精通
     recharge: number = 1;           // 元素充能效率

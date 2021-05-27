@@ -1,9 +1,9 @@
 export enum Element {
-    Thunder,
-    Water,
-    Fire,
-    Rock,
-    Wind,
-    Ice,
-    Grass
+    Thunder = "thunder",
+    Water = "water",
+    Fire = "fire",
+    Rock = "rock",
+    Wind = "wind",
+    Ice = "ice",
+    Grass = "grass",
 }

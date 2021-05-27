@@ -7,8 +7,9 @@ function apply2(attribute: Attribute, ctx: ApplyContext, params: Param) {
 }
 
 function apply4(attribute: Attribute, ctx: ApplyContext, params: Param) {
-    if (params.countThunderSmoother) {
-        attribute.bonus += 0.35;
+    if (params.configThunderSmoother) {
+        let rate = params.configThunderSmoother.rate;
+        attribute.bonus += 0.35 * rate;
     }
 }
 

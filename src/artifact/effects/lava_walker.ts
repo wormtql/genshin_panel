@@ -7,8 +7,9 @@ function apply2(attribute: Attribute, ctx: ApplyContext, params: Param) {
 }
 
 function apply4(attribute: Attribute, ctx: ApplyContext, params: Param) {
-    if (params.countLavaWalker) {
-        attribute.bonus += 0.35;
+    if (params.configLavaWalker) {
+        let rate = params.configLavaWalker.rate;
+        attribute.bonus += rate * 0.35;
     }
 }
 

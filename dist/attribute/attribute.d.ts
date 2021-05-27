@@ -22,6 +22,7 @@ export default class Attribute {
     iceRes: number;
     windRes: number;
     rockRes: number;
+    grassRes: number;
     elementalMastery: number;
     recharge: number;
     thunderBonus: number;

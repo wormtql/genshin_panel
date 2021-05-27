@@ -7,10 +7,11 @@ function apply2(attribute: Attribute, ctx: ApplyContext, params: Param) {
 }
 
 function apply4(attribute: Attribute, ctx: ApplyContext, params: Param) {
-    let level = params.paleFlameCount ?? 0;
-    attribute.attackPercentage += attribute.attackBasic * (0.09 * level);
-    if (level >= 2) {
-        attribute.physicalBonus += 0.25;
+    if (params.configPaleFlame) {
+        let level = Math.min(params.configPaleFlame.level, 2);
+        let rate = params.configPaleFlame.rate;
+        attribute.atkLift(0.09 * level);
+        attribute.physicalBonus += 0.25 * rate;
     }
 }
 

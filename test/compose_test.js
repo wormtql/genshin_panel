@@ -64,4 +64,38 @@ describe("#test1", () => {
 
         expect(attribute.critical).eq(0.13);
     })
+});
+
+describe("test berserker effect", () => {
+    it("test1", () => {
+        let keqing = new genshin.Character("keqing", 90, false, 0);
+        let weapon = new genshin.Weapon("wufengjian", 70, false, 5);
+        let art1 = new genshin.ArtifactBuilder()
+            .setName("berserker")
+            .position("flower")
+            .build()
+        let art2 = new genshin.ArtifactBuilder()
+            .setName("berserker")
+            .position("feather")
+            .build()
+        let art3 = new genshin.ArtifactBuilder()
+            .setName("berserker")
+            .position("sand")
+            .build()
+        let art4 = new genshin.ArtifactBuilder()
+            .setName("berserker")
+            .position("cup")
+            .build()
+        let attribute = new genshin.AttributeBuilder()
+            .character(keqing)
+            .weapon(weapon)
+            .artifacts([art1, art2, art3, art4])
+            .artifactsConfig({
+                configBerserker: {
+                    rate: 0.5,
+                }
+            })
+            .build()
+        expect(attribute.critical).eq(0.29);
+    })
 })

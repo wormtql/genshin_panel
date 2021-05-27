@@ -7,8 +7,9 @@ function apply2(attribute: Attribute, ctx: ApplyContext, params: Param) {
 }
 
 function apply4(attribute: Attribute, ctx: ApplyContext, params: Param) {
-    if (params.countInstructor) {
-        attribute.elementalMastery += 120;
+    if (params.configInstructor) {
+        let rate = params.configInstructor.rate;
+        attribute.elementalMastery += 120 * rate;
     }
 }
 

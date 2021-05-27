@@ -7,9 +7,10 @@ function apply2(attribute: Attribute, ctx: ApplyContext, params: Param) {
 }
 
 function apply4(attribute: Attribute, ctx: ApplyContext, params: Param) {
-    if (params.countRetracingBolide) {
-        attribute.aBonus += 0.4;
-        attribute.bBonus += 0.4;
+    if (params.configRetracingBolide) {
+        let rate = params.configRetracingBolide.rate;
+        attribute.aBonus += 0.4 * rate;
+        attribute.bBonus += 0.4 * rate;
     }
 }
 

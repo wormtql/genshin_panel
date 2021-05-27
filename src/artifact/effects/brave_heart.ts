@@ -7,8 +7,9 @@ function apply2(attribute: Attribute, ctx: ApplyContext, params: Param) {
 }
 
 function apply4(attribute: Attribute, ctx: ApplyContext, params: Param) {
-    if (params.countBraveHeart) {
-        attribute.bonus += 0.3;
+    if (params.configBraveHeart) {
+        let rate = params.configBraveHeart.rate;
+        attribute.bonus += rate * 0.3;
     }
 }
 

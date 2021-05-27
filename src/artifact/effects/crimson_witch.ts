@@ -12,8 +12,9 @@ function apply4(attribute: Attribute, ctx: ApplyContext, params: Param) {
     attribute.vaporizeEnhance += 0.15;
     attribute.meltEnhance += 0.15;
     
-    if (params.countCrimsonWitch1) {
-        attribute.fireBonus += 1;
+    if (params.configCrimsonWitch) {
+        let level = Math.min(3, params.configCrimsonWitch.level);
+        attribute.fireBonus += 0.075 * level;
     }
 }
 

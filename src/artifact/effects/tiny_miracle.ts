@@ -12,7 +12,12 @@ function apply2(attribute: Attribute, ctx: ApplyContext, params: Param) {
 }
 
 function apply4(attribute: Attribute, ctx: ApplyContext, params: Param) {
-
+    if (params.configTinyMiracle) {
+        let element = params.configTinyMiracle.element;
+        let rate = params.configTinyMiracle.rate;
+        let resName = element + "res";
+        attribute[resName] += 0.3 * rate;
+    }
 }
 
 export default [null, apply2, null, apply4, null];

@@ -7,8 +7,9 @@ function apply2(attribute: Attribute, ctx: ApplyContext, params: Param) {
 }
 
 function apply4(attribute: Attribute, ctx: ApplyContext, params: Param) {
-    if (params.countBloodstainedChinalry) {
-        attribute.bBonus += 0.5;
+    if (params.configBloodstainedChivalry) {
+        let rate = params.configBloodstainedChivalry.rate;
+        attribute.bBonus += rate * 0.5;
     }
 }
 

@@ -8,9 +8,10 @@ function apply2(attribute: Attribute, ctx: ApplyContext, params: Param) {
 }
 
 function apply4(attribute: Attribute, ctx: ApplyContext, params: Param) {
-    if (params.countMartialArtist) {
-        attribute.aBonus += 0.25;
-        attribute.bBonus += 0.25;
+    if (params.configMartialArtist) {
+        let rate = params.configMartialArtist.rate;
+        attribute.aBonus += rate * 0.25;
+        attribute.bBonus += rate * 0.25;
     }
 }
 

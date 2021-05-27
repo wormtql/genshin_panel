@@ -7,6 +7,10 @@ function apply2(attribute: Attribute, ctx: ApplyContext, params: Param) {
 }
 
 function apply4(attribute: Attribute, ctx: ApplyContext, params: Param) {
+    if (params.configBlizzardStrayer) {
+        let value = params.configBlizzardStrayer.criticalBonus;
+        attribute.crit(value);
+    }
 }
 
 export default [null, apply2, null, apply4, null];
