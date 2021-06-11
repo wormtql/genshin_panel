@@ -1,13 +1,13 @@
 {
   "name": "genshin_panel",
-  "version": "2.9.0",
+  "version": "2.10.0",
   "description": "genshin panel calculator",
   "main": "dist/index.js",
   "files": [
     "dist/"
   ],
   "scripts": {
-    "test": "mocha",
+    "test": "mocha --recursive",
     "build": "webpack",
     "example": "node ./scripts/example.js",
     "idk": "node ./scripts/test.js"
