@@ -72,6 +72,7 @@ export default class Attribute {
     swirlFireEnhance: number = 0;
     swirlWaterEnhance: number = 0;
     swirlIceEnhance: number = 0;
+    swirlEnhance: number = 0;
 
 
     vaporizeEnhance: number = 0;    // 蒸发强度

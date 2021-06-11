@@ -14,10 +14,7 @@ function apply4(attribute: Attribute, ctx: ApplyContext, params: Param) {
     //     }
     // }
 
-    attribute.swirlFireEnhance += 0.6;
-    attribute.swirlIceEnhance += 0.6;
-    attribute.swirlThunderEnhance += 0.6;
-    attribute.swirlWaterEnhance += 0.6;
+    attribute.swirlEnhance += 0.6;
 }
 
 export default [null, apply2, null, apply4, null];

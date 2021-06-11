@@ -57,6 +57,7 @@ export default class Attribute {
     swirlFireEnhance: number;
     swirlWaterEnhance: number;
     swirlIceEnhance: number;
+    swirlEnhance: number;
     vaporizeEnhance: number;
     meltEnhance: number;
     moveSpeed: number;
