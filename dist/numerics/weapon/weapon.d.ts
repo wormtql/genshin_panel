@@ -14,7 +14,7 @@ export default class Weapon {
         name: SecondaryTagName;
         value: number;
     } | null;
-    constructor(name: string, level: number, ascend: boolean, refine: number, args: any);
+    constructor(name: string, level: number, ascend: boolean, refine: number, args?: any);
     applyPrimary(attribute: Attribute): void;
     applySecondary(attribute: Attribute): void;
     applyEffect(attribute: Attribute): void;

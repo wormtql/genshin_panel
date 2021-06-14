@@ -30,7 +30,7 @@ export default class Weapon {
         value: number
     } | null;
 
-    constructor(name: string, level: number, ascend: boolean, refine: number, args: any) {
+    constructor(name: string, level: number, ascend: boolean, refine: number, args: any = {}) {
         this.star = 0;
         this.eng = "";
         this.name = name;
@@ -42,7 +42,12 @@ export default class Weapon {
         let temp = getWeaponData(name);
         this.effect = temp.effect || null;
 
-        this.baseAtk = getWeaponBaseAtk(temp.baseAtkFamily, level, ascend);
+        if (name !== "custom") {
+            this.baseAtk = getWeaponBaseAtk(temp.baseAtkFamily, level, ascend);
+        } else {
+            this.baseAtk = args.baseAtk ?? 0;
+        }
+        
         if (temp.secondary) {
             this.secondary = {
                 name: temp.secondary.name,
