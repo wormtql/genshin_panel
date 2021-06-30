@@ -5,6 +5,7 @@ declare const _default: {
     em31: number[];
     em36: number[];
     em41: number[];
+    em43: number[];
     em48: number[];
 };
 export default _default;
