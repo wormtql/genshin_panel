@@ -39,7 +39,10 @@ export function getWeaponSpecial(family: number[], level: number): number {
     if (level === temp[index]) {
         return family[index];
     }
-    return family[index - 1];
+    
+    let range = family[index] - family[index - 1];
+    let delta = range / (temp[index] - temp[index - 1]);
+    return family[index - 1] + delta * (level - temp[index - 1]);
 }
 
 export function getCharSpecial(family: number[], level: number, ascend: boolean): number {
