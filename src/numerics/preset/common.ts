@@ -42,7 +42,9 @@ export function getWeaponSpecial(family: number[], level: number): number {
     
     let range = family[index] - family[index - 1];
     let delta = range / (temp[index] - temp[index - 1]);
-    return family[index - 1] + delta * (level - temp[index - 1]);
+
+    let count = Math.floor(level / 5) - Math.floor(temp[index - 1] / 5);
+    return family[index - 1] + delta * count * 5;
 }
 
 export function getCharSpecial(family: number[], level: number, ascend: boolean): number {
