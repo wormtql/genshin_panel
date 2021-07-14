@@ -1,5 +1,6 @@
 import Attribute from "../../attribute/attribute";
 import { SecondaryTagName } from "../../common/type";
+import Character from "../character/character";
 export default class Weapon {
     name: string;
     eng: string;
@@ -7,7 +8,7 @@ export default class Weapon {
     ascend: boolean;
     level: number;
     refine: number;
-    effect: ((attribute: Attribute) => void) | null;
+    effect: ((attribute: Attribute, character?: Character) => void) | null;
     args: any;
     baseAtk: number;
     secondary: {
@@ -17,5 +18,5 @@ export default class Weapon {
     constructor(name: string, level: number, ascend: boolean, refine: number, args?: any);
     applyPrimary(attribute: Attribute): void;
     applySecondary(attribute: Attribute): void;
-    applyEffect(attribute: Attribute): void;
+    applyEffect(attribute: Attribute, character?: Character): void;
 }

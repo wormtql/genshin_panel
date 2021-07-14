@@ -119,5 +119,6 @@ export default class Attribute {
         this.iceBonus += value;
         this.windBonus += value;
         this.rockBonus += value;
+        this.grassBonus += value;
     }
 }

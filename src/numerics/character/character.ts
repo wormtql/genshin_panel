@@ -6,10 +6,12 @@ import { applyPrimaryTag, applySecondaryTag } from "../../common/common";
 import { getBaseValue } from "../preset/common";
 import { getCharacterSecondary } from "../preset/get_attribute";
 import WeaponType from "../weapon/weapon_type";
+import { Element } from "../../common/element";
 
 export default abstract class Character {
     // character name
     name: string;
+    element: Element;
 
     // eng: string;
 
@@ -55,6 +57,7 @@ export default abstract class Character {
         this.baseHp = getBaseValue(charSpec.life, level, ascend);
 
         this.weapon = charSpec.weapon;
+        this.element = charSpec.element;
 
         if (charSpec.applyTalent) {
             this.applyTalent = charSpec.applyTalent;

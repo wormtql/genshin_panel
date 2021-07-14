@@ -43,6 +43,8 @@ export type ArtifactSetName
     | "prayersForDestiny"          // 祭水之人
     | "paleFlame"                  // 苍白之火
     | "tenacityOfTheMillelith"     // 千岩牢固
+    | "emblemOfSeveredFate"        // 绝缘之旗印
+    | "shimenawaReminiscence"      // 追忆之注连
 ;
 
 export const SET_COUNT = 29;

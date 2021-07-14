@@ -51,4 +51,5 @@ export default interface Param {
     configTenacityOfTheMillelith?: CommonConfigRatio,
     configLavaWalker?: CommonConfigRatio,
     configMaidenBeloved?: CommonConfigRatio,
+    configShimenawaReminiscence?: CommonConfigRatio,
 }

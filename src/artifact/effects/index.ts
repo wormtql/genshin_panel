@@ -38,6 +38,8 @@ import { default as heartOfDepthApply } from "./heart_of_depth";
 import { default as blizzardStrayerApply } from "./blizzard_strayer";
 import { default as paleFlameApply } from "./pale_flame";
 import { default as tenacityOfTheMillelithApply } from "./tenacity_of_the_millelith";
+import { default as emblemOfSeveredFate } from "./emblem_of_severed_fate";
+import { default as shimenawaReminiscence } from "./shimenawa_reminiscence";
 
 
 type ApplyFunctionType = ((attribute: Attribute, ctx: ApplyContext, params: Param) => void) | null;
@@ -76,6 +78,8 @@ applyFunctions["heartOfDepth"] = heartOfDepthApply;
 applyFunctions["blizzardStrayer"] = blizzardStrayerApply;
 applyFunctions["paleFlame"] = paleFlameApply;
 applyFunctions["tenacityOfTheMillelith"] = tenacityOfTheMillelithApply;
+applyFunctions["emblemOfSeveredFate"] = emblemOfSeveredFate;
+applyFunctions["shimenawaReminiscence"] = shimenawaReminiscence;
 
 
 export default function apply(attribute: Attribute, ctx: ApplyContext, params: Param | undefined | null, artifacts: ArtifactSet) {
@@ -97,11 +101,11 @@ export default function apply(attribute: Attribute, ctx: ApplyContext, params: P
 
     for (let key in temp) {
         let count = temp[key];
-        while (count > 0) {
-            if (applyFunctions[key][count - 1] !== null) {
-                applyFunctions[key][count - 1](attribute, ctx, params);
+
+        for(let i = 0; i < count; i++) {
+            if (applyFunctions[key][i]) {
+                applyFunctions[key][i](attribute, ctx, params);
             }
-            count--;
         }
     }
 }

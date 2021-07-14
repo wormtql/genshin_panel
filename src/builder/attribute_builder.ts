@@ -127,7 +127,7 @@ export default class AttributeBuilder {
 
         // apply weapon effect
         if (this._weapon && this._useWeaponEffect) {
-            this._weapon?.applyEffect(attribute);
+            this._weapon?.applyEffect(attribute, this._character);
         }
         
         return attribute;

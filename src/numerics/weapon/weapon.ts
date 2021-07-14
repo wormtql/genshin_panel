@@ -4,6 +4,7 @@ import getWeaponData from "./data";
 import { applyPrimaryTag, applySecondaryTag } from "../../common/common";
 import { SecondaryTagName } from "../../common/type";
 import { getWeaponBaseAtk, getWeaponSecondary } from "../preset/get_attribute";
+import Character from "../character/character";
 
 export default class Weapon {
     name: string;
@@ -19,7 +20,7 @@ export default class Weapon {
     refine: number;
 
     // 特效
-    effect: ((attribute: Attribute) => void) | null;
+    effect: ((attribute: Attribute, character?: Character) => void) | null;
 
     // 特殊参数
     args: any;
@@ -70,9 +71,9 @@ export default class Weapon {
         }
     }
 
-    applyEffect(attribute: Attribute) {
+    applyEffect(attribute: Attribute, character?: Character) {
         if (this.effect) {
-            this.effect(attribute);
+            this.effect(attribute, character);
         }
     }
 }

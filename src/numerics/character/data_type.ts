@@ -1,8 +1,10 @@
 import Attribute from "../../attribute/attribute";
+import { Element } from "../../common/element";
 import { SecondaryTagName } from "../../common/type";
 import WeaponType from "../weapon/weapon_type";
 
 export default interface CharacterDataType {
+    element: Element,
     alt: string[],
     life: number[],
     attack: number[],

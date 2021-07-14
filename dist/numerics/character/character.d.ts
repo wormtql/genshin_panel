@@ -1,8 +1,10 @@
 import { SecondaryTagName } from "../../common/type";
 import Attribute from "../../attribute/attribute";
 import WeaponType from "../weapon/weapon_type";
+import { Element } from "../../common/element";
 export default abstract class Character {
     name: string;
+    element: Element;
     star: number;
     level: number;
     ascend: boolean;
