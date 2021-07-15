@@ -7,34 +7,33 @@
 注：最终面板与实际面板有出入，这是因为游戏中的圣遗物只保留到小数点后一位，实际上这之后的小数位数并不是零。  
 最终结果仅有非常小的差别，可以忽略不计
 
-## 安装
+## Install
 ```bash
 npm install genshin_panel
 ```
-<!-- 
 
-## 文档
-[https://wormtql.gitbook.io/genshin-panel-doc/](https://wormtql.gitbook.io/genshin-panel-doc/) -->
+## Documentation
+[https://wormtql.gitbook.io/genshin-panel-doc/](https://wormtql.gitbook.io/genshin-panel-doc/)
 
 
-## 构建角色与武器
+## Build Character and Weapon
 ```js
 const genshin = require("genshin_panel");
 
 // 刻晴，80级，已突破，0命之座
 let keqing = new genshin.Character("keqing", 80, true, 0);
-// 可以使用中文或英文
+// use Chinese or English
 let keqing = new genshin.Character("刻晴", 80, true, 0);
 
 // 黑剑，90级，未突破，精炼2（初始为精炼1）
 let heijian = new genshin.Weapon("heijian", 90, false, 2);
-// 同样可以使用中文或英文，英文应当全部小写且没有空格
+// same
 let heijian = new genshin.Weapon("theblacksword", 90, false, 2);
 ```
 
 
-## 构建圣遗物
-使用ArtifactBuilder构建圣遗物
+## Build artifacts
+use ArtifactBuilder to build artifacts
 ```js
 const genshin = require("genshin_panel");
 
@@ -51,7 +50,7 @@ let art1 = new genshin.ArtifactBuilder()
 ```
 
 
-## 构建最终面板
+## Build Panel
 ```js
 const genshin = require("genshin_panel");
 
