@@ -4,7 +4,7 @@ import WeaponDataType from "../../data_type"
 import Weapon from "../../weapon"
 
 export default {
-    alt: ["雾切之回光", "wuqiezhihuiguang"],
+    alt: ["雾切之回光", "wuqiezhihuiguang", "mistsplitterreforged"],
     baseAtkFamily: "atk48",
     secondary: {
         name: "criticalDamage",
@@ -22,7 +22,7 @@ export default {
                 value2 = that.refine * 0.02 + 0.06;
             } else if (that.args.level === 2) {
                 value2 = that.refine * 0.04 + 0.12;
-            } else {
+            } else if (that.args.level === 3) {
                 value2 = that.refine * 0.07 + 0.21;
             }
             attribute[element + "Bonus"] += value2;

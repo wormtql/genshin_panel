@@ -3,7 +3,7 @@ import Weapon from "../../weapon";
 import WeaponDataType from "../../data_type";
 
 export default {
-    alt: ["xiduoyuanshiwenzi", "喜多院十文字"],
+    alt: ["xiduoyuanshiwenzi", "喜多院十文字", "kitaincrossspear"],
     baseAtkFamily: "atk44",
     secondary: {
         name: "elementalMastery",

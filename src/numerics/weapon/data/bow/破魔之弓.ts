@@ -3,7 +3,7 @@ import Weapon from "../../weapon";
 import WeaponDataType from "../../data_type";
 
 export default {
-    alt: ["pomozhigong", "破魔之弓"],
+    alt: ["pomozhigong", "破魔之弓", "hamayumi"],
     baseAtkFamily: "atk41",
     effect: function (attribute: Attribute) {
         let that = this as any as Weapon;

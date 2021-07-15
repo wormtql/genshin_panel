@@ -18,7 +18,7 @@ export default {
     applyTalent(attribute: Attribute) {
         let that = this as any as Character;
 
-        if (that.args.hpBelow50) {
+        if (that.args.hpBelow50 && that.hasTalent2) {
             attribute.fireBonus += 0.33;
         }
     }

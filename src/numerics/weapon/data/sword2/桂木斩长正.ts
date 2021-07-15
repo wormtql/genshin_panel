@@ -3,7 +3,7 @@ import WeaponDataType from "../../data_type";
 import Weapon from "../../weapon";
 
 export default {
-    alt: ["guimuzhanchangzheng", "桂木斩长正"],
+    alt: ["guimuzhanchangzheng", "桂木斩长正", "katsuragikirinagamasa"],
     baseAtkFamily: "atk42",
     secondary: {
         name: "recharge",

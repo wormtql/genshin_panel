@@ -2,7 +2,7 @@ import { Weapon } from "../../../..";
 import WeaponDataType from "../../data_type";
 
 export default {
-    alt: ["feiyufaqiu", "翡玉法球", "emeraldord"],
+    alt: ["feiyufaqiu", "翡玉法球", "emeraldorb"],
     baseAtkFamily: "atk40",
     secondary: {
         name: "elementalMastery",
