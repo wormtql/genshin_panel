@@ -48,19 +48,19 @@ export function getWeaponSpecial(family: number[], level: number): number {
 }
 
 export function getCharSpecial(family: number[], level: number, ascend: boolean): number {
-    if (level < 20 || (level === 20 && !ascend)) {
+    if (level < 40 || (level === 40 && !ascend)) {
         return 0;
     }
 
-    let temp = [20, 40, 50, 60, 70, 80, 90];
+    let temp = [40, 50, 60, 70, 80, 90];
     let index = 0;
     while (index < temp.length && temp[index] < level) {
         index++;
     }
 
-    if (temp[index] === level && ascend) {
-        return family[index];
+    if (temp[index] === level && ascend && index < 5) {
+        return family[index + 1];
     }
 
-    return family[index - 1];
+    return family[index];
 }

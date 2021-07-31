@@ -13,7 +13,7 @@ export default {
         attribute.attackPercentage += attribute.life() * percentage;
         // attribute.attackPercentage += attribute.attackBasic * percentage;
     },
-    baseAtkFamily: "atk44",
+    baseAtkFamily: "atk44_panyan",
     secondary: {
         name: "critical",
         family: "cr96",
