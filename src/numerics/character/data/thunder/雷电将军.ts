@@ -1,6 +1,9 @@
+import Attribute from "../../../../attribute/attribute";
 import { Element } from "../../../../common/element";
 import WeaponType from "../../../weapon/weapon_type";
 import CharacterDataType from "../../data_type";
+import Character from "../../character";
+
 
 export default {
     element: Element.Thunder,
@@ -11,6 +14,15 @@ export default {
     secondary: {
         name: "recharge",
         family: "recharge320"
+    },
+    applyTalent(attribute: Attribute) {
+        let that = this as any as Character;
+
+        if (that.hasTalent2) {
+            let value = (attribute.recharge - 1) * 0.004;
+            value = Math.max(0, value);
+            attribute.thunderBonus += value;
+        }
     },
     weapon: WeaponType.Stick,
 } as CharacterDataType

@@ -13,8 +13,5 @@ export default {
         name: "iceBonus",
         family: "bonus288",
     },
-    applyTalent(attribute: Attribute) {
-        
-    },
     weapon: WeaponType.Sword,
 } as CharacterDataType
