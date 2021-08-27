@@ -19,9 +19,11 @@ export default {
         let that = this as any as Character;
 
         if (that.hasTalent2) {
-            let value = (attribute.recharge - 1) * 0.004;
-            value = Math.max(0, value);
-            attribute.thunderBonus += value;
+            attribute.addLazy((a: Attribute) => {
+                let value = (a.recharge - 1) * 0.4;
+                value = Math.max(0, value);
+                a.thunderBonus += value;
+            });
         }
     },
     weapon: WeaponType.Stick,

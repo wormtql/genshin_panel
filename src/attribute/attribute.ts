@@ -1,3 +1,7 @@
+
+
+type Constraint = (attribute: Attribute) => void;
+
 export default class Attribute {
     cureEffect: number = 0;         // 治疗效果 
     curedEffect: number = 0;        // 被治疗效果
@@ -80,6 +84,9 @@ export default class Attribute {
 
     moveSpeed: number = 1;
 
+
+    private _lazyList: Constraint[] = [];
+
     attack(): number {
         return this.attackBasic + this.attackPercentage + this.attackStatic;
     }
@@ -120,5 +127,15 @@ export default class Attribute {
         this.windBonus += value;
         this.rockBonus += value;
         this.grassBonus += value;
+    }
+
+    addLazy(f: Constraint) {
+        this._lazyList.push(f);
+    }
+
+    applyLazy(): void {
+        for (let f of this._lazyList) {
+            f(this);
+        }
     }
 }

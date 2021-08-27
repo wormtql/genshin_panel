@@ -20,7 +20,9 @@ export default {
             attribute.recharge += value * rate;
         }
 
-        value = that.refine * 0.07 + 0.21;
-        attribute.atkLift(Math.min(value * (attribute.recharge - 1), 0.1 * that.refine + 0.7));
+        attribute.addLazy((a: Attribute) => {
+            let v = that.refine * 0.07 + 0.21;
+            a.atkLift(Math.min(v * (a.recharge - 1), 0.1 * that.refine + 0.7));
+        })
     }
 } as WeaponDataType

@@ -10,13 +10,15 @@ export default {
         let percentage = that.refine * 0.05 + 0.15;
         attribute.lifePercentage += attribute.lifeBasic * percentage;
 
-        percentage = that.refine * 0.002 + 0.006;
-        attribute.attackStatic += attribute.life() * percentage;
+        attribute.addLazy((a: Attribute) => {
+            let p = that.refine * 0.002 + 0.006;
+            
+            if (that.args.lifeBelow50) {
+                p += that.refine * 0.002 + 0.008;
+            }
 
-        if (that.args.lifeBelow50) {
-            percentage = that.refine * 0.002 + 0.008;
-            attribute.attackStatic += attribute.life() * percentage;
-        }
+            a.attackStatic += a.life() * p;
+        })
     },
     baseAtkFamily: "atk46",
     secondary: {

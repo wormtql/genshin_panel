@@ -28,6 +28,7 @@ export default class AttributeBuilder {
         this._artifactsConfig = {};
     }
 
+
     weaponEffect(value: boolean) {
         this._useWeaponEffect = value;
     }
@@ -130,6 +131,8 @@ export default class AttributeBuilder {
 
         // apply artifacts effect
         this._artifacts.applyEffect(attribute, context, this._artifactsConfig);
+
+        attribute.applyLazy();
         
         return attribute;
     }
