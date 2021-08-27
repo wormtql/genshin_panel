@@ -120,6 +120,8 @@ export default class AttributeBuilder {
 
         // apply artifacts basic
         this._artifacts.applyBasic(attribute);
+        // apply artifacts effect
+        this._artifacts.applyEffect(attribute, context, this._artifactsConfig);
 
         // character talent
         this._character.applyTalent(attribute);
@@ -128,9 +130,6 @@ export default class AttributeBuilder {
         if (this._weapon && this._useWeaponEffect) {
             this._weapon?.applyEffect(attribute, this._character);
         }
-
-        // apply artifacts effect
-        this._artifacts.applyEffect(attribute, context, this._artifactsConfig);
 
         attribute.applyLazy();
         

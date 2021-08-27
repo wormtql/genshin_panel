@@ -19,7 +19,9 @@ export default {
         let that = this as any as Character;
 
         if (that.hasTalent2) {
-            attribute.waterBonus += attribute.recharge * 0.2;
+            attribute.addLazy((a: Attribute) => {
+                a.waterBonus += a.recharge * 0.2;
+            });
         }
     }
 } as CharacterDataType
