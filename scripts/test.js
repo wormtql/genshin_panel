@@ -1,21 +1,21 @@
 const genshin = require("../dist");
 
 let character = new genshin.Character("leidianjiangjun", 90, false, 0);
-let weapon = new genshin.Weapon("ticaozhidaoguang", 90, false, 1);
+let weapon = new genshin.Weapon("ticaozhidaoguang", 90, false, 1, { rate: 1 });
 
 let art1 = new genshin.ArtifactBuilder()
-    .setName("blizzardStrayer")
+    .setName("emblemOfSeveredFate")
     .position("flower")
     .mainTag("lifeStatic", 4780)
-    .tag("recharge", 0.188)
-    .tag("lifePercentage", 0.053)
-    .tag("criticalDamage", 0.187)
-    .tag("attackPercentage", 0.093)
+    .tag("critical", 0.066)
+    .tag("criticalDamage", 0.198)
+    // .tag("criticalDamage", 0.187)
+    // .tag("attackPercentage", 0.093)
     .build()
 ;
 
 let art2 = new genshin.ArtifactBuilder()
-    .setName("viridescentVenerer")
+    .setName("emblemOfSeveredFate")
     .position("feather")
     .mainTag("attackStatic", 311)
     .tag("lifePercentage", 0.192)
@@ -26,7 +26,7 @@ let art2 = new genshin.ArtifactBuilder()
 ;
 
 let art3 = new genshin.ArtifactBuilder()
-    .setName("gladiatorFinale")
+    .setName("emblemOfSeveredFate")
     .position("sand")
     .mainTag("attackPercentage", 0.387)
     .tag("attackStatic", 16)
@@ -37,7 +37,7 @@ let art3 = new genshin.ArtifactBuilder()
 ;
 
 let art4 = new genshin.ArtifactBuilder()
-    .setName("wandererTroupe")
+    .setName("emblemOfSeveredFate")
     .position("cup")
     .mainTag("waterBonus", 0.466)
     .tag("defendPercentage", 0.117)
@@ -48,7 +48,7 @@ let art4 = new genshin.ArtifactBuilder()
 ;
 
 let art5 = new genshin.ArtifactBuilder()
-    .setName("gladiatorFinale")
+    .setName("emblemOfSeveredFate")
     .position("head")
     .mainTag("criticalDamage", 0.622)
     .tag("recharge", 0.168)

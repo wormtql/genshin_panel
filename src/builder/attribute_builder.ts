@@ -85,8 +85,9 @@ export default class AttributeBuilder {
     // 2. character basic
     // 3. weapon secondary
     // 4. character secondary
-    // 5. artifacts
+    // 5. artifacts basic
     // 6. character talent
+    // 7. artifacts effect
     // 7. weapon effects
     build(): Attribute {
         if (this._character === null || this._weapon === null) {
@@ -116,11 +117,8 @@ export default class AttributeBuilder {
             weapon: this._weapon,
         };
 
-        // apply artifacts
-        this._artifacts.apply(attribute, context, this._artifactsConfig);
-        for (let s of this._single) {
-            applySecondaryTag(attribute, s.key, s.value);
-        }
+        // apply artifacts basic
+        this._artifacts.applyBasic(attribute);
 
         // character talent
         this._character.applyTalent(attribute);
@@ -129,6 +127,9 @@ export default class AttributeBuilder {
         if (this._weapon && this._useWeaponEffect) {
             this._weapon?.applyEffect(attribute, this._character);
         }
+
+        // apply artifacts effect
+        this._artifacts.applyEffect(attribute, context, this._artifactsConfig);
         
         return attribute;
     }

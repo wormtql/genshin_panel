@@ -23,11 +23,13 @@ export default class ArtifactSet {
         return this.arts[i];
     }
 
-    apply(attribute: Attribute, ctx: ApplyContext, params: undefined | Param | null) {
+    applyBasic(attribute: Attribute) {
         for (let art of this.arts) {
             art.apply(attribute);
         }
+    }
 
+    applyEffect(attribute: Attribute, ctx: ApplyContext, params: undefined | Param | null) {
         applyArtifactSet(attribute, ctx, params, this);
     }
 }
