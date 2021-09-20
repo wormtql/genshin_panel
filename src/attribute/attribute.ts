@@ -85,6 +85,8 @@ export default class Attribute {
     moveSpeed: number = 1;
 
 
+    lifeRatio: number = 0;          // 基础伤害乘区的生命值倍率
+
     private _lazyList: Constraint[] = [];
 
     attack(): number {
