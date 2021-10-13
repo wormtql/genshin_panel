@@ -15,7 +15,7 @@ export default {
         if (that.args.totalEnergy) {
             let e = that.args.totalEnergy;
             e = Math.max(e, 0);
-            const value = Math.max(
+            const value = Math.min(
                 0.1 * that.refine + 0.3,
                 (0.0003 * that.refine + 0.0009) * e
             );
