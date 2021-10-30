@@ -85,7 +85,18 @@ export default class Attribute {
     moveSpeed: number = 1;
 
 
-    lifeRatio: number = 0;          // 基础伤害乘区的生命值倍率
+    lifeRatio: number = 0;          // 基础伤害乘区的生命值倍率，这是因为某些武器也会加该乘区
+
+    enemyThunderDown: number = 0;       // 雷元素减抗
+    enemyFireDown: number = 0;          //
+    enemyWaterDown: number = 0;         //
+    enemyIceDown: number = 0;           //
+    enemyWindDown: number = 0;          //
+    enemyRockBonus: number = 0;          //
+    enemyGrassBonus: number = 0;         //
+    enemyPhysicalBonus: number = 0;      // 物理减抗
+    enemyDefDown: number = 0;           // 减防
+    
 
     private _lazyList: Constraint[] = [];
 

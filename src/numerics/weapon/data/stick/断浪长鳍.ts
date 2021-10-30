@@ -1,25 +1,25 @@
 import Attribute from "../../../../attribute/attribute";
-import WeaponDataType from "../../data_type";
 import Weapon from "../../weapon";
+import WeaponDataType from "../../data_type";
 
 export default {
-    alt: ["wyuwan", "ewangwan", "恶王丸", "akuoumaru"],
-    baseAtkFamily: "atk42",
+    alt: ["duanlangchangqi", "断浪长鳍"],
+    baseAtkFamily: "atk45",
     secondary: {
         name: "attackPercentage",
-        family: "atk90",
+        family: "atk30",
     },
-    effect(attribute: Attribute) {
+    effect: function (attribute: Attribute) {
         let that = this as any as Weapon;
-        
+
         if (that.args.totalEnergy) {
             let e = that.args.totalEnergy;
             e = Math.max(e, 0);
-            const value = Math.max(
+            let bonus = Math.min(
+                (0.0003 * that.refine + 0.0009) * e,
                 0.1 * that.refine + 0.3,
-                (0.0003 * that.refine + 0.0009) * e
             );
-            attribute.qBonus += value;
+            attribute.qBonus += bonus;
         }
     }
 } as WeaponDataType
