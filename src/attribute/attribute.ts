@@ -92,9 +92,9 @@ export default class Attribute {
     enemyWaterDown: number = 0;         //
     enemyIceDown: number = 0;           //
     enemyWindDown: number = 0;          //
-    enemyRockBonus: number = 0;          //
-    enemyGrassBonus: number = 0;         //
-    enemyPhysicalBonus: number = 0;      // 物理减抗
+    enemyRockDown: number = 0;          //
+    enemyGrassDown: number = 0;         //
+    enemyPhysicalDown: number = 0;      // 物理减抗
     enemyDefDown: number = 0;           // 减防
     
 
