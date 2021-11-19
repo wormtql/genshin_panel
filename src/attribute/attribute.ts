@@ -86,6 +86,23 @@ export default class Attribute {
 
 
     lifeRatio: number = 0;          // 基础伤害乘区的生命值倍率，这是因为某些武器也会加该乘区
+    defendRatio: number = 0;        // 基础伤害乘区的防御力倍率
+    atkRatio: number = 0;
+    aLifeRatio: number = 0;
+    aDefRatio: number = 0;
+    aAtkRatio: number = 0;
+    bLifeRatio: number = 0;
+    bDefRatio: number = 0;
+    bAtkRatio: number = 0;
+    airLifeRatio: number = 0;
+    airDefRatio: number = 0;
+    airAtkRatio: number = 0;
+    eLifeRatio: number = 0;
+    eDefRatio: number = 0;
+    eAtkRatio: number = 0;
+    qLifeRatio: number = 0;
+    qDefRatio: number = 0;
+    qAtkRatio: number = 0;
 
     enemyThunderDown: number = 0;       // 雷元素减抗
     enemyFireDown: number = 0;          //
@@ -99,6 +116,66 @@ export default class Attribute {
     
 
     private _lazyList: Constraint[] = [];
+
+    getNormalAttackBaseDamage(atkRatio: number, defRatio: number = 0, hpRatio: number = 0): number {
+        const atk = this.attack();
+        const def = this.defend();
+        const hp = this.life();
+
+        const atkR = atkRatio + this.atkRatio + this.aAtkRatio;
+        const defR = defRatio + this.defendRatio + this.aDefRatio;
+        const hpR = hpRatio + this.lifeRatio + this.aLifeRatio;
+
+        return atk * atkR + def * defR + hp * hpR;
+    }
+
+    getChargedAttackBaseDamage(atkRatio: number, defRatio: number = 0, hpRatio: number = 0): number {
+        const atk = this.attack();
+        const def = this.defend();
+        const hp = this.life();
+
+        const atkR = atkRatio + this.atkRatio + this.bAtkRatio;
+        const defR = defRatio + this.defendRatio + this.bDefRatio;
+        const hpR = hpRatio + this.lifeRatio + this.bLifeRatio;
+
+        return atk * atkR + def * defR + hp * hpR;
+    }
+
+    getPlungingAttackBaseDamage(atkRatio: number, defRatio: number = 0, hpRatio: number = 0): number {
+        const atk = this.attack();
+        const def = this.defend();
+        const hp = this.life();
+
+        const atkR = atkRatio + this.atkRatio + this.airAtkRatio;
+        const defR = defRatio + this.defendRatio + this.airDefRatio;
+        const hpR = hpRatio + this.lifeRatio + this.airLifeRatio;
+
+        return atk * atkR + def * defR + hp * hpR;
+    }
+
+    getElementalSkillBaseDamage(atkRatio: number, defRatio: number = 0, hpRatio: number = 0): number {
+        const atk = this.attack();
+        const def = this.defend();
+        const hp = this.life();
+
+        const atkR = atkRatio + this.atkRatio + this.eAtkRatio;
+        const defR = defRatio + this.defendRatio + this.eDefRatio;
+        const hpR = hpRatio + this.lifeRatio + this.eLifeRatio;
+
+        return atk * atkR + def * defR + hp * hpR;
+    }
+
+    getElementalBurstBaseDamage(atkRatio: number, defRatio: number = 0, hpRatio: number = 0): number {
+        const atk = this.attack();
+        const def = this.defend();
+        const hp = this.life();
+
+        const atkR = atkRatio + this.atkRatio + this.qAtkRatio;
+        const defR = defRatio + this.defendRatio + this.qDefRatio;
+        const hpR = hpRatio + this.lifeRatio + this.qLifeRatio;
+
+        return atk * atkR + def * defR + hp * hpR;
+    }
 
     attack(): number {
         return this.attackBasic + this.attackPercentage + this.attackStatic;
