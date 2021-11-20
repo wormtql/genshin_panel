@@ -52,4 +52,5 @@ export default interface Param {
     configLavaWalker?: CommonConfigRatio,
     configMaidenBeloved?: CommonConfigRatio,
     configShimenawaReminiscence?: CommonConfigRatio,
+    configHuskOfOpulentDreams?: CommonConfigLevel,
 }

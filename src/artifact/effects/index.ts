@@ -40,6 +40,7 @@ import { default as paleFlameApply } from "./pale_flame";
 import { default as tenacityOfTheMillelithApply } from "./tenacity_of_the_millelith";
 import { default as emblemOfSeveredFate } from "./emblem_of_severed_fate";
 import { default as shimenawaReminiscence } from "./shimenawa_reminiscence";
+import { default as huskOfOpulentDreams } from "./husk_of_opulent_dreams";
 
 
 type ApplyFunctionType = ((attribute: Attribute, ctx: ApplyContext, params: Param) => void) | null;
@@ -80,6 +81,7 @@ applyFunctions["paleFlame"] = paleFlameApply;
 applyFunctions["tenacityOfTheMillelith"] = tenacityOfTheMillelithApply;
 applyFunctions["emblemOfSeveredFate"] = emblemOfSeveredFate;
 applyFunctions["shimenawaReminiscence"] = shimenawaReminiscence;
+applyFunctions["huskOfOpulentDreams"] = huskOfOpulentDreams;
 
 
 export default function apply(attribute: Attribute, ctx: ApplyContext, params: Param | undefined | null, artifacts: ArtifactSet) {
