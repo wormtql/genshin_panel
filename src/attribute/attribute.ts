@@ -117,6 +117,22 @@ export default class Attribute {
 
     private _lazyList: Constraint[] = [];
 
+    getBaseDamage(skill: string, atkRatio: number = 0, defRatio: number = 0, hpRatio: number = 0): number {
+        if (skill === "a") {
+            return this.getNormalAttackBaseDamage(atkRatio, defRatio, hpRatio);
+        } else if (skill === "b") {
+            return this.getChargedAttackBaseDamage(atkRatio, defRatio, hpRatio);
+        } else if (skill === "air") {
+            return this.getPlungingAttackBaseDamage(atkRatio, defRatio, hpRatio);
+        } else if (skill === "e") {
+            return this.getElementalSkillBaseDamage(atkRatio, defRatio, hpRatio);
+        } else if (skill === "q") {
+            return this.getElementalBurstBaseDamage(atkRatio, defRatio, hpRatio);
+        }
+
+        throw new Error(`unsupported skill name: ${skill}`);
+    }
+
     getNormalAttackBaseDamage(atkRatio: number, defRatio: number = 0, hpRatio: number = 0): number {
         const atk = this.attack();
         const def = this.defend();
