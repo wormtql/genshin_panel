@@ -41,6 +41,7 @@ import { default as tenacityOfTheMillelithApply } from "./tenacity_of_the_millel
 import { default as emblemOfSeveredFate } from "./emblem_of_severed_fate";
 import { default as shimenawaReminiscence } from "./shimenawa_reminiscence";
 import { default as huskOfOpulentDreams } from "./husk_of_opulent_dreams";
+import { default as oceanHuedClam } from "./ocean_hued_clam";
 
 
 type ApplyFunctionType = ((attribute: Attribute, ctx: ApplyContext, params: Param) => void) | null;
@@ -82,6 +83,7 @@ applyFunctions["tenacityOfTheMillelith"] = tenacityOfTheMillelithApply;
 applyFunctions["emblemOfSeveredFate"] = emblemOfSeveredFate;
 applyFunctions["shimenawaReminiscence"] = shimenawaReminiscence;
 applyFunctions["huskOfOpulentDreams"] = huskOfOpulentDreams;
+applyFunctions["oceanHuedClam"] = oceanHuedClam;
 
 
 export default function apply(attribute: Attribute, ctx: ApplyContext, params: Param | undefined | null, artifacts: ArtifactSet) {
