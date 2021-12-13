@@ -25,6 +25,14 @@ export default class Attribute {
     qCritical: number = 0.05;          // 元素爆发暴击率
     airCritical: number = 0.05;        // 下落攻击暴击率
     criticalDamage: number = 0.5;     // 暴击伤害
+    thunderCriticalDamage: number = 0;    // 雷元素暴击伤害
+    fireCriticalDamage: number = 0;
+    waterCriticalDamage: number = 0;
+    iceCriticalDamage: number = 0;
+    windCriticalDamage: number = 0;
+    rockCriticalDamage: number = 0;
+    grassCriticalDamage: number = 0;
+    physicalCriticalDamage: number = 0;
 
     thunderRes: number = 0;         // 雷元素抗性
     fireRes: number = 0;            //
