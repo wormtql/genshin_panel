@@ -13,5 +13,5 @@ export default {
         name: "iceBonus",
         family: "bonus288",
     },
-    weapon: WeaponType.Sword,
+    weapon: WeaponType.Bow,
 } as CharacterDataType

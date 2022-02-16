@@ -1,7 +1,7 @@
 const genshin = require("../dist");
 
-let character = new genshin.Character("leidianjiangjun", 90, false, 0);
-let weapon = new genshin.Weapon("ticaozhidaoguang", 90, false, 1, { rate: 1 });
+let character = new genshin.Character("bachongshenzi", 90, false, 0);
+let weapon = new genshin.Weapon("shenlezhizhenyi", 90, false, 1, { rate: .5 });
 
 let art1 = new genshin.ArtifactBuilder()
     .setName("emblemOfSeveredFate")
